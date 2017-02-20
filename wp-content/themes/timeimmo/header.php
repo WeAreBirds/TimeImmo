@@ -33,10 +33,10 @@
 				
 				<!-- Logo -->
 				<div id="logo" class="margin-top-10">
-					<a href="index.html"><img src="<?php bloginfo('template_directory'); ?>/images/logo.png" alt=""></a>
+					<a href="<?php bloginfo('url'); ?>"><img src="<?php bloginfo('template_directory'); ?>/images/logo.png" alt=""></a>
 
 					<!-- Logo for Sticky Header -->
-					<a href="index.html" class="sticky-logo"><img src="images/logo2.png" alt=""></a>
+					<a href="<?php bloginfo('url'); ?>" class="sticky-logo"><img src="<?php bloginfo('template_directory'); ?>/images/logo2.png" alt=""></a>
 				</div>
 				
 			</div>
@@ -78,7 +78,8 @@
 		<!-- Main Navigation -->
 		<nav id="navigation" class="style-2">
 			<div class="container">
-					<ul id="responsive">
+				<?php wp_nav_menu(); ?>
+					<!-- <ul id="responsive">
 
 						<li><a class="current" href="#">Home</a>
 							<ul>
@@ -169,7 +170,7 @@
 							</ul>
 						</li>
 
-					</ul>
+					</ul> -->
 			</div>
 		</nav>
 		<div class="clearfix"></div>
