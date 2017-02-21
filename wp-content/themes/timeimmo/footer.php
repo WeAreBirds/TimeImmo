@@ -7,37 +7,18 @@
 			<div class="col-md-5 col-sm-6">
 				<img class="footer-logo" src="<?php bloginfo('template_directory'); ?>/images/logo.png" alt="">
 				<br><br>
-				<p>Morbi convallis bibendum urna ut viverra. Maecenas quis consequat libero, a feugiat eros. Nunc ut lacinia tortor morbi ultricies laoreet ullamcorper phasellus semper.</p>
+				<?php if ( !function_exists( 'dynamic_sidebar' ) || !dynamic_sidebar('footer_text') ) ?>
 			</div>
 
 			<div class="col-md-4 col-sm-6 ">
-				<h4>Helpful Links</h4>
-				<ul class="footer-links">
-					<li><a href="#">Login</a></li>
-					<li><a href="#">Sign Up</a></li>
-					<li><a href="#">My Account</a></li>
-					<li><a href="#">Add Property</a></li>
-					<li><a href="#">Pricing</a></li>
-					<li><a href="#">Privacy Policy</a></li>
-				</ul>
 
-				<ul class="footer-links">
-					<li><a href="#">FAQ</a></li>
-					<li><a href="#">Blog</a></li>
-					<li><a href="#">Our Agents</a></li>
-					<li><a href="#">How It Works</a></li>
-					<li><a href="#">Contact</a></li>
-				</ul>
+				<h4>Liens</h4>
+				<?php wp_nav_menu( array( 'Navigation principale' => 'Top', 'menu_class' => 'footer-links' ) ); ?>
 				<div class="clearfix"></div>
 			</div>		
 
 			<div class="col-md-3  col-sm-12">
-				<h4>Contact Us</h4>
-				<div class="text-widget">
-					<span>12345 Little Lonsdale St, Melbourne</span> <br>
-					Phone: <span>(123) 123-456 </span><br>
-					E-Mail:<span> <a href="#">office@example.com</a> </span><br>
-				</div>
+				<?php if ( !function_exists( 'dynamic_sidebar' ) || !dynamic_sidebar('footer_contact') ) ?>
 
 				<ul class="social-icons margin-top-20">
 					<li><a class="facebook" href="#"><i class="icon-facebook"></i></a></li>
@@ -53,7 +34,7 @@
 		<!-- Copyright -->
 		<div class="row">
 			<div class="col-md-12">
-				<div class="copyrights">© 2016 Findeo. All Rights Reserved.</div>
+				<div class="copyrights">© 2017 We Are Birds. Tous droit réservé.</div>
 			</div>
 		</div>
 
@@ -81,39 +62,12 @@
 <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/scripts/masonry.min.js"></script>
 <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/scripts/custom.js"></script>
 
-
-
-
-<!-- Style Switcher
-================================================== -->
-<script src="<?php bloginfo('template_directory'); ?>/scripts/switcher.js"></script>
-
-<div id="style-switcher">
-	<h2>Color Switcher <a href="#"><i class="sl sl-icon-settings"></i></a></h2>
-	
-	<div>
-		<ul class="colors" id="color1">
-			<li><a href="#" class="blue" title="Blue"></a></li>
-			<li><a href="#" class="green" title="Green"></a></li>
-			<li><a href="#" class="orange" title="Orange"></a></li>
-			<li><a href="#" class="navy" title="Navy"></a></li>
-			<li><a href="#" class="yellow" title="Yellow"></a></li>
-			<li><a href="#" class="peach" title="Peach"></a></li>
-			<li><a href="#" class="beige" title="Beige"></a></li>
-			<li><a href="#" class="purple" title="Purple"></a></li>
-			<li><a href="#" class="celadon" title="Celadon"></a></li>
-			<li><a href="#" class="pink" title="Pink"></a></li>
-			<li><a href="#" class="red" title="Red"></a></li>
-			<li><a href="#" class="brown" title="Brown"></a></li>
-			<li><a href="#" class="cherry" title="Cherry"></a></li>
-			<li><a href="#" class="cyan" title="Cyan"></a></li>
-			<li><a href="#" class="gray" title="Gray"></a></li>
-			<li><a href="#" class="olive" title="Olive"></a></li>
-		</ul>
-	</div>
-		
-</div>
-<!-- Style Switcher / End -->
+<!-- Maps -->
+<script type="text/javascript" src="http://maps.google.com/maps/api/js"></script>
+<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/scripts/infobox.min.js"></script>
+<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/scripts/markerclusterer.js"></script>
+<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/scripts/maps.js"></script>
+<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/scripts/gmaps.js"></script>
 
 
 </div>

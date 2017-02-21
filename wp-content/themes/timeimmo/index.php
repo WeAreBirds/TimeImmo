@@ -12,7 +12,7 @@
 				<div class="search-container">
 
 					<!-- Form -->
-					<h2>Find New Home</h2>
+					<h2>Trouvez la maison de vos rêves</h2>
 
 					<!-- Row With Forms -->
 					<div class="row with-forms">
@@ -49,12 +49,12 @@
 
 					<!-- Browse Jobs -->
 					<div class="adv-search-btn">
-						Need more search options? <a href="listings-list-full-width.html">Advanced Search</a>
+						Recherche approfondie <a href="listings-list-full-width.html">Recherche avancée</a>
 					</div>
 					
 					<!-- Announce -->
 					<div class="announce">
-						We’ve 1000 properties for you!
+						Nous sommes à votre écoute!
 					</div>
 
 				</div>
@@ -82,9 +82,15 @@
 					<div class="icon-container">
 						<i class="im im-icon-Checked-User"></i>
 					</div>
+					<?php 
+			            $id = 26;
+			            $banner= get_post($id);
+			            $contenu = $banner->post_content;
+			            $titre = $banner->post_title;
+			        ?>
+					<h3><?php echo $titre ?></h3>
+					<p><?php echo $contenu ?></p>
 
-					<h3>Agent Finder</h3>
-					<p>See who specializes in your area, has the most reviews and the right experience to meet your needs.</p>
 				</div>
 			</div>
 
@@ -96,8 +102,15 @@
 						<i class="im im-icon-Cloud-Computer"></i>
 					</div>
 
-					<h3>Modern Technology</h3>
-					<p>More than 10,000 customers buy or sell a home with us each year. We help people and homes find each together.</p>
+					<?php 
+			            $id = 28;
+			            $banner= get_post($id);
+			            $contenu = $banner->post_content;
+			            $titre = $banner->post_title;
+			        ?>
+					<h3><?php echo $titre ?></h3>
+					<p><?php echo $contenu ?></p>
+
 				</div>
 			</div>
 
@@ -109,8 +122,15 @@
 						<i class="im im-icon-Idea"></i>
 					</div>
 
-					<h3>Home Designs Ideas</h3>
-					<p>Our specialists can help you get started on that home project. Find paint colors, that perfect tile and more. </p>
+					<?php 
+			            $id = 31;
+			            $banner= get_post($id);
+			            $contenu = $banner->post_content;
+			            $titre = $banner->post_title;
+			        ?>
+					<h3><?php echo $titre ?></h3>
+					<p><?php echo $contenu ?></p>
+
 				</div>
 			</div>
 
@@ -126,7 +146,7 @@
 	<div class="row">
 	
 		<div class="col-md-12">
-			<h3 class="headline margin-bottom-25 margin-top-65">Featured</h3>
+			<h3 class="headline margin-bottom-25 margin-top-65">Les dernières offres</h3>
 		</div>
 		
 		<!-- Carousel -->
@@ -321,44 +341,38 @@
 <section class="fullwidth margin-top-105 margin-bottom-0 padding-bottom-80 padding-top-95" data-background-color="#f7f7f7">
 
 	<!-- Box Headline -->
-	<h3 class="headline-box">What Our Clients Say</h3>
+	<h3 class="headline-box">Ce que les clients pensent de <br>Time Immo</h3>
 	
 	<div class="container">
 		<div class="row">
 
 			<div class="col-md-12">
-				<div class="testimonials-subtitle">We collect reviews from our customers so you can get an honest opinion of what an apartment is really like!</div>
+				<div class="testimonials-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque consectetur odio a bibendum sollicitudin.</div>
 			</div>
+			
+			<!-- BOUCLE -->
+			<?php
+			$query = new WP_Query(array('post_type' => 'Avis client', 'posts_per_page' => 3));; 
+			if($query->have_posts()) : while($query->have_posts()) : $query->the_post();
+			?>
 
 			<div class="col-md-4">
 				<div class="testimonial-box">
-					<div class="testimonial">Aliquam dictum elit vitae mauris facilisis, at dictum urna dignissim. Donec vel lectus vel felis lacinia luctus vitae iaculis arcu. Mauris mattis, massa eu porta ultricies.</div>
+					<div class="testimonial"><?php the_content(); ?></div>
 					<div class="testimonial-author">
-						<img src="<?php bloginfo('template_directory'); ?>/images/happy-client-01.jpg" alt="">
-						<h4>Jennie Wilson <span>Rented Apartment</span></h4>
-					</div>
-				</div>
-			</div>
 
-			<div class="col-md-4">
-				<div class="testimonial-box">
-					<div class="testimonial">Aliquam dictum elit vitae mauris facilisis, at dictum urna dignissim. Donec vel lectus vel felis lacinia luctus vitae iaculis arcu. Mauris mattis, massa eu porta ultricies.</div>
-					<div class="testimonial-author">
-						<img src="<?php bloginfo('template_directory'); ?>/images/happy-client-02.jpg" alt="">
-						<h4>Thomas Smith <span>Bought House</span></h4>
-					</div>
-				</div>
-			</div>
+					<?php $image = get_field('image_du_client');
+					if( !empty($image) ): ?>
+						<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+					<?php endif; ?>
 
-			<div class="col-md-4">
-				<div class="testimonial-box">
-					<div class="testimonial">Aliquam dictum elit vitae mauris facilisis, at dictum urna dignissim. Donec vel lectus vel felis lacinia luctus vitae iaculis arcu. Mauris mattis, massa eu porta ultricies.</div>
-					<div class="testimonial-author">
-						<img src="<?php bloginfo('template_directory'); ?>/images/happy-client-03.jpg" alt="">
-						<h4>Robert Lindstrom <span>Sold Apartment</span></h4>
+						<h4><?php the_title(); ?><span><?php the_field('fonction_du_client'); ?></span></h4>
 					</div>
 				</div>
 			</div>
+			
+			<!-- FIN BOUCLE -->
+			<?php endwhile; endif; ?>
 
 		</div>
 	</div>
@@ -395,74 +409,6 @@
 
 </div>
 <!-- Parallax / End -->
-
-
-
-<!-- Container -->
-<div class="container">
-	<div class="row">
-
-		<div class="col-md-12">
-			<h3 class="headline centered margin-bottom-35 margin-top-10">Most Popular Places <span>Properties In Most Popular Places</span></h3>
-		</div>
-		
-		<div class="col-md-4">
-
-			<!-- Image Box -->
-			<a href="listings-list-with-sidebar.html" class="img-box" data-background-image="<?php bloginfo('template_directory'); ?>/images/popular-location-01.jpg">
-
-				<!-- Badge -->
-				<div class="listing-badges">
-					<span class="featured">Featured</span>
-				</div>
-
-				<div class="img-box-content visible">
-					<h4>New York </h4>
-					<span>14 Properties</span>
-				</div>
-			</a>
-
-		</div>	
-			
-		<div class="col-md-8">
-
-			<!-- Image Box -->
-			<a href="listings-list-with-sidebar.html" class="img-box" data-background-image="<?php bloginfo('template_directory'); ?>/images/popular-location-02.jpg">
-				<div class="img-box-content visible">
-					<h4>Los Angeles</h4>
-					<span>24 Properties</span>
-				</div>
-			</a>
-
-		</div>	
-
-		<div class="col-md-8">
-
-			<!-- Image Box -->
-			<a href="listings-list-with-sidebar.html" class="img-box" data-background-image="<?php bloginfo('template_directory'); ?>/images/popular-location-03.jpg">
-				<div class="img-box-content visible">
-					<h4>San Francisco </h4>
-					<span>12 Properties</span>
-				</div>
-			</a>
-
-		</div>	
-			
-		<div class="col-md-4">
-
-			<!-- Image Box -->
-			<a href="listings-list-with-sidebar.html" class="img-box" data-background-image="<?php bloginfo('template_directory'); ?>/images/popular-location-04.jpg">
-				<div class="img-box-content visible">
-					<h4>Miami</h4>
-					<span>9 Properties</span>
-				</div>
-			</a>
-
-		</div>
-
-	</div>
-</div>
-<!-- Container / End -->
 
 
 <!-- Fullwidth Section -->
