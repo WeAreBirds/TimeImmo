@@ -19,13 +19,8 @@
 
 						<!-- Property Type -->
 						<div class="col-md-3">
-							<select data-placeholder="Any Type" class="chosen-select-no-single" >
-								<option>Apartments</option>
-								<option>Houses</option>
-								<option>Commercial</option>
-								<option>Garages</option>
-								<option>Lots</option>
-							</select>
+							<option>For Sale</option>
+							<option>For Rent</option>
 						</div>
 
 						<!-- Status -->
@@ -151,180 +146,47 @@
 		
 		<!-- Carousel -->
 		<div class="col-md-12">
-			<div class="carousel">
-				
+			<div class="carousel">	
+
 				<!-- Listing Item -->
+				<?php
+				$query = new WP_Query(array(
+					'post_type' => 'Liste', 
+					'posts_per_page' => 6)); 
+				if($query->have_posts()) : while($query->have_posts()) : $query->the_post();
+				?>
 				<div class="carousel-item">
 					<div class="listing-item compact">
 
-						<a href="single-property-page-1.html" class="listing-img-container">
+						<a href="<?php the_permalink(); ?>" class="listing-img-container">
 
 							<div class="listing-badges">
-								<span class="featured">Featured</span>
-								<span>For Sale</span>
+								<span class="featured">coup de coeur</span>
+								<span><?php the_field('status_du_bien'); ?></span>
 							</div>
 
 							<div class="listing-img-content">
-								<span class="listing-compact-title">Eagle Apartments <i>$275,000</i></span>
+								<span class="listing-compact-title"><?php the_title( ); ?> <i><?php the_field('prix'); ?></i></span>
 
 								<ul class="listing-hidden-content">
-									<li>Area <span>530 sq ft</span></li>
-									<li>Rooms <span>3</span></li>
-									<li>Beds <span>1</span></li>
-									<li>Baths <span>1</span></li>
+									<li><?php the_field('surface'); ?></li>
+									<li><?php the_field('chambre'); ?></li>
+									<li><?php the_field('salle_de_bain'); ?></li>
+									<li><?php the_field('choix'); ?></li>
 								</ul>
 							</div>
 
-							<img src="<?php bloginfo('template_directory'); ?>/images/listing-01.jpg" alt="">
+							<?php $image = get_field('large_image_list');
+							if( !empty($image) ): ?>
+								<img src="<?php echo $image['url']; ?>" alt="">
+							<?php endif; ?>
 						</a>
 
 					</div>
 				</div>
-				<!-- Listing Item / End -->
-
-				<!-- Listing Item -->
-				<div class="carousel-item">
-					<div class="listing-item compact">
-
-						<a href="single-property-page-2.html" class="listing-img-container">
-
-							<div class="listing-badges">
-								<span class="featured">Featured</span>
-								<span>For Sale</span>
-							</div>
-
-							<div class="listing-img-content">
-								<span class="listing-compact-title">Serene Uptown <i>$900 / monthly</i></span>
-
-								<ul class="listing-hidden-content">
-									<li>Area <span>440 sq ft</span></li>
-									<li>Rooms <span>3</span></li>
-									<li>Beds <span>1</span></li>
-									<li>Baths <span>1</span></li>
-								</ul>
-							</div>
-
-							<img src="<?php bloginfo('template_directory'); ?>/images/listing-02.jpg" alt="">
-						</a>
-
-					</div>
-				</div>
-				<!-- Listing Item / End -->
-
-				<!-- Listing Item -->
-				<div class="carousel-item">
-					<div class="listing-item compact">
-
-						<a href="single-property-page-1.html" class="listing-img-container">
-
-							<div class="listing-badges">
-								<span class="featured">Featured</span>
-								<span>For Rent</span>
-							</div>
-
-							<div class="listing-img-content">
-								<span class="listing-compact-title">Meridian Villas <i>$1700 / monthly</i></span>
-
-								<ul class="listing-hidden-content">
-									<li>Area <span>1450 sq ft</span></li>
-									<li>Rooms <span>3</span></li>
-									<li>Beds <span>2</span></li>
-									<li>Baths <span>2</span></li>
-								</ul>
-							</div>
-
-							<img src="<?php bloginfo('template_directory'); ?>/images/listing-03.jpg" alt="">
-						</a>
-
-					</div>
-				</div>
-				<!-- Listing Item / End -->
-
-				<!-- Listing Item -->
-				<div class="carousel-item">
-					<div class="listing-item compact">
-
-						<a href="single-property-page-3.html" class="listing-img-container">
-
-							<div class="listing-badges">
-								<span class="featured">Featured</span>
-								<span>For Sale</span>
-							</div>
-
-							<div class="listing-img-content">
-								<span class="listing-compact-title">Selway Apartments <i>$420,000</i></span>
-
-								<ul class="listing-hidden-content">
-									<li>Area <span>540 sq ft</span></li>
-									<li>Rooms <span>2</span></li>
-									<li>Beds <span>2</span></li>
-									<li>Baths <span>1</span></li>
-								</ul>
-							</div>
-
-							<img src="<?php bloginfo('template_directory'); ?>/images/listing-04.jpg" alt="">
-						</a>
-
-					</div>
-				</div>
-				<!-- Listing Item / End -->
-
-				<!-- Listing Item -->
-				<div class="carousel-item">
-					<div class="listing-item compact">
-
-						<a href="single-property-page-2.html" class="listing-img-container">
-
-							<div class="listing-badges">
-								<span class="featured">Featured</span>
-								<span>For Sale</span>
-							</div>
-
-							<div class="listing-img-content">
-								<span class="listing-compact-title">Oak Tree Villas <i>$535,000</i></span>
-
-								<ul class="listing-hidden-content">
-									<li>Area <span>550 sq ft</span></li>
-									<li>Rooms <span>3</span></li>
-									<li>Beds <span>2</span></li>
-									<li>Baths <span>2</span></li>
-								</ul>
-							</div>
-
-							<img src="<?php bloginfo('template_directory'); ?>/images/listing-05.jpg" alt="">
-						</a>
-
-					</div>
-				</div>
-				<!-- Listing Item / End -->
-
-				<!-- Listing Item -->
-				<div class="carousel-item">
-					<div class="listing-item compact">
-
-						<a href="single-property-page-1.html" class="listing-img-container">
-
-							<div class="listing-badges">
-								<span class="featured">Featured</span>
-								<span>For Rent</span>
-							</div>
-
-							<div class="listing-img-content">
-								<span class="listing-compact-title">Old Town Manchester <i>$500 / monthly</i></span>
-
-								<ul class="listing-hidden-content">
-									<li>Area <span>850 sq ft</span></li>
-									<li>Rooms <span>3</span></li>
-									<li>Beds <span>2</span></li>
-									<li>Baths <span>1</span></li>
-								</ul>
-							</div>
-
-							<img src="<?php bloginfo('template_directory'); ?>/images/listing-06.jpg" alt="">
-						</a>
-
-					</div>
-				</div>
+				<?php endwhile; ?>
+				<?php else : ?>
+				<?php endif; ?>
 				<!-- Listing Item / End -->
 
 			</div>
@@ -398,7 +260,7 @@
 				<div class="col-lg-6 col-sm-8">
 					<h2>It's your journey. We're here to help.</h2>
 					<p>We’re full-service, local agents who know how to find people and home each together. We use online tools with an unmatched search capability to make you smarter and faster.</p>
-					<a href="listings-list-with-sidebar.html" class="button margin-top-25">Get Started</a>
+					<a href="<?php echo get_page_link(59); ?>" class="button margin-top-25">C'est partit !</a>
 				</div>
 			</div>
 
@@ -415,79 +277,42 @@
 <section class="fullwidth margin-top-95 margin-bottom-0">
 
 	<!-- Box Headline -->
-	<h3 class="headline-box">Articles & Tips</h3>
+	<h3 class="headline-box">Articles & actualités</h3>
 
 	<div class="container">
 		<div class="row">
-
+			
+		<?php
+		$query = new WP_Query(array('post_type' => 'Blog', 'posts_per_page' => 3));; 
+		if($query->have_posts()) : while($query->have_posts()) : $query->the_post();
+		?>
+			
 			<div class="col-md-4">
-
+			
 				<!-- Blog Post -->
 				<div class="blog-post">
 					
 					<!-- Img -->
-					<a href="blog-post.html" class="post-img">
-						<img src="<?php bloginfo('template_directory'); ?>/images/blog-post-01.jpg" alt="">
+					<a href="<?php the_permalink(); ?>" class="post-img">
+					<?php $image = get_field('blog_image');
+						if( !empty($image) ): ?>
+							<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+						<?php endif; ?>
 					</a>
 					
 					<!-- Content -->
 					<div class="post-content">
-						<h3><a href="#">8 Tips to Help You Finding New Home</a></h3>
-						<p>Nam nisl lacus, dignissim ac tristique ut, scelerisque eu massa. Vestibulum ligula nunc, rutrum in malesuada vitae. </p>
+						<h3><a href="<?php the_permalink(); ?>"><?php the_title() ?></a></h3>
+						<p><?php the_field('extrait'); ?></p>
 
-						<a href="blog-post.html" class="read-more">Read More <i class="fa fa-angle-right"></i></a>
+						<a href="<?php the_permalink(); ?>" class="read-more">Lire la suite <i class="fa fa-angle-right"></i></a>
 					</div>
 
 				</div>
 				<!-- Blog Post / End -->
 
 			</div>
-
-			<div class="col-md-4">
-
-				<!-- Blog Post -->
-				<div class="blog-post">
-					
-					<!-- Img -->
-					<a href="blog-post.html" class="post-img">
-						<img src="<?php bloginfo('template_directory'); ?>/images/blog-post-02.jpg" alt="">
-					</a>
-					
-					<!-- Content -->
-					<div class="post-content">
-						<h3><a href="#">Bedroom Colors You'll Never Regret</a></h3>
-						<p>Nam nisl lacus, dignissim ac tristique ut, scelerisque eu massa. Vestibulum ligula nunc, rutrum in malesuada vitae. </p>
-
-						<a href="blog-post.html" class="read-more">Read More <i class="fa fa-angle-right"></i></a>
-					</div>
-
-				</div>
-				<!-- Blog Post / End -->
-
-			</div>
-
-			<div class="col-md-4">
-
-				<!-- Blog Post -->
-				<div class="blog-post">
-					
-					<!-- Img -->
-					<a href="blog-post.html" class="post-img">
-						<img src="<?php bloginfo('template_directory'); ?>/images/blog-post-03.jpg" alt="">
-					</a>
-					
-					<!-- Content -->
-					<div class="post-content">
-						<h3><a href="#">What to Do a Year Before Buying Apartment</a></h3>
-						<p>Nam nisl lacus, dignissim ac tristique ut, scelerisque eu massa. Vestibulum ligula nunc, rutrum in malesuada vitae. </p>
-
-						<a href="blog-post.html" class="read-more">Read More <i class="fa fa-angle-right"></i></a>
-					</div>
-
-				</div>
-				<!-- Blog Post / End -->
-
-			</div>
+		<?php endwhile; endif; ?>
 
 		</div>
 	</div>
@@ -496,10 +321,10 @@
 
 
 <!-- Flip banner -->
-<a href="listings-half-map-grid-standard.html" class="flip-banner parallax" data-background="<?php bloginfo('template_directory'); ?>/images/flip-banner-bg.jpg" data-color="#274abb" data-color-opacity="0.9" data-img-width="2500" data-img-height="1600">
+<a href="<?php echo get_page_link(59); ?>" class="flip-banner parallax" data-background="<?php bloginfo('template_directory'); ?>/images/flip-banner-bg.jpg" data-color="#274abb" data-color-opacity="0.9" data-img-width="2500" data-img-height="1600">
 	<div class="flip-banner-content">
-		<h2 class="flip-visible">We help people and homes find each other</h2>
-		<h2 class="flip-hidden">Browse Properties <i class="sl sl-icon-arrow-right"></i></h2>
+		<h2 class="flip-visible">Nous aidons les gens et les biens à se trouver</h2>
+		<h2 class="flip-hidden">Voir les propriétés <i class="sl sl-icon-arrow-right"></i></h2>
 	</div>
 </a>
 <!-- Flip banner / End -->

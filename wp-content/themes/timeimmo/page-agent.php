@@ -8,15 +8,20 @@
 		<div class="row">
 			<div class="col-md-12">
 
-				<h2>Jennie Wilson</h2>
-				<span>Agent In New York</span>
+				<?php
+				$query = new WP_Query(array('post_type' => 'Agent', 'posts_per_page' => 6));; 
+				if($query->have_posts()) : while($query->have_posts()) : $query->the_post();
+				?>
+
+				<h2><?php the_title(); ?></h2>
+				<span><?php the_field('bottom_name'); ?></span>
+
+				<?php endwhile; endif; ?>
 				
 				<!-- Breadcrumbs -->
 				<nav id="breadcrumbs">
-					<ul>
-						<li><a href="#">Home</a></li>
-						<li>Listings</li>
-					</ul>
+					<?php if ( function_exists('yoast_breadcrumb') ) 
+					{yoast_breadcrumb('<ul><li><span>','</span></li></ul>');} ?>
 				</nav>
 
 			</div>
@@ -33,21 +38,29 @@
 		<div class="col-md-12">
 			<div class="agent agent-page">
 
+				<?php
+				$query = new WP_Query(array('post_type' => 'Agent', 'posts_per_page' => 6));; 
+				if($query->have_posts()) : while($query->have_posts()) : $query->the_post();
+				?>
+
 				<div class="agent-avatar">
-					<img src="images/agent-02.jpg" alt="">
+					<?php $image = get_field('agent_image');
+					if( !empty($image) ): ?>
+						<img src="<?php echo $image['url']; ?>" alt="">
+					<?php endif; ?>
 				</div>
 
 				<div class="agent-content">
 					<div class="agent-name">
-						<h4>Jennie Wilson</h4>
-						<span>Agent In New York</span>
+						<h4><?php the_title(); ?></h4>
+						<span><?php the_field('bottom_name'); ?></span>
 					</div>
 
-					<p>Maecenas quis consequat libero, a feugiat eros. Nunc ut lacinia tortor morbi ultricies laoreet ullamcorper phasellus semper</p>
+					<p><?php the_content(); ?></p>
 
 					<ul class="agent-contact-details">
-						<li><i class="sl sl-icon-call-in"></i>(123) 123-456</li>
-						<li><i class="fa fa-envelope-o "></i><a href="#">jennie@example.com</a></li>
+						<li><i class="sl sl-icon-call-in"></i><?php the_field('phone'); ?></li>
+						<li><i class="fa fa-envelope-o "></i><a href="mailto:<?php the_field('mail'); ?>"><?php the_field('mail'); ?></a></li>
 					</ul>
 
 					<ul class="social-icons">
@@ -58,6 +71,8 @@
 					</ul>
 					<div class="clearfix"></div>
 				</div>
+
+				<?php endwhile; endif; ?>
 
 			</div>
 		</div>
@@ -86,7 +101,7 @@
 
 				<div class="col-md-6">
 					<!-- Sort by -->
-					<div class="sort-by">
+					<!-- <div class="sort-by">
 						<label>Sort by:</label>
 
 						<div class="sort-by-select">
@@ -98,7 +113,7 @@
 								<option>Oldest Properties</option>
 							</select>
 						</div>
-					</div>
+					</div> -->
 				</div>
 
 				<div class="col-md-6">
@@ -568,90 +583,46 @@
 
 					<div class="listing-carousel outer">
 						<!-- Item -->
+						<?php
+						$query = new WP_Query(array(
+							'post_type' => 'Liste', 
+							'meta_key'   => '_is_ns_featured_post',
+							'meta_value' => 'yes', 
+							'posts_per_page' => 3));; 
+						if($query->have_posts()) : while($query->have_posts()) : $query->the_post();
+						?>
 						<div class="item">
 							<div class="listing-item compact">
 
-								<a href="#" class="listing-img-container">
+								<a href="<?php the_permalink(); ?>" class="listing-img-container">
 
 									<div class="listing-badges">
-										<span class="featured">Featured</span>
-										<span>For Sale</span>
+										<span class="featured">Vedettes</span>
+										<span><?php the_field('status_du_bien'); ?></span>
 									</div>
 
 									<div class="listing-img-content">
-										<span class="listing-compact-title">Eagle Apartments <i>$275,000</i></span>
+										<span class="listing-compact-title"><?php the_title( ); ?> <i><?php the_field('prix'); ?></i></span>
 
 										<ul class="listing-hidden-content">
-											<li>Area <span>530 sq ft</span></li>
-											<li>Rooms <span>3</span></li>
-											<li>Beds <span>1</span></li>
-											<li>Baths <span>1</span></li>
+											<li><?php the_field('surface'); ?></li>
+											<li><?php the_field('chambre'); ?></li>
+											<li><?php the_field('salle_de_bain'); ?></li>
+											<li><?php the_field('choix'); ?></li>
 										</ul>
 									</div>
 
-									<img src="images/listing-01.jpg" alt="">
+									<?php $image = get_field('large_image_list');
+									if( !empty($image) ): ?>
+										<div><img src="<?php echo $image['url']; ?>" alt=""></div>
+									<?php endif; ?>
 								</a>
 
 							</div>
 						</div>
-						<!-- Item / End -->
-
-						<!-- Item -->
-						<div class="item">
-							<div class="listing-item compact">
-
-								<a href="#" class="listing-img-container">
-
-									<div class="listing-badges">
-										<span class="featured">Featured</span>
-										<span>For Sale</span>
-									</div>
-
-									<div class="listing-img-content">
-										<span class="listing-compact-title">Selway Apartments <i>$245,000</i></span>
-
-										<ul class="listing-hidden-content">
-											<li>Area <span>530 sq ft</span></li>
-											<li>Rooms <span>3</span></li>
-											<li>Beds <span>1</span></li>
-											<li>Baths <span>1</span></li>
-										</ul>
-									</div>
-
-									<img src="images/listing-02.jpg" alt="">
-								</a>
-
-							</div>
-						</div>
-						<!-- Item / End -->
-
-						<!-- Item -->
-						<div class="item">
-							<div class="listing-item compact">
-
-								<a href="#" class="listing-img-container">
-
-									<div class="listing-badges">
-										<span class="featured">Featured</span>
-										<span>For Sale</span>
-									</div>
-
-									<div class="listing-img-content">
-										<span class="listing-compact-title">Oak Tree Villas <i>$325,000</i></span>
-
-										<ul class="listing-hidden-content">
-											<li>Area <span>530 sq ft</span></li>
-											<li>Rooms <span>3</span></li>
-											<li>Beds <span>1</span></li>
-											<li>Baths <span>1</span></li>
-										</ul>
-									</div>
-
-									<img src="images/listing-03.jpg" alt="">
-								</a>
-
-							</div>
-						</div>
+						<?php endwhile; ?>
+						<?php else : ?>
+						<?php endif; ?>
 						<!-- Item / End -->
 					</div>
 

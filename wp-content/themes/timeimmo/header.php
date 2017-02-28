@@ -36,7 +36,7 @@
 					<a href="<?php bloginfo('url'); ?>"><img src="<?php bloginfo('template_directory'); ?>/images/logo.png" alt=""></a>
 
 					<!-- Logo for Sticky Header -->
-					<a href="<?php bloginfo('url'); ?>" class="sticky-logo"><img src="<?php bloginfo('template_directory'); ?>/images/logo2.png" alt=""></a>
+					<a href="<?php bloginfo('url'); ?>" class="sticky-logo"><img src="<?php bloginfo('template_directory'); ?>/images/logo_TimeImmo_Black.png" alt=""></a>
 				</div>
 				
 			</div>

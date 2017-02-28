@@ -1,245 +1,377 @@
 <?php get_header(); ?>
 
-
-<!-- Search
+<!-- Titlebar
 ================================================== -->
-<section class="search margin-bottom-50">
+<div class="parallax titlebar"
+	data-background="<?php bloginfo('template_directory'); ?>/images/listings-parallax.jpg"
+	data-color="#333333"
+	data-color-opacity="0.7"
+	data-img-width="800"
+	data-img-height="505">
+
+	<div id="titlebar">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+
+					<h2>Liste des biens</h2>
+					<span>Trouver l'annonce que vous cherchez</span>
+					
+					<!-- Breadcrumbs -->
+					<nav id="breadcrumbs">
+						<?php if ( function_exists('yoast_breadcrumb') ) 
+						{yoast_breadcrumb('<ul><li><span>','</span></li></ul>');} ?>
+					</nav>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<!-- Content
+================================================== -->
 <div class="container">
-	<div class="row">
-		<div class="col-md-12">
+	<div class="row sticky-wrapper">
 
-			<!-- Title -->
-			<h3 class="search-title">Search</h3>
+		<div class="col-md-8">
 
-			<!-- Form -->
-			<div class="main-search-box no-shadow">
+			<!-- Main Search Input -->
+			<div class="main-search-input margin-bottom-35">
+				<input type="text" class="ico-01" placeholder="Enter address e.g. street, city and state or zip" value=""/>
+				<?php get_search_form(); ?>
+				<button class="button">Search</button>
+			</div>
 
+			<!-- Sorting / Layout Switcher -->
+			<div class="row margin-bottom-15">
 
-				<!-- Row With Forms -->
-				<div class="row with-forms">
+				<div class="col-md-6">
+					<!-- Sort by -->
+					<!-- <div class="sort-by">
+						<label>Sort by:</label>
 
-					<!-- Status -->
-					<div class="col-md-3">
-						<select data-placeholder="Any Status" class="chosen-select-no-single" >
-							<option>Any Status</option>	
-							<option>For Sale</option>
-							<option>For Rent</option>
-						</select>
-					</div>
-
-					<!-- Property Type -->
-					<div class="col-md-3">
-						<select data-placeholder="Any Type" class="chosen-select-no-single" >
-							<option>Any Type</option>	
-							<option>Apartments</option>
-							<option>Houses</option>
-							<option>Commercial</option>
-							<option>Garages</option>
-							<option>Lots</option>
-						</select>
-					</div>
-
-					<!-- Main Search Input -->
-					<div class="col-md-6">
-						<div class="main-search-input">
-							<input type="text" placeholder="Enter address e.g. street, city or state" value=""/>
-							<button class="button">Search</button>
+						<div class="sort-by-select">
+							<select data-placeholder="Default order" class="chosen-select-no-single" >
+								<option>Default Order</option>	
+								<option>Price Low to High</option>
+								<option>Price High to Low</option>
+								<option>Newest Properties</option>
+								<option>Oldest Properties</option>
+							</select>
 						</div>
-					</div>
-
+					</div> -->
 				</div>
-				<!-- Row With Forms / End -->
 
-
-				<!-- Row With Forms -->
-				<div class="row with-forms">
-
-					<!-- Min Price -->
-					<div class="col-md-3">
-						
-						<!-- Select Input -->
-						<div class="select-input disabled-first-option">
-							<input type="text" placeholder="Min Area" data-unit="Sq Ft">
-							<select>	
-								<option>Min Area</option>
-								<option>300</option>
-								<option>400</option>
-								<option>500</option>
-								<option>700</option>
-								<option>800</option>
-								<option>1000</option>
-								<option>1500</option>
-							</select>
-						</div>
-						<!-- Select Input / End -->
-
+				<div class="col-md-6">
+					<!-- Layout Switcher -->
+					<div class="layout-switcher">
+						<a href="#" class="list"><i class="fa fa-th-list"></i></a>
+						<a href="#" class="grid"><i class="fa fa-th-large"></i></a>
 					</div>
+				</div>
+			</div>
 
-					<!-- Max Price -->
-					<div class="col-md-3">
-						
-						<!-- Select Input -->
-						<div class="select-input disabled-first-option">
-							<input type="text" placeholder="Max Area" data-unit="Sq Ft">
-							<select>	
-								<option>Max Area</option>
-								<option>300</option>
-								<option>400</option>
-								<option>500</option>
-								<option>700</option>
-								<option>800</option>
-								<option>1000</option>
-								<option>1500</option>
-							</select>
+			
+			<!-- Listings -->
+			<div class="listings-container list-layout">
+
+				<!-- Listing Item -->
+
+				<?php
+				$query = new WP_Query(array('post_type' => 'Liste', 'posts_per_page' => 5));; 
+				if($query->have_posts()) : while($query->have_posts()) : $query->the_post();
+				?>
+				<div class="listing-item">
+
+					<a href="<?php the_permalink(); ?>" class="listing-img-container">
+
+						<div class="listing-badges">
+							<span>
+								<?php the_field('status_du_bien'); ?>
+							</span>
 						</div>
-						<!-- Select Input / End -->
 
-					</div>
-
-
-					<!-- Min Price -->
-					<div class="col-md-3">
-						
-						<!-- Select Input -->
-						<div class="select-input disabled-first-option">
-							<input type="text" placeholder="Min Price" data-unit="USD">
-							<select>		
-								<option>Min Price</option>
-								<option>1 000</option>
-								<option>2 000</option>	
-								<option>3 000</option>	
-								<option>4 000</option>	
-								<option>5 000</option>	
-								<option>10 000</option>	
-								<option>15 000</option>	
-								<option>20 000</option>	
-								<option>30 000</option>
-								<option>40 000</option>
-								<option>50 000</option>
-								<option>60 000</option>
-								<option>70 000</option>
-								<option>80 000</option>
-								<option>90 000</option>
-								<option>100 000</option>
-								<option>110 000</option>
-								<option>120 000</option>
-								<option>130 000</option>
-								<option>140 000</option>
-								<option>150 000</option>
-							</select>
+						<div class="listing-img-content">
+							<span class="listing-price"><?php the_field('prix'); ?></span>
+							<!-- <span class="like-icon tooltip"></span> -->
 						</div>
-						<!-- Select Input / End -->
+							
+							<div class="listing-carousel">
+								<div>
+									<?php $image = get_field('large_image_list');
+									if( !empty($image) ): ?>
+										<div><img src="<?php echo $image['url']; ?>" alt=""></div>
+									<?php endif; ?>
+								</div>
+								<div>
+									<?php $image = get_field('grande_image_2');
+									if( !empty($image) ): ?>
+										<div><img src="<?php echo $image['url']; ?>" alt=""></div>
+									<?php endif; ?>
+								</div>
+								<div>
+									<?php $image = get_field('grande_image_3');
+									if( !empty($image) ): ?>
+										<div><img src="<?php echo $image['url']; ?>" alt=""></div>
+									<?php endif; ?>
+								</div>
+							</div>
+					</a>
+					
+					<div class="listing-content">
 
-					</div>
+						<div class="listing-title">
+							<h4><a href="<?php the_permalink(); ?>"><?php the_title( ); ?></a></h4>
+							<a href="https://maps.google.com/maps?q=221B+Baker+Street,+London,+United+Kingdom&hl=en&t=v&hnear=221B+Baker+St,+London+NW1+6XE,+United+Kingdom" class="listing-address popup-gmaps">
+								<i class="fa fa-map-marker"></i>
+								<?php the_field('adresse_du_bien'); ?>
+							</a>
 
-
-					<!-- Max Price -->
-					<div class="col-md-3">
-						
-						<!-- Select Input -->
-						<div class="select-input disabled-first-option">
-							<input type="text" placeholder="Max Price" data-unit="USD">
-							<select>		
-								<option>Max Price</option>
-								<option>1 000</option>
-								<option>2 000</option>	
-								<option>3 000</option>	
-								<option>4 000</option>	
-								<option>5 000</option>	
-								<option>10 000</option>	
-								<option>15 000</option>	
-								<option>20 000</option>	
-								<option>30 000</option>
-								<option>40 000</option>
-								<option>50 000</option>
-								<option>60 000</option>
-								<option>70 000</option>
-								<option>80 000</option>
-								<option>90 000</option>
-								<option>100 000</option>
-								<option>110 000</option>
-								<option>120 000</option>
-								<option>130 000</option>
-								<option>140 000</option>
-								<option>150 000</option>
-							</select>
+							<a href="<?php the_permalink(); ?>" class="details button border">Details</a>
 						</div>
-						<!-- Select Input / End -->
+
+						<ul class="listing-details">
+							<li><?php the_field('surface'); ?></li>
+							<li><?php the_field('chambre'); ?></li>
+							<li><?php the_field('salle_de_bain'); ?></li>
+							<li><?php the_field('choix'); ?></li>
+						</ul>
+
+						<div class="listing-footer">
+							<a href="<?php echo get_page_link(11); ?>"><i class="fa fa-user"></i> <?php the_field('auteur'); ?></a>
+							<span><i class="fa fa-calendar-o"></i> <?php the_time('d-m-y'); ?></span>
+						</div>
 
 					</div>
 
 				</div>
-				<!-- Row With Forms / End -->
+
+				<?php endwhile; ?>
+				<?php else : ?>
+				<?php endif; ?>
+				<!-- Listing Item / End -->
+
+				<!-- Listing Item / End -->
+
+			</div>
+			<!-- Listings Container / End -->
+
+			
+			<!-- Pagination -->
+			<div class="pagination-container margin-top-20">
+				<nav class="pagination">
+					<ul>
+						<li><a href="#" class="current-page">1</a></li>
+						<li><a href="#">2</a></li>
+						<li><a href="#">3</a></li>
+						<li class="blank">...</li>
+						<li><a href="#">22</a></li>
+					</ul>
+				</nav>
+
+				<nav class="pagination-next-prev">
+					<ul>
+						<li><a href="#" class="prev">Previous</a></li>
+						<li><a href="#" class="next">Next</a></li>
+					</ul>
+				</nav>
+			</div>
+			
+			<!-- Pagination / End -->
+				
+				
+		</div>
 
 
-				<!-- More Search Options -->
-				<a href="#" class="more-search-options-trigger margin-top-10" data-open-title="More Options" data-close-title="Less Options"></a>
+		<!-- Sidebar
+		================================================== -->
+		<div class="col-md-4">
+			<div class="sidebar sticky right">
 
-				<div class="more-search-options relative">
-					<div class="more-search-options-container">
+				<!-- Widget -->
+				<div class="widget margin-bottom-40">
+					<h3 class="margin-top-0 margin-bottom-35">Find New Home</h3>
 
-						<!-- Row With Forms -->
-						<div class="row with-forms">
-
-							<!-- Age of Home -->
-							<div class="col-md-3">
-								<select data-placeholder="Age of Home" class="chosen-select-no-single" >
-									<option label="blank"></option>	
-									<option>Age of Home (Any)</option>	
-									<option>0 - 1 Years</option>
-									<option>0 - 5 Years</option>
-									<option>0 - 10 Years</option>
-									<option>0 - 20 Years</option>
-									<option>0 - 50 Years</option>
-									<option>50 + Years</option>
-								</select>
-							</div>
-
-							<!-- Rooms Area -->
-							<div class="col-md-3">
-								<select data-placeholder="Rooms" class="chosen-select-no-single" >
-									<option label="blank"></option>	
-									<option>Rooms (Any)</option>	
-									<option>1</option>
-									<option>2</option>
-									<option>3</option>
-									<option>4</option>
-									<option>5</option>
-								</select>
-							</div>
-
-							<!-- Min Area -->
-							<div class="col-md-3">
-								<select data-placeholder="Beds" class="chosen-select-no-single" >
-									<option label="blank"></option>	
-									<option>Beds (Any)</option>	
-									<option>1</option>
-									<option>2</option>
-									<option>3</option>
-									<option>4</option>
-									<option>5</option>
-								</select>
-							</div>
-
-							<!-- Max Area -->
-							<div class="col-md-3">
-								<select data-placeholder="Baths" class="chosen-select-no-single" >
-									<option label="blank"></option>	
-									<option>Baths (Any)</option>	
-									<option>1</option>
-									<option>2</option>
-									<option>3</option>
-									<option>4</option>
-									<option>5</option>
-								</select>
-							</div>
-
+					<!-- Row -->
+					<div class="row with-forms">
+						<!-- Status -->
+						<div class="col-md-12">
+							<select data-placeholder="Any Status" class="chosen-select-no-single" >
+								<option>Any Status</option>	
+								<option>For Sale</option>
+								<option>For Rent</option>
+							</select>
 						</div>
-						<!-- Row With Forms / End -->
+					</div>
+					<!-- Row / End -->
 
+
+					<!-- Row -->
+					<div class="row with-forms">
+						<!-- Type -->
+						<div class="col-md-12">
+							<select data-placeholder="Any Type" class="chosen-select-no-single" >
+								<option>Any Type</option>	
+								<option>Apartments</option>
+								<option>Houses</option>
+								<option>Commercial</option>
+								<option>Garages</option>
+								<option>Lots</option>
+							</select>
+						</div>
+					</div>
+					<!-- Row / End -->
+
+
+					<!-- Row -->
+					<div class="row with-forms">
+						<!-- States -->
+						<div class="col-md-12">
+							<select data-placeholder="All States" class="chosen-select" >
+								<option>All States</option>	
+								<option>Alabama</option>
+								<option>Alaska</option>
+								<option>Arizona</option>
+								<option>Arkansas</option>
+								<option>California</option>
+								<option>Colorado</option>
+								<option>Connecticut</option>
+								<option>Delaware</option>
+								<option>Florida</option>
+								<option>Georgia</option>
+								<option>Hawaii</option>
+								<option>Idaho</option>
+								<option>Illinois</option>
+								<option>Indiana</option>
+								<option>Iowa</option>
+								<option>Kansas</option>
+								<option>Kentucky</option>
+								<option>Louisiana</option>
+								<option>Maine</option>
+								<option>Maryland</option>
+								<option>Massachusetts</option>
+								<option>Michigan</option>
+								<option>Minnesota</option>
+								<option>Mississippi</option>
+								<option>Missouri</option>
+								<option>Montana</option>
+								<option>Nebraska</option>
+								<option>Nevada</option>
+								<option>New Hampshire</option>
+								<option>New Jersey</option>
+								<option>New Mexico</option>
+								<option>New York</option>
+								<option>North Carolina</option>
+								<option>North Dakota</option>
+								<option>Ohio</option>
+								<option>Oklahoma</option>
+								<option>Oregon</option>
+								<option>Pennsylvania</option>
+								<option>Rhode Island</option>
+								<option>South Carolina</option>
+								<option>South Dakota</option>
+								<option>Tennessee</option>
+								<option>Texas</option>
+								<option>Utah</option>
+								<option>Vermont</option>
+								<option>Virginia</option>
+								<option>Washington</option>
+								<option>West Virginia</option>
+								<option>Wisconsin</option>
+								<option>Wyoming</option>
+							</select>
+						</div>
+					</div>
+					<!-- Row / End -->
+
+
+					<!-- Row -->
+					<div class="row with-forms">
+						<!-- Cities -->
+						<div class="col-md-12">
+							<select data-placeholder="All Cities" class="chosen-select" >
+								<option>All Cities</option>
+								<option>New York</option>
+								<option>Los Angeles</option>
+								<option>Chicago</option>
+								<option>Brooklyn</option>
+								<option>Queens</option>
+								<option>Houston</option>
+								<option>Manhattan</option>
+								<option>Philadelphia</option>
+								<option>Phoenix</option>
+								<option>San Antonio</option>
+								<option>Bronx</option>
+								<option>San Diego</option>
+								<option>Dallas</option>
+								<option>San Jose</option>
+							</select>
+						</div>
+					</div>
+					<!-- Row / End -->
+
+
+					<!-- Row -->
+					<div class="row with-forms">
+
+						<!-- Min Area -->
+						<div class="col-md-6">
+							<select data-placeholder="Beds" class="chosen-select-no-single" >
+								<option label="blank"></option>	
+								<option>Beds (Any)</option>	
+								<option>1</option>
+								<option>2</option>
+								<option>3</option>
+								<option>4</option>
+								<option>5</option>
+							</select>
+						</div>
+
+						<!-- Max Area -->
+						<div class="col-md-6">
+							<select data-placeholder="Baths" class="chosen-select-no-single" >
+								<option label="blank"></option>	
+								<option>Baths (Any)</option>	
+								<option>1</option>
+								<option>2</option>
+								<option>3</option>
+								<option>4</option>
+								<option>5</option>
+							</select>
+						</div>
+
+					</div>
+					<!-- Row / End -->
+
+					<br>
+
+					<!-- Area Range -->
+					<div class="range-slider">
+						<label>Area Range</label>
+						<div id="area-range" data-min="0" data-max="1500" data-unit="sq ft"></div>
+						<div class="clearfix"></div>
+					</div>
+
+					<br>
+					
+					<!-- Price Range -->
+					<div class="range-slider">
+						<label>Price Range</label>
+						<div id="price-range" data-min="0" data-max="400000" data-unit="$"></div>
+						<div class="clearfix"></div>
+					</div>
+
+
+
+					<!-- More Search Options -->
+					<a href="#" class="more-search-options-trigger margin-bottom-10 margin-top-30" data-open-title="Additional Features" data-close-title="Additional Features"></a>
+
+					<div class="more-search-options relative">
 
 						<!-- Checkboxes -->
-						<div class="checkboxes in-row">
+						<div class="checkboxes one-in-row margin-bottom-10">
 					
 							<input id="check-2" type="checkbox" name="check">
 							<label for="check-2">Air Conditioning</label>
@@ -267,149 +399,18 @@
 						<!-- Checkboxes / End -->
 
 					</div>
+					<!-- More Search Options / End -->
+
+					<button class="button fullwidth margin-top-30">Search</button>
+
 
 				</div>
-				<!-- More Search Options / End -->
-
+				<!-- Widget / End -->
 
 			</div>
-			<!-- Box / End -->
 		</div>
+		<!-- Sidebar / End -->
 	</div>
 </div>
-</section>
-
-
-
-<!-- Content
-================================================== -->
-<div class="container">
-	<div class="row fullwidth-layout">
-
-		<div class="col-md-12">
-
-			<!-- Sorting / Layout Switcher -->
-			<div class="row margin-bottom-15">
-
-				<div class="col-md-6">
-					<!-- Sort by -->
-					<div class="sort-by">
-						<label>Sort by:</label>
-
-						<div class="sort-by-select">
-							<select data-placeholder="Default order" class="chosen-select-no-single" >
-								<option>Default Order</option>	
-								<option>Price Low to High</option>
-								<option>Price High to Low</option>
-								<option>Newest Properties</option>
-								<option>Oldest Properties</option>
-							</select>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-md-6">
-					<!-- Layout Switcher -->
-					<div class="layout-switcher">
-						<a href="#" class="list"><i class="fa fa-th-list"></i></a>
-						<a href="#" class="grid"><i class="fa fa-th-large"></i></a>
-						<a href="#" class="grid-three"><i class="fa fa-th"></i></a>
-					</div>
-				</div>
-			</div>
-
-			
-			<!-- Listings -->
-			<div class="listings-container list-layout">
-
-				<!-- Listing Item -->
-				<?php
-				$query = new WP_Query(array('post_type' => 'Liste', 'posts_per_page' => 6));; 
-				if($query->have_posts()) : while($query->have_posts()) : $query->the_post();
-				?>
-
-				<div class="listing-item">
-
-					<a href="<?php the_permalink(); ?>" class="listing-img-container">
-
-						<div class="listing-badges">
-							<span class="featured">Featured</span>
-							<span>For Sale</span>
-						</div>
-
-						<div class="listing-img-content">
-							<span class="listing-price">$275,000 <i>$520 / sq ft</i></span>
-							<span class="like-icon tooltip"></span>
-						</div>
-
-						<div class="listing-carousel">
-							<div><img src="images/listing-01.jpg" alt=""></div>
-							<div><img src="images/listing-01b.jpg" alt=""></div>
-							<div><img src="images/listing-01c.jpg" alt=""></div>
-						</div>
-					</a>
-					
-					<div class="listing-content">
-
-						<div class="listing-title">
-							<h4><a href="<?php the_permalink(); ?>"><?php the_title() ?></a></h4>
-							<a href="https://maps.google.com/maps?q=221B+Baker+Street,+London,+United+Kingdom&hl=en&t=v&hnear=221B+Baker+St,+London+NW1+6XE,+United+Kingdom" class="listing-address popup-gmaps">
-								<i class="fa fa-map-marker"></i>
-								9364 School St. Lynchburg, NY
-							</a>
-
-							<a href="<?php the_permalink(); ?>" class="details button border">Details</a>
-						</div>
-
-						<ul class="listing-details">
-							<li>530 sq ft</li>
-							<li>1 Bedroom</li>
-							<li>3 Rooms</li>
-							<li>1 Bathroom</li>
-						</ul>
-
-						<div class="listing-footer">
-							<a href="#"><i class="fa fa-user"></i> David Strozier</a>
-							<span><i class="fa fa-calendar-o"></i> 1 day ago</span>
-						</div>
-
-					</div>
-
-				</div>
-
-				<?php endwhile; endif; ?>
-				<!-- Listing Item / End -->
-				
-
-			</div>
-			<!-- Listings Container / End -->
-
-			<div class="clearfix"></div>
-			<!-- Pagination -->
-			<div class="pagination-container margin-top-20">
-				<nav class="pagination">
-					<ul>
-						<li><a href="#" class="current-page">1</a></li>
-						<li><a href="#">2</a></li>
-						<li><a href="#">3</a></li>
-						<li class="blank">...</li>
-						<li><a href="#">22</a></li>
-					</ul>
-				</nav>
-
-				<nav class="pagination-next-prev">
-					<ul>
-						<li><a href="#" class="prev">Previous</a></li>
-						<li><a href="#" class="next">Next</a></li>
-					</ul>
-				</nav>
-			</div>
-			<!-- Pagination / End -->
-
-		</div>
-
-	</div>
-</div>
-
 
 <?php get_footer(); ?>

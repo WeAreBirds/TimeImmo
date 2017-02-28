@@ -12,7 +12,7 @@
 				<?php while (have_posts()) : the_post(); ?>
 				<a href="listings-list-with-sidebar.html" class="back-to-listings"></a>
 				<div class="property-title">
-					<h2><?php the_title() ?><span class="property-badge">For Sale</span></h2>
+					<h2><?php the_title() ?><span class="property-badge"><?php the_field('status_du_bien'); ?></span></h2>
 					<span>
 						<a href="#location" class="listing-address">
 							<i class="fa fa-map-marker"></i>
@@ -22,8 +22,8 @@
 				</div>
 
 				<div class="property-pricing">
-					<div>$420,000</div>
-					<div class="sub-price">$770 / sq ft</div>
+					<div><?php the_field('prix'); ?></div>
+					<!-- <div class="sub-price">$770 / sq ft</div> -->
 				</div>
 
 				<?php endwhile; ?>
@@ -47,19 +47,25 @@
 
 				<!-- Agent Widget -->
 				<div class="agent-widget">
+					
+				<?php $loop = new WP_Query( array( 'post_type' => 'agent', 'posts_per_page' => '1' ) ); ?>
+				<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
 					<div class="agent-title">
-						<div class="agent-photo"><img src="images/agent-avatar.jpg" alt="" /></div>
+						<div class="agent-photo">
+							<?php $image = get_field('agent_image');
+							if( !empty($image) ): ?>
+								<img src="<?php echo $image['url']; ?>" alt="">
+							<?php endif; ?>
+						</div>
 						<div class="agent-details">
-							<h4><a href="#">Jennie Wilson</a></h4>
-							<span><i class="sl sl-icon-call-in"></i>(123) 123-456</span>
+							<h4><a href="<?php echo get_page_link(11); ?>"><?php the_title(); ?></a></h4>
+							<span><i class="sl sl-icon-call-in"></i><?php the_field('phone'); ?></span>
 						</div>
 						<div class="clearfix"></div>
 					</div>
-
-					<input type="text" placeholder="Your Email" pattern="^[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})$">
-					<input type="text" placeholder="Your Phone">
-					<textarea>I'm interested in this property [ID 123456] and I'd like to know more details.</textarea>
-					<button class="button fullwidth margin-top-5">Send Message</button>
+					<?php echo do_shortcode('[contact-form-7 id="96" title="formulaire sur image dans les annonces immo"]'); ?>
+					
+				<?php endwhile; wp_reset_query(); ?>
 				</div>
 				<!-- Agent Widget / End -->
 
@@ -141,10 +147,10 @@
 
 				<!-- Main Features -->
 				<ul class="property-main-features">
-					<li>Area <span>1450 sq ft</span></li>
-					<li>Rooms <span>4</span></li>
-					<li>Bedrooms <span>2</span></li>
-					<li>Bathrooms <span>1</span></li>
+					<li>Surface <span><?php the_field('surface'); ?></span></li>
+					<li>chambre(s) <span><?php the_field('chambre'); ?></span></li>
+					<li>Salle de bain(s) <span><?php the_field('salle_de_bain'); ?></span></li>
+					<li>divers <span><?php the_field('choix'); ?></span></li>
 				</ul>
 
 
@@ -157,35 +163,21 @@
 				</div>
 
 				<!-- Details -->
-				<h3 class="desc-headline">Details</h3>
+				<h3 class="desc-headline">Détails du bien</h3>
 				<ul class="property-features margin-top-0">
-					<li>Building Age: <span>2 Years</span></li>
-					<li>Parking: <span>Attached Garage</span></li>
-					<li>Cooling: <span>Central Cooling</span></li>
-					<li>Heating: <span>Forced Air, Gas</span></li>
-					<li>Sewer: <span>Public/City</span></li>
-					<li>Water: <span>City</span></li>
-					<li>Exercise Room: <span>Yes</span></li>
-					<li>Storage Room: <span>Yes</span></li>
+					<?php the_field('detail'); ?>
 				</ul>
 
 
 				<!-- Features -->
-				<h3 class="desc-headline">Features</h3>
+				<h3 class="desc-headline">Caractéristiques</h3>
 				<ul class="property-features checkboxes margin-top-0">
-					<li>Air Conditioning</li>
-					<li>Swimming Pool</li>
-					<li>Central Heating</li>
-					<li>Laundry Room</li>
-					<li>Gym</li>
-					<li>Alarm</li>
-					<li>Window Covering</li>
-					<li>Internet</li>
+					<?php the_field('features'); ?>
 				</ul>
 
 
 				<!-- Location -->
-				<h3 class="desc-headline no-border" id="location">Location</h3>
+				<h3 class="desc-headline no-border" id="location">Localisation</h3>
 				<div id="propertyMap-container">
 					<div id="propertyMap" data-latitude="40.7427837" data-longitude="-73.11445617675781"></div>
 					<a href="#" id="streetView">Street View</a>
@@ -363,102 +355,60 @@
 				<!-- Widget -->
 				<div class="widget margin-bottom-35">
 					<button class="widget-button"><i class="sl sl-icon-printer"></i> Print</button>
-					<button class="widget-button save" data-save-title="Save" data-saved-title="Saved"><span class="like-icon"></span></button>
+					<!-- <button class="widget-button save" data-save-title="Save" data-saved-title="Saved"><span class="like-icon"></span></button> -->
 				</div>
 				<!-- Widget / End -->
 
 
 				<!-- Widget -->
 				<div class="widget">
-					<h3 class="margin-bottom-35">Featured Properties</h3>
+					<h3 class="margin-bottom-35">Dernières annonces</h3>
 
 					<div class="listing-carousel outer">
+
 						<!-- Item -->
+						<?php
+						$query = new WP_Query(array(
+							'post_type' => 'Liste', 
+							'meta_key'   => '_is_ns_featured_post',
+							'meta_value' => 'yes', 
+							'posts_per_page' => 3));; 
+						if($query->have_posts()) : while($query->have_posts()) : $query->the_post();
+						?>
 						<div class="item">
 							<div class="listing-item compact">
 
-								<a href="#" class="listing-img-container">
+								<a href="<?php the_permalink(); ?>" class="listing-img-container">
 
 									<div class="listing-badges">
-										<span class="featured">Featured</span>
-										<span>For Sale</span>
+										<span class="featured">Vedettes</span>
+										<span><?php the_field('status_du_bien'); ?></span>
 									</div>
 
 									<div class="listing-img-content">
-										<span class="listing-compact-title">Eagle Apartments <i>$275,000</i></span>
+										<span class="listing-compact-title"><?php the_title( ); ?> <i><?php the_field('prix'); ?></i></span>
 
 										<ul class="listing-hidden-content">
-											<li>Area <span>530 sq ft</span></li>
-											<li>Rooms <span>3</span></li>
-											<li>Beds <span>1</span></li>
-											<li>Baths <span>1</span></li>
+											<li><?php the_field('surface'); ?></li>
+											<li><?php the_field('chambre'); ?></li>
+											<li><?php the_field('salle_de_bain'); ?></li>
+											<li><?php the_field('choix'); ?></li>
 										</ul>
 									</div>
 
-									<img src="images/listing-01.jpg" alt="">
+									<?php $image = get_field('large_image_list');
+									if( !empty($image) ): ?>
+										<div><img src="<?php echo $image['url']; ?>" alt=""></div>
+									<?php endif; ?>
 								</a>
 
 							</div>
 						</div>
+						<?php endwhile; ?>
+						<?php else : ?>
+						<?php endif; ?>
 						<!-- Item / End -->
 
-						<!-- Item -->
-						<div class="item">
-							<div class="listing-item compact">
-
-								<a href="#" class="listing-img-container">
-
-									<div class="listing-badges">
-										<span class="featured">Featured</span>
-										<span>For Sale</span>
-									</div>
-
-									<div class="listing-img-content">
-										<span class="listing-compact-title">Selway Apartments <i>$245,000</i></span>
-
-										<ul class="listing-hidden-content">
-											<li>Area <span>530 sq ft</span></li>
-											<li>Rooms <span>3</span></li>
-											<li>Beds <span>1</span></li>
-											<li>Baths <span>1</span></li>
-										</ul>
-									</div>
-
-									<img src="images/listing-02.jpg" alt="">
-								</a>
-
-							</div>
-						</div>
-						<!-- Item / End -->
-
-						<!-- Item -->
-						<div class="item">
-							<div class="listing-item compact">
-
-								<a href="#" class="listing-img-container">
-
-									<div class="listing-badges">
-										<span class="featured">Featured</span>
-										<span>For Sale</span>
-									</div>
-
-									<div class="listing-img-content">
-										<span class="listing-compact-title">Oak Tree Villas <i>$325,000</i></span>
-
-										<ul class="listing-hidden-content">
-											<li>Area <span>530 sq ft</span></li>
-											<li>Rooms <span>3</span></li>
-											<li>Beds <span>1</span></li>
-											<li>Baths <span>1</span></li>
-										</ul>
-									</div>
-
-									<img src="images/listing-03.jpg" alt="">
-								</a>
-
-							</div>
-						</div>
-						<!-- Item / End -->
 					</div>
 
 				</div>

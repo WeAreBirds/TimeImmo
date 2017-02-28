@@ -7,15 +7,13 @@
 		<div class="row">
 			<div class="col-md-12">
 
-				<h2>Blog</h2>
-				<span>Keep up to date with the latest news</span>
+				<h2>Actualités</h2>
+				<span>Restez au courant des actualités sur Time-Immo</span>
 				
 				<!-- Breadcrumbs -->
 				<nav id="breadcrumbs">
-					<ul>
-						<li><a href="#">Home</a></li>
-						<li>Blog</li>
-					</ul>
+					<?php if ( function_exists('yoast_breadcrumb') ) 
+					{yoast_breadcrumb('<ul><li><span>','</span></li></ul>');} ?>
 				</nav>
 
 			</div>
@@ -44,10 +42,7 @@
 			<div class="blog-post single-post">
 				
 				<!-- Img -->
-				<?php $image = get_field('blog_image');
-				if( !empty($image) ): ?>
-					<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-				<?php endif; ?>
+				<?php the_post_thumbnail( 'full', array( 'class' => 'post-img' ) ); ?>
 
 				
 				<!-- Content -->
@@ -55,7 +50,7 @@
 					<h3><?php the_title() ?></h3>
 
 					<ul class="post-meta">
-						<li><?php the_date() ?></li>
+						<li><?php the_date('d-m') ?></li>
 						<li><a href="#">5 Comments</a></li>
 					</ul>
 
@@ -270,22 +265,22 @@
 		<div class="sidebar right">
 
 			<!-- Widget -->
-			<div class="widget">
+			<!-- <div class="widget">
 				<h3 class="margin-top-0 margin-bottom-25">Search Blog</h3>
 				<div class="search-blog-input">
 					<div class="input"><input class="search-field" type="text" placeholder="Type and hit enter" value=""/></div>
 				</div>
 				<div class="clearfix"></div>
-			</div>
+			</div> -->
 			<!-- Widget / End -->
 
 
 			<!-- Widget -->
 			<div class="widget">
-				<h3>Got any questions?</h3>
+				<h3>Vous avez des questions?</h3>
 				<div class="info-box margin-bottom-10">
-					<p>If you are having any questions, please feel free to ask.</p>
-					<a href="contact.html" class="button fullwidth margin-top-20"><i class="fa fa-envelope-o"></i> Drop Us a Line</a>
+					<p>N'hésitez pas à nous contactez et nous vous répondrons au plus vite</p>
+					<a href="contact.html" class="button fullwidth margin-top-20"><i class="fa fa-envelope-o"></i> Ecrivez-nous</a>
 				</div>
 			</div>
 			<!-- Widget / End -->
@@ -294,53 +289,37 @@
 			<!-- Widget -->
 			<div class="widget">
 
-				<h3>Popular Posts</h3>
+				<h3>Pages recommandées</h3>
 				<ul class="widget-tabs">
 
-					<!-- Post #1 -->
+					<!-- Post popular -->
+					<?php
+					$query = new WP_Query(array(
+						'post_type' => 'Blog', 
+						'meta_key'   => '_is_ns_featured_post',
+						'meta_value' => 'yes', 
+						'posts_per_page' => 3));; 
+					if($query->have_posts()) : while($query->have_posts()) : $query->the_post();
+					?>
 					<li>
 						<div class="widget-content">
 								<div class="widget-thumb">
-								<a href="blog-full-width-single-post.html"><img src="images/blog-widget-03.jpg" alt=""></a>
+								<a href="<?php the_permalink(); ?>" class="">
+									<?php the_post_thumbnail( '', array() ); ?>
+								</a>
 							</div>
 							
 							<div class="widget-text">
-								<h5><a href="blog-full-width-single-post.html">What to Do a Year Before Buying Apartment </a></h5>
-								<span>October 26, 2016</span>
+								<h5><a href="<?php the_permalink(); ?>"><?php the_title() ?> </a></h5>
+								<span><?php the_time('d-m-y'); ?></span>
 							</div>
 							<div class="clearfix"></div>
 						</div>
 					</li>
-					
-					<!-- Post #2 -->
-					<li>
-						<div class="widget-content">
-							<div class="widget-thumb">
-								<a href="blog-full-width-single-post.html"><img src="images/blog-widget-02.jpg" alt=""></a>
-							</div>
-							
-							<div class="widget-text">
-								<h5><a href="blog-full-width-single-post.html">Bedroom Colors You'll Never Regret</a></h5>
-								<span>November 9, 2016</span>
-							</div>
-							<div class="clearfix"></div>
-						</div>
-					</li>
-					
-					<!-- Post #3 -->
-					<li>
-						<div class="widget-content">
-							<div class="widget-thumb">
-								<a href="blog-full-width-single-post.html"><img src="images/blog-widget-01.jpg" alt=""></a>
-							</div>
-							
-							<div class="widget-text">
-								<h5><a href="blog-full-width-single-post.html">8 Tips to Help You Finding New Home</a></h5>
-								<span>November 12, 2016</span>
-							</div>
-							<div class="clearfix"></div>
-						</div>
-					</li>
+					<?php endwhile; ?>
+					<?php else : ?>
+					<?php endif; ?>
+					<!-- Fin Post popular -->
 
 				</ul>
 

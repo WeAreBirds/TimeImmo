@@ -4,13 +4,13 @@
 
 #backtotop a,
 #top-bar {
-    background-color: #EF672F
+    background-color: #EF672F;
 }
 
 .custom-zoom-in:hover:before,
 .custom-zoom-out:hover:before,
 .infoBox-close:hover {
-    -webkit-text-stroke: 1px #EF672F
+    -webkit-text-stroke: 1px #EF672F;
 }
 
 .list-4 li:before,
