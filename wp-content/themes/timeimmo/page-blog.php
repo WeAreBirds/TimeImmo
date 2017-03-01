@@ -8,8 +8,8 @@
 		<div class="row">
 			<div class="col-md-12">
 
-				<h2>Actualités</h2>
-				<span>Restez au courant des actualités sur Time-Immo</span>
+				<h2>Nos dossiers</h2>
+				<span>Nous avons enquêté pour vous !</span>
 				
 				<!-- Breadcrumbs -->
 				<nav id="breadcrumbs">
@@ -86,7 +86,8 @@
 			<div class="clearfix"></div>
 			<?php endwhile; endif; ?>
 		</div>
-<?php theme_pagination(); ?>
+		<?php theme_pagination(); ?>
+		
 	<!-- Widgets -->
 	<div class="col-md-4">
 		<div class="sidebar right">

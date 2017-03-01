@@ -14,8 +14,8 @@
 			<div class="row">
 				<div class="col-md-12">
 
-					<h2>Liste des biens</h2>
-					<span>Trouver l'annonce que vous cherchez</span>
+					<h2>Nos annonces</h2>
+					<span>Trouvez la maison de vos rêves !</span>
 					
 					<!-- Breadcrumbs -->
 					<nav id="breadcrumbs">

@@ -12,28 +12,44 @@
 				<div class="search-container">
 
 					<!-- Form -->
-					<h2>Trouvez la maison de vos rêves</h2>
+					<h2>Ensemble prenons le temps de réaliser vos projets</h2>
+
+					<!-- Announce -->
+					<div class="announce">
+						Vous recherchez :<br/><br/>
+					</div>
 
 					<!-- Row With Forms -->
 					<div class="row with-forms">
 						
 						<!-- Property Type -->
-						<div class="col-md-3">
+						<!-- <div class="col-md-3">
 							<?php echo do_shortcode('[wpdreams_ajaxsearchpro_results id=2 element="div"]'); ?>
+						</div> -->
+
+						<!-- Type de bien -->
+						<div class="col-md-3">
+							<select data-placeholder="Type de bien" class="chosen-select-no-single" >	
+								<option>Maison</option>
+								<option>Appartement</option>
+								<option>Studio</option>
+								<option>Bureau</option>
+								<option>Garage</option>
+							</select>
 						</div>
 
 						<!-- Status -->
 						<div class="col-md-3">
-							<select data-placeholder="Any Status" class="chosen-select-no-single" >	
-								<option>For Sale</option>
-								<option>For Rent</option>
+							<select data-placeholder="Status" class="chosen-select-no-single" >	
+								<option>À vendre</option>
+								<option>À louer</option>
 							</select>
 						</div>
 
 						<!-- Main Search Input -->
 						<div class="col-md-6">
 							<div class="main-search-input">
-								<input type="text" placeholder="Enter address e.g. street, city or state" value=""/>
+								<input type="text" placeholder="À... (ville ou code postal)" value=""/>
 								<button class="button"><i class="fa fa-search"></i></button>
 							</div>
 						</div>
@@ -43,12 +59,8 @@
 
 					<!-- Browse Jobs -->
 					<div class="adv-search-btn">
-						Recherche approfondie <a href="<?php echo get_page_link(59); ?>">Recherche avancée</a>
-					</div>
-					
-					<!-- Announce -->
-					<div class="announce">
-						Nous sommes à votre écoute!
+						<span>ou essayez une</span>
+						<a href="annonces">Recherche avancée</a>
 					</div>
 
 				</div>
@@ -140,7 +152,7 @@
 	<div class="row">
 	
 		<div class="col-md-12">
-			<h3 class="headline margin-bottom-25 margin-top-65">Les dernières offres</h3>
+			<h3 class="headline margin-bottom-25 margin-top-65">Les dernières annonces</h3>
 		</div>
 		
 		<!-- Carousel -->
@@ -160,7 +172,7 @@
 						<a href="<?php the_permalink(); ?>" class="listing-img-container">
 
 							<div class="listing-badges">
-								<span class="featured">coup de coeur</span>
+								<span class="featured">NOUVEAU</span>
 								<span><?php the_field('status_du_bien'); ?></span>
 							</div>
 
@@ -256,10 +268,10 @@
 		<div class="container">
 
 			<div class="row">
-				<div class="col-lg-6 col-sm-8">
-					<h2>It's your journey. We're here to help.</h2>
-					<p>We’re full-service, local agents who know how to find people and home each together. We use online tools with an unmatched search capability to make you smarter and faster.</p>
-					<a href="<?php echo get_page_link(59); ?>" class="button margin-top-25">C'est partit !</a>
+				<div class="col-lg-5 col-sm-8">
+					<h2>Une agence en adéquation avec son temps</h2>
+					<p>Une agence à taille humaine qui vous conseille<br/>et vous assure un suivi personnalisé du début à la fin.<br/>Nous prenons le temps de vous écouter.<br/>Nous vous offrons notre expérience et notre<br/>savoir-faire pour réussir ensemble votre projet.</p>
+					<a href="<?php echo get_page_link(59); ?>" class="button margin-top-25">Allons-y !</a>
 				</div>
 			</div>
 
@@ -276,7 +288,7 @@
 <section class="fullwidth margin-top-95 margin-bottom-0">
 
 	<!-- Box Headline -->
-	<h3 class="headline-box">Articles & actualités</h3>
+	<h3 class="headline-box">Nos dossiers</h3>
 
 	<div class="container">
 		<div class="row">
@@ -320,12 +332,12 @@
 
 
 <!-- Flip banner -->
-<a href="<?php echo get_page_link(59); ?>" class="flip-banner parallax" data-background="<?php bloginfo('template_directory'); ?>/images/flip-banner-bg.jpg" data-color="#274abb" data-color-opacity="0.9" data-img-width="2500" data-img-height="1600">
+<!-- <a href="<?php echo get_page_link(59); ?>" class="flip-banner parallax" data-background="<?php bloginfo('template_directory'); ?>/images/flip-banner-bg.jpg" data-color="#274abb" data-color-opacity="0.9" data-img-width="2500" data-img-height="1600">
 	<div class="flip-banner-content">
 		<h2 class="flip-visible">Nous aidons les gens et les biens à se trouver</h2>
 		<h2 class="flip-hidden">Voir les propriétés <i class="sl sl-icon-arrow-right"></i></h2>
 	</div>
-</a>
+</a> -->
 <!-- Flip banner / End -->
 
 

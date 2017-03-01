@@ -10,7 +10,9 @@
 				<?php if ( !function_exists( 'dynamic_sidebar' ) || !dynamic_sidebar('footer_text') ) ?>
 			</div>
 
-			<div class="col-md-4 col-sm-6 ">
+			<div class="col-md-1 col-sm-0 "></div>
+
+			<div class="col-md-3 col-sm-6 ">
 
 				<h4>Liens</h4>
 				<?php wp_nav_menu( array( 'Navigation principale' => 'Top', 'menu_class' => 'footer-links' ) ); ?>
@@ -34,7 +36,7 @@
 		<!-- Copyright -->
 		<div class="row">
 			<div class="col-md-12">
-				<div class="copyrights">© 2017 We Are Birds. Tous droit réservé.</div>
+				<div class="copyrights">© 2017 We Are Birds. Tous droits réservés.</div>
 			</div>
 		</div>
 
