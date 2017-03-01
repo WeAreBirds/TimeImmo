@@ -1,0 +1,3656 @@
+
+div[id*='ajaxsearchpro1_'] div.asp_loader,
+div[id*='ajaxsearchpro1_'] div.asp_loader * {
+    /* display: none; */
+    box-sizing: border-box !important;
+    margin: 0;
+    padding: 0;
+    /* vertical-align: middle !important; */
+    box-shadow: none;
+}
+
+div[id*='ajaxsearchpro1_'] div.asp_loader {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 1 auto;
+    flex-direction: column;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis:28px;
+    max-width: 100%;
+    max-height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+div[id*='ajaxsearchpro1_'] div.asp_loader-inner {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    /* vertical-align: text-top; */
+    height: 100%;
+}
+ 
+@-webkit-keyframes rotate-simple {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg); }
+
+    50% {
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg); }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg); } }
+
+@keyframes rotate-simple {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg); }
+
+    50% {
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg); }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg); } }
+div[id*='ajaxsearchpro1_'] div.asp_simple-circle {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    animation: rotate-simple 0.8s infinite linear;
+    -webkit-animation: rotate-simple 0.8s infinite linear;
+    border: 4px solid rgb(255, 255, 255);
+    border-right-color: transparent;
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+
+div[id*='ajaxsearchprores1_'] .asp_res_loader div.asp_loader,
+div[id*='ajaxsearchprores1_'] .asp_res_loader div.asp_loader * {
+    /* display: none; */
+    box-sizing: border-box !important;
+    margin: 0;
+    padding: 0;
+    /* vertical-align: middle !important; */
+    box-shadow: none;
+}
+
+div[id*='ajaxsearchprores1_'] .asp_res_loader div.asp_loader {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 1 auto;
+    flex-direction: column;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis:28px;
+    max-width: 100%;
+    max-height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+div[id*='ajaxsearchprores1_'] .asp_res_loader div.asp_loader-inner {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    /* vertical-align: text-top; */
+    height: 100%;
+}
+ 
+@-webkit-keyframes rotate-simple {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg); }
+
+    50% {
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg); }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg); } }
+
+@keyframes rotate-simple {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg); }
+
+    50% {
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg); }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg); } }
+div[id*='ajaxsearchprores1_'] .asp_res_loader div.asp_simple-circle {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    animation: rotate-simple 0.8s infinite linear;
+    -webkit-animation: rotate-simple 0.8s infinite linear;
+    border: 4px solid rgb(255, 255, 255);
+    border-right-color: transparent;
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+/*
+AJAX SEARCH PRO FOR WORDPRESS PLUGIN BASIC CSS
+*/
+
+/*
+WARNING!
+
+DO NOT MODIFY THIS FILE! YOU WILL LOOSE ALL CHANGES WHEN UPDATING THE PLUGIN.
+FOR CUSTOM CSS USE THE PLUGIN THEME OPTIONS->CUSTOM CSS PANEL.
+
+CONTENTS:
+    0. ANIMATIONS AND TRANSITIONS
+	1. GENERICS AND CSS RESET - Some basic CSS classes and reset
+	2. INPUT BOX - input box and form layout
+	3. ICONS - loading, closing, magnifier, settings icons
+	4. RESULT STYLES
+	    4.1 GENERAL RESULT STYLES
+	    4.2 VERTICAL RESULT STYLES
+	    4.3 HORIZONTAL RESULT STYLES
+	    4.4 ISOTOPIC RESULT STYLES
+	    4.5 POLAROID RESULT STYLES
+	5. SETTINGS STYLES
+	6. COLUMN STYLES
+	7. CUSTOM FIELD FIELDSETS
+	8. NO-UI DRAGGER STYLES
+	9. SUGGESTED KEYWORDS
+    10. SCROLLBAR STYLES
+    11. JQUERY UI STYLES
+*/
+
+/**********************************************************************************************************************\
+    0. ANIMATIONS AND TRANSITIONS
+\**********************************************************************************************************************/
+
+@keyframes aspAnFadeIn {
+    0%   {opacity: 0;}
+    50%  {opacity: 0.6;}
+    100% {opacity: 1;}
+}
+
+@-webkit-keyframes aspAnFadeIn {
+    0%   {opacity: 0;}
+    50%  {opacity: 0.6;}
+    100% {opacity: 1;}
+}
+
+@keyframes aspAnFadeOut {
+    0%   {opacity: 1;}
+    50%  {opacity: 0.6;}
+    100% {opacity: 0;}
+}
+
+@-webkit-keyframes aspAnFadeOut {
+    0%   {opacity: 1;}
+    50%  {opacity: 0.6;}
+    100% {opacity: 0;}
+}
+
+@keyframes aspAnFadeInDrop {
+    0%   {opacity: 0; transform: translate(0, -50px);}
+    100% {opacity: 1; transform: translate(0, 0);}
+}
+
+@-webkit-keyframes aspAnFadeInDrop {
+    0%   {opacity: 0; transform: translate(0, -50px); -webkit-transform: translate(0, -50px);}
+    100% {opacity: 1; transform: translate(0, 0); -webkit-transform: translate(0, 0);}
+}
+
+@keyframes aspAnFadeOutDrop {
+    0% {opacity: 1; transform: translate(0, 0); -webkit-transform: translate(0, 0);}
+    100%   {opacity: 0; transform: translate(0, -50px); -webkit-transform: translate(0, -50px);}
+}
+
+@-webkit-keyframes aspAnFadeOutDrop {
+    0% {opacity: 1; transform: translate(0, 0); -webkit-transform: translate(0, 0);}
+    100%   {opacity: 0; transform: translate(0, -50px); -webkit-transform: translate(0, -50px);}
+}
+
+div.ajaxsearchpro.asp_an_fadeIn,
+div.ajaxsearchpro.asp_an_fadeOut,
+div.ajaxsearchpro.asp_an_fadeInDrop,
+div.ajaxsearchpro.asp_an_fadeOutDrop {
+    -webkit-animation-duration: 100ms;
+    animation-duration: 100ms;
+    -webkit-animation-fill-mode: forwards; /* Chrome, Safari, Opera */
+    animation-fill-mode: forwards;
+}
+
+.asp_an_fadeIn,
+div.ajaxsearchpro.asp_an_fadeIn {
+    animation-name: aspAnFadeIn;
+    -webkit-animation-name: aspAnFadeIn;
+}
+
+.asp_an_fadeOut,
+div.ajaxsearchpro.asp_an_fadeOut {
+    animation-name: aspAnFadeOut;
+    -webkit-animation-name: aspAnFadeOut;
+}
+
+div.ajaxsearchpro.asp_an_fadeInDrop {
+    animation-name: aspAnFadeInDrop;
+    -webkit-animation-name: aspAnFadeInDrop;
+}
+
+div.ajaxsearchpro.asp_an_fadeOutDrop {
+    animation-name: aspAnFadeOutDrop;
+    -webkit-animation-name: aspAnFadeOutDrop;
+}
+
+div.ajaxsearchpro.asp_main_container {
+    transition: width 130ms linear;
+    -webkit-transition: width 130ms linear;
+}
+
+
+/**********************************************************************************************************************\
+    1. GENERIC CSS RESET
+\**********************************************************************************************************************/
+
+#ajaxsearchpro1_1, #ajaxsearchpro1_2,
+#ajaxsearchprores1_1, #ajaxsearchprores1_2,
+#ajaxsearchprosettings1_1, #ajaxsearchprosettings1_2,
+#ajaxsearchprobsettings1_1, #ajaxsearchprobsettings1_2,
+#ajaxsearchprobsettings1_1 *, #ajaxsearchprobsettings1_2 * {
+    -webkit-box-sizing: content-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: content-box; /* Firefox, other Gecko */
+    -ms-box-sizing: content-box;
+    -o-box-sizing: content-box;
+    box-sizing: content-box;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    border-radius: 0;
+    text-transform: none;
+    text-shadow: none;
+    box-shadow: none;
+    text-decoration: none;
+    text-align: left;
+    letter-spacing: normal;
+}
+
+#ajaxsearchpro1_1, #ajaxsearchpro1_2 {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+#ajaxsearchprores1_1, #ajaxsearchprores1_2,
+#ajaxsearchprores1_1 *, #ajaxsearchprores1_2 * {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#ajaxsearchpro1_1 input[type=text]::-ms-clear, #ajaxsearchpro1_2 input[type=text]::-ms-clear {  display: none; width : 0; height: 0; }
+#ajaxsearchpro1_1 input[type=text]::-ms-reveal, #ajaxsearchpro1_2 input[type=text]::-ms-reveal {  display: none; width : 0; height: 0; }
+
+#ajaxsearchpro1_1 input[type="search"]::-webkit-search-decoration, #ajaxsearchpro1_2 input[type="search"]::-webkit-search-decoration,
+#ajaxsearchpro1_1 input[type="search"]::-webkit-search-cancel-button, #ajaxsearchpro1_2 input[type="search"]::-webkit-search-cancel-button,
+#ajaxsearchpro1_1 input[type="search"]::-webkit-search-results-button, #ajaxsearchpro1_2 input[type="search"]::-webkit-search-results-button,
+#ajaxsearchpro1_1 input[type="search"]::-webkit-search-results-decoration, #ajaxsearchpro1_2 input[type="search"]::-webkit-search-results-decoration { display: none; }
+
+#ajaxsearchpro1_1 input[type="search"], #ajaxsearchpro1_2 input[type="search"] {
+    -webkit-appearance: textfield !important;
+}
+
+.clear {
+    clear: both;
+}
+
+/* This clear class is bulletproof */
+.asp_clear {
+    clear: both !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: auto !important;
+    height: 0 !important;
+}
+
+.hiddend {
+    display: none !important;
+}
+
+#ajaxsearchpro1_1, #ajaxsearchpro1_2 {
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+    background: rgba(255, 255, 255, 0);
+    overflow: hidden;
+}
+
+#asp_absolute_overlay {
+    width: 0;
+    height: 0;
+    position: fixed;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.5);
+    top: 0;
+    left: 0;
+    display: block;
+    z-index: 0;
+    opacity: 0;
+    transition: opacity 200ms linear;
+    -webkit-transition: opacity 200ms linear;
+}
+
+
+/**********************************************************************************************************************\
+    2. INPUT BOX
+\**********************************************************************************************************************/
+
+#ajaxsearchpro1_1 textarea:focus, #ajaxsearchpro1_2 textarea:focus,
+#ajaxsearchpro1_1 input:focus, #ajaxsearchpro1_2 input:focus {
+    outline: none;
+}
+
+/* Remove IE X from the input */
+#ajaxsearchpro1_1 .probox .proinput input::-ms-clear, #ajaxsearchpro1_2 .probox .proinput input::-ms-clear {
+    display: none;
+}
+
+#ajaxsearchpro1_1 .probox, #ajaxsearchpro1_2 .probox {
+    width: auto;
+    border-radius: 5px;
+    background: #FFF;
+    overflow: hidden;
+    border: 1px solid #FFF;
+    box-shadow: 1px 0 3px #CCCCCC inset;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    direction: ltr;
+    align-items: stretch;
+}
+
+#ajaxsearchpro1_1 .probox .proinput, #ajaxsearchpro1_2 .probox .proinput {
+    width: 1px;
+    height: 100%;
+    margin: 0px 0px 0px 10px;
+    padding: 0 5px;
+    float: left;
+    box-shadow: none;
+    position: relative;
+    flex: 1 1 auto;    /* Let it grow, shrink, auto basis*/
+    -webkit-flex: 1 1 auto; /* Let it grow, shrink, auto basis*/
+}
+
+#ajaxsearchpro1_1 .probox .proinput form, #ajaxsearchpro1_2 .probox .proinput form {
+    height: 100%;
+    /* some themes like to add un-removable margin and padding.. */
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+#ajaxsearchpro1_1 .probox .proinput input, #ajaxsearchpro1_2 .probox .proinput input {
+    height: 100%;
+    width: 100%;
+    border: 0px;
+    background: transparent;
+    width: auto;
+    box-shadow: none;
+    margin: -1px;
+    padding: 0;
+    left: 0;
+    padding-top: 2px;
+    min-width: 120px;
+}
+
+#ajaxsearchpro1_1 .probox .proinput input.autocomplete, #ajaxsearchpro1_2 .probox .proinput input.autocomplete {
+    border: 0px;
+    background: transparent;
+    width: 100%;
+    box-shadow: none;
+    margin: 0;
+    padding: 0;
+    left: 0;
+}
+
+#ajaxsearchpro1_1 .probox .proinput.iepaddingfix, #ajaxsearchpro1_2 .probox .proinput.iepaddingfix {
+    padding-top: 0;
+}
+
+
+/**********************************************************************************************************************\
+    3. ICONS - loading, closing, magnifier, settings icons
+\**********************************************************************************************************************/
+
+#ajaxsearchpro1_1 .probox .proloading, #ajaxsearchpro1_2 .probox .proloading,
+#ajaxsearchpro1_1 .probox .proclose, #ajaxsearchpro1_2 .probox .proclose,
+#ajaxsearchpro1_1 .probox .promagnifier, #ajaxsearchpro1_2 .probox .promagnifier,
+#ajaxsearchpro1_1 .probox .prosettings, #ajaxsearchpro1_2 .probox .prosettings {
+    width: 20px;
+    height: 20px;
+    background: none;
+    background-size: 20px 20px;
+    float: right;
+    box-shadow: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    z-index: 1;
+}
+
+#ajaxsearchpro1_1 .probox .proloading, #ajaxsearchpro1_2 .probox .proloading,
+#ajaxsearchpro1_1 .probox .proclose, #ajaxsearchpro1_2 .probox .proclose {
+    background-position: center center;
+    display: none;
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
+
+#ajaxsearchpro1_1 .probox .proloading, #ajaxsearchpro1_2 .probox .proloading {
+    padding: 2px;
+    box-sizing: border-box;
+}
+
+#ajaxsearchpro1_1 .probox .proclose, #ajaxsearchpro1_2 .probox .proclose {
+    position: relative;
+    cursor: pointer;
+}
+
+#ajaxsearchpro1_1 .probox .promagnifier .innericon, #ajaxsearchpro1_2 .probox .promagnifier .innericon,
+#ajaxsearchpro1_1 .probox .prosettings .innericon, #ajaxsearchpro1_2 .probox .prosettings .innericon,
+#ajaxsearchpro1_1 .probox .proclose .innericon, #ajaxsearchpro1_2 .probox .proclose .innericon {
+    background-size: 20px 20px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    overflow: hidden;
+}
+
+#ajaxsearchpro1_1 .probox .promagnifier .innericon svg, #ajaxsearchpro1_2 .probox .promagnifier .innericon svg,
+#ajaxsearchpro1_1 .probox .prosettings .innericon svg, #ajaxsearchpro1_2 .probox .prosettings .innericon svg,
+#ajaxsearchpro1_1 .probox .proloading svg, #ajaxsearchpro1_2 .probox .proloading svg {
+    height: 100%;
+    width: 22px;
+    vertical-align: baseline;
+    display: inline-block;
+}
+
+#ajaxsearchpro1_1.asp_msie .probox .proloading .asp_loader, #ajaxsearchpro1_2.asp_msie .probox .proloading .asp_loader {
+    height: 0;
+    width: 0;
+    display: none !important;
+}
+
+#ajaxsearchpro1_1 .probox .proclose svg, #ajaxsearchpro1_2 .probox .proclose svg {
+    background: #333333;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    width: 20px;
+    height: 20px;
+    margin-top: -10px;
+    left: 50%;
+    margin-left: -10px;
+    fill: #fefefe;
+    padding: 4px;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.9);
+}
+
+
+/**********************************************************************************************************************\
+    4. RESULT STYLES
+\**********************************************************************************************************************/
+
+
+/*      4.1 GENERAL RESULT STYLES
+\**********************************************************************************************************************/
+
+.opacityOne {
+    opacity: 1;
+}
+
+.opacityZero {
+    opacity: 0;
+}
+
+#ajaxsearchprosettings1_1 [disabled].noUi-connect, #ajaxsearchprosettings1_2 [disabled].noUi-connect,
+#ajaxsearchprosettings1_1 [disabled] .noUi-connect, #ajaxsearchprosettings1_2 [disabled] .noUi-connect {
+    background: #B8B8B8;
+}
+#ajaxsearchprosettings1_1 [disabled] .noUi-handle, #ajaxsearchprosettings1_2 [disabled] .noUi-handle {
+    cursor: not-allowed;
+}
+
+#ajaxsearchprores1_1 p.showmore, #ajaxsearchprores1_2 p.showmore {
+    display: none;
+    margin: 5px 0;
+}
+
+div.asp_hidden_data,
+div.asp_hidden_data * {
+    display: none;
+}
+
+#ajaxsearchprores1_1, #ajaxsearchprores1_2 {
+    display: none;
+}
+
+#ajaxsearchprores1_1 *, #ajaxsearchprores1_2 * {
+    text-decoration: none;
+    text-shadow: none;
+}
+
+#ajaxsearchprores1_1 .results, #ajaxsearchprores1_2 .results {
+    overflow: hidden;
+    width: auto;
+    height: 0;
+    margin: 0;
+    padding: 0;
+}
+
+#ajaxsearchprores1_1 .results .asp_nores, #ajaxsearchprores1_2 .results .asp_nores {
+    overflow: hidden;
+    width: auto;
+    height: 100%;
+    line-height: initial;
+    text-align: center;
+    margin: 0;
+    background: #FFF;
+    padding: 10px 3px;
+    color: #222;
+}
+
+#ajaxsearchprores1_1 .results .item, #ajaxsearchprores1_2 .results .item {
+    overflow: hidden;
+    width: auto;
+    margin: 0;
+    padding: 3px;
+    position: relative;
+    background: #f4f4f4;
+    border-left: 1px solid rgba(255, 255, 255, 0.6);
+    border-right: 1px solid rgba(255, 255, 255, 0.4);
+    animation-delay: 0s;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-timing-function: ease;
+    backface-visibility: hidden;
+    -webkit-animation-delay: 0s;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    -webkit-animation-timing-function: ease;
+    -webkit-backface-visibility: hidden;
+}
+
+#ajaxsearchprores1_1 .results .item .asp_image, #ajaxsearchprores1_2 .results .item .asp_image {
+    overflow: hidden;
+    background: transparent;
+    margin: 4px auto 0px 0px;
+    padding: 0;
+    float: left;
+    background-position: center;
+    background-size: cover;
+}
+
+#ajaxsearchprores1_1 a.asp_res_image_url, #ajaxsearchprores1_2 a.asp_res_image_url,
+#ajaxsearchprores1_1 a.asp_res_image_url:hover, #ajaxsearchprores1_2 a.asp_res_image_url:hover,
+#ajaxsearchprores1_1 a.asp_res_image_url:focus, #ajaxsearchprores1_2 a.asp_res_image_url:focus,
+#ajaxsearchprores1_1 a.asp_res_image_url:active, #ajaxsearchprores1_2 a.asp_res_image_url:active {
+    box-shadow: none !important;
+    border: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: inline !important;
+}
+
+#ajaxsearchprores1_1 .results .item .asp_image_auto, #ajaxsearchprores1_2 .results .item .asp_image_auto {
+    width: auto !important;
+    height: auto !important;
+}
+
+#ajaxsearchprores1_1 .results .item .asp_image img, #ajaxsearchprores1_2 .results .item .asp_image img {
+    width: 100%;
+    height: 100%;
+}
+
+#ajaxsearchprores1_1 .results a span.overlap, #ajaxsearchprores1_2 .results a span.overlap {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+#ajaxsearchprores1_1 .resdrg, #ajaxsearchprores1_2 .resdrg {
+    height: auto;
+}
+
+#ajaxsearchpro1_1 .asp_group_header:first-of-type, #ajaxsearchpro1_2 .asp_group_header:first-of-type {
+    margin: 0px 0 -3px !important;
+}
+
+
+/*      4.2 VERTICAL RESULT STYLES
+\**********************************************************************************************************************/
+
+#ajaxsearchprores1_1.vertical .results .item:first-child, #ajaxsearchprores1_2.vertical .results .item:first-child {
+    border-radius: 0;
+}
+
+#ajaxsearchprores1_1.vertical .results .item:last-child, #ajaxsearchprores1_2.vertical .results .item:last-child {
+    border-radius: 0;
+    margin-bottom: 0px;
+}
+
+#ajaxsearchprores1_1.vertical .results .asp_spacer, #ajaxsearchprores1_2.vertical .results .asp_spacer {
+    background: none repeat scroll 0 0 rgba(255, 255, 255, 0.55);
+    display: block;
+    height: 1px;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 10000px;
+}
+
+#ajaxsearchprores1_1.vertical .results .asp_spacer:last-child, #ajaxsearchprores1_2.vertical .results .asp_spacer:last-child {
+    display: none;
+    height: 0px !important;
+}
+
+#ajaxsearchprores1_1.vertical .results .item:last-child:after, #ajaxsearchprores1_2.vertical .results .item:last-child:after {
+    height: 0;
+    margin: 0;
+    width: 0;
+}
+
+
+/*      4.3 HORIZONTAL RESULT STYLES
+\**********************************************************************************************************************/
+
+#ajaxsearchprores1_1.horizontal, #ajaxsearchprores1_2.horizontal {
+    padding: 2px 0 10px;
+}
+
+#ajaxsearchprores1_1.horizontal .results .asp_nores, #ajaxsearchprores1_2.horizontal .results .asp_nores {
+    background: transparent;
+}
+
+
+#ajaxsearchprores1_1.horizontal .results, #ajaxsearchprores1_2.horizontal .results {
+    height: auto;
+    width: auto;
+}
+
+#ajaxsearchprores1_1.horizontal .results .item .asp_content, #ajaxsearchprores1_2.horizontal .results .item .asp_content {
+    height: auto;
+    width: 100%;
+    padding: 0;
+}
+
+#ajaxsearchprores1_1.horizontal .resdrg, #ajaxsearchprores1_2.horizontal .resdrg {
+    height: auto;
+    width: auto;
+}
+
+/*      4.4 ISOTOPIC RESULT STYLES, ISOTOPIC NAVIGATION
+\**********************************************************************************************************************/
+
+#ajaxsearchprores1_1.isotopic>nav, #ajaxsearchprores1_2.isotopic>nav,
+#ajaxsearchprores1_1.isotopic nav.asp_navigation, #ajaxsearchprores1_2.isotopic nav.asp_navigation {
+    display: none;
+    background: rgba(255, 255, 255, 0.6);
+    margin: 0;
+    position: relative;
+}
+
+#ajaxsearchprores1_1.isotopic nav.asp_navigation[style='display: block;']+.results, #ajaxsearchprores1_2.isotopic nav.asp_navigation[style='display: block;']+.results {
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+#ajaxsearchprores1_1.isotopic a.asp_prev, #ajaxsearchprores1_2.isotopic a.asp_prev,
+#ajaxsearchprores1_1.isotopic a.asp_next, #ajaxsearchprores1_2.isotopic a.asp_next {
+    display: block;
+    float: left;
+    z-index: 100;
+    max-height: 36px;
+    position: relative;
+    word-wrap: nowrap;
+}
+
+#ajaxsearchprores1_1.isotopic a.asp_next, #ajaxsearchprores1_2.isotopic a.asp_next {
+    float: right;
+}
+
+#ajaxsearchprores1_1.isotopic nav.asp_navigation a svg, #ajaxsearchprores1_2.isotopic nav.asp_navigation a svg {
+    -webkit-backface-visibility: hidden;
+}
+
+#ajaxsearchprores1_1.isotopic nav.asp_navigation a.asp_prev, #ajaxsearchprores1_2.isotopic nav.asp_navigation a.asp_prev,
+#ajaxsearchprores1_1.isotopic nav.asp_navigation a.asp_next, #ajaxsearchprores1_2.isotopic nav.asp_navigation a.asp_next {
+    background: #3F3F3F;
+    height: 36px;
+    padding: 0 10px;
+    cursor: pointer;
+}
+
+#ajaxsearchprores1_1.isotopic nav.asp_navigation ul, #ajaxsearchprores1_2.isotopic nav.asp_navigation ul {
+    float: left;
+    word-wrap: nowrap;
+    overflow: hidden;
+    max-height: 36px;
+    z-index: 0;
+    position: absolute;
+    left: 36px;
+    top: 0;
+    width: 300000px;
+    -webkit-transition: left 120ms linear;
+    transition: left 120ms linear;
+}
+
+#ajaxsearchprores1_1.isotopic nav.asp_navigation a.asp_next, #ajaxsearchprores1_2.isotopic nav.asp_navigation a.asp_next {
+    float: right;
+}
+
+#ajaxsearchprores1_1.isotopic nav.asp_navigation a.asp_prev svg, #ajaxsearchprores1_2.isotopic nav.asp_navigation a.asp_prev svg,
+#ajaxsearchprores1_1.isotopic nav.asp_navigation a.asp_next svg, #ajaxsearchprores1_2.isotopic nav.asp_navigation a.asp_next svg {
+    fill: #eee;
+    height: 100%;
+    width: 18px;
+}
+
+#ajaxsearchprores1_1.isotopic nav.asp_navigation a.asp_prev svg, #ajaxsearchprores1_2.isotopic nav.asp_navigation a.asp_prev svg {
+    -moz-transform: scale(-1, 1);
+    -webkit-transform: scale(-1, 1);
+    -o-transform: scale(-1, 1);
+    -ms-transform: scale(-1, 1);
+    transform: scale(-1, 1);
+}
+
+#ajaxsearchprores1_1.isotopic nav.asp_navigation ul li, #ajaxsearchprores1_2.isotopic nav.asp_navigation ul li {
+    display: inline-block;
+    list-style-type: none;
+    margin: 0;
+    height: 36px;
+    width: 36px;
+    cursor: pointer;
+    text-align: center;
+}
+
+#ajaxsearchprores1_1.isotopic nav.asp_navigation ul li.asp_active, #ajaxsearchprores1_2.isotopic nav.asp_navigation ul li.asp_active {
+    background: rgba(255, 255, 255, 0.6);
+}
+
+#ajaxsearchprores1_1.isotopic nav.asp_navigation ul li:hover, #ajaxsearchprores1_2.isotopic nav.asp_navigation ul li:hover {
+    background: rgba(255, 255, 255, 0.6);
+}
+
+#ajaxsearchprores1_1.isotopic nav.asp_navigation ul li span, #ajaxsearchprores1_2.isotopic nav.asp_navigation ul li span {
+    font-family: sans-serif;
+    font-size: 11px;
+    vertical-align: middle;
+    color: #333;
+    line-height: 36px;
+    font-weight: bold;
+    text-shadow: none;
+}
+
+#ajaxsearchprores1_1.isotopic .results .item, #ajaxsearchprores1_2.isotopic .results .item {
+    box-sizing: border-box;
+    background-clip: padding-box;
+    border: 0px solid rgba(0, 0, 0, 0);
+}
+
+#ajaxsearchprores1_1.isotopic .results .item .asp_item_overlay, #ajaxsearchprores1_2.isotopic .results .item .asp_item_overlay,
+#ajaxsearchprores1_1.isotopic .results .item .asp_item_overlay_m, #ajaxsearchprores1_2.isotopic .results .item .asp_item_overlay_m {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.2);
+    top: 0;
+    left: 0;
+    display: none;
+    z-index: 4;
+    cursor: pointer;
+}
+
+#ajaxsearchprores1_1.isotopic .results .item .asp_item_overlay_m, #ajaxsearchprores1_2.isotopic .results .item .asp_item_overlay_m {
+    display: block;
+    background: transparent;
+}
+
+#ajaxsearchprores1_1.isotopic .results .item .asp_item_inner, #ajaxsearchprores1_2.isotopic .results .item .asp_item_inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 70px;
+    height: 70px;
+    margin: -35px 0 0 -35px;
+    background: #ddd;
+    box-sizing: padding-box;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.7);
+    text-align: center;
+    z-index: 2;
+    line-height: 66px;
+}
+
+#ajaxsearchprores1_1.isotopic .results .item .asp_item_inner svg, #ajaxsearchprores1_2.isotopic .results .item .asp_item_inner svg,
+#ajaxsearchprores1_1.isotopic .results .item .asp_item_inner img, #ajaxsearchprores1_2.isotopic .results .item .asp_item_inner img {
+    height: 100%;
+    width: 32px;
+    fill: #fff;
+}
+
+#ajaxsearchprores1_1.isotopic .results .item .asp_item_inner img, #ajaxsearchprores1_2.isotopic .results .item .asp_item_inner img {
+    height: 32px;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+
+#ajaxsearchprores1_1.isotopic .results .item .asp_content, #ajaxsearchprores1_2.isotopic .results .item .asp_content {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.8);
+    border: 0;
+    backface-visibility: visible;
+    -webkit-backface-visibility: visible;
+    box-sizing: border-box;
+    z-index: 3;
+    padding: 4px 6px;
+}
+
+#ajaxsearchprores1_1.isotopic .results .item .asp_item_img+.asp_content, #ajaxsearchprores1_2.isotopic .results .item .asp_item_img+.asp_content {
+    height: auto;
+    top: auto;
+    bottom: 0;
+}
+
+#ajaxsearchprores1_1.isotopic .results .item .asp_item_img, #ajaxsearchprores1_2.isotopic .results .item .asp_item_img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    background-size: cover;
+    background-position: center;
+}
+
+#ajaxsearchprores1_1.isotopic .results .item .asp_item_overlay_img, #ajaxsearchprores1_2.isotopic .results .item .asp_item_overlay_img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    filter: url('#aspblur');
+    -moz-filter: url('#aspblur');
+    -webkit-filter: url('#aspblur');
+    -ms-filter: url('#aspblur');
+    -o-filter: url('#aspblur');
+    display: none;
+    cursor: pointer;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center;
+}
+
+
+/*      4.4 POLAROID RESULT STYLES
+\**********************************************************************************************************************/
+
+#ajaxsearchprores1_1 .photostack, #ajaxsearchprores1_2 .photostack,
+#ajaxsearchprores1_1 .photostack *, #ajaxsearchprores1_2 .photostack * {
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box; /* Firefox, other Gecko */
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+#ajaxsearchprores1_1 .photostack, #ajaxsearchprores1_2 .photostack {
+    background: transparent;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+}
+
+#ajaxsearchprores1_1 .photostack-start, #ajaxsearchprores1_2 .photostack-start {
+    cursor: pointer;
+}
+
+#ajaxsearchprores1_1 .photostack > div, #ajaxsearchprores1_2 .photostack > div {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.js div.ajaxsearchpro[id*='ajaxsearchprores'] .photostack figure {
+    position: absolute;
+    display: block;
+    margin: 0;
+}
+
+#ajaxsearchprores1_1 .photostack-img, #ajaxsearchprores1_2 .photostack-img {
+    outline: none;
+    display: block;
+    background: #f9f9f9;
+    background-position: center;
+    background-size: cover;
+}
+
+#ajaxsearchprores1_1 .photostack-img img, #ajaxsearchprores1_2 .photostack-img img {
+    width: 100%;
+    height: 100%;
+}
+
+#ajaxsearchprores1_1 .photostack-back, #ajaxsearchprores1_2 .photostack-back {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #fff;
+    padding: 50px 40px;
+    text-align: left;
+}
+
+#ajaxsearchprores1_1 .photostack-back p, #ajaxsearchprores1_2 .photostack-back p {
+    margin: 0;
+}
+
+#ajaxsearchprores1_1 .photostack-back p span, #ajaxsearchprores1_2 .photostack-back p span {
+    text-decoration: line-through;
+}
+
+/* Navigation dots */
+#ajaxsearchprores1_1 .photostack nav, #ajaxsearchprores1_2 .photostack nav {
+    position: absolute;
+    width: 100%;
+    bottom: 30px;
+    z-index: 90;
+    text-align: center;
+    left: 0;
+    -webkit-transition: opacity 0.3s;
+    transition: opacity 0.3s;
+}
+
+#ajaxsearchprores1_1 .photostack-start nav, #ajaxsearchprores1_2 .photostack-start nav {
+    opacity: 0;
+}
+
+#ajaxsearchprores1_1 .photostack nav span, #ajaxsearchprores1_2 .photostack nav span {
+    position: relative;
+    display: inline-block;
+    margin: 0 5px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background: #aaa;
+    border-radius: 50%;
+    text-align: center;
+    -webkit-transition: -webkit-transform 0.6s ease-in-out, background 0.3s;
+    transition: transform 0.6s ease-in-out, background 0.3s;
+    -webkit-transform: scale(0.48);
+    transform: scale(0.48);
+}
+
+#ajaxsearchprores1_1 .photostack nav span:last-child, #ajaxsearchprores1_2 .photostack nav span:last-child {
+    margin-right: 0;
+}
+
+#ajaxsearchprores1_1 .photostack nav span::after, #ajaxsearchprores1_2 .photostack nav span::after {
+    content: "\e801";
+    font-family: 'asppsicons2';
+    font-size: 80%;
+    speak: none;
+    display: inline-block;
+    vertical-align: top;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 30px;
+    color: #fff;
+    opacity: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-transition: opacity 0.3s;
+    transition: opacity 0.3s;
+}
+
+#ajaxsearchprores1_1 .photostack nav span.current, #ajaxsearchprores1_2 .photostack nav span.current {
+    background: #888;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+#ajaxsearchprores1_1 .photostack nav span.current.flip, #ajaxsearchprores1_2 .photostack nav span.current.flip {
+    -webkit-transform: scale(1) rotateY(-180deg) translateZ(-1px);
+    transform: scale(1) rotateY(-180deg) translateZ(-1px);
+    background: #555;
+}
+
+#ajaxsearchprores1_1 .photostack nav span.flippable::after, #ajaxsearchprores1_2 .photostack nav span.flippable::after {
+    opacity: 1;
+    -webkit-transition-delay: 0.4s;
+    transition-delay: 0.4s;
+}
+
+.js div.ajaxsearchpro[id*='ajaxsearchprores'] .photostack::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+    z-index: 100;
+    -webkit-transition: opacity 0.3s, visibility 0s 0.3s;
+    transition: opacity 0.3s, visibility 0s 0.3s;
+}
+
+.js div.ajaxsearchpro[id*='ajaxsearchprores'] .photostack-start::before {
+    -webkit-transition: opacity 0.3s;
+    transition: opacity 0.3s;
+}
+
+/* Button on photostack container */
+.js div.ajaxsearchpro[id*='ajaxsearchprores'] .photostack::after {
+    content: 'View Gallery';
+    font-weight: 400;
+    position: absolute;
+    border: 3px solid #fff;
+    text-align: center;
+    white-space: nowrap;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translateY(-50%) translateX(-50%);
+    transform: translateY(-50%) translateX(-50%);
+    padding: 10px 20px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    z-index: 101;
+}
+
+.js div.ajaxsearchpro[id*='ajaxsearchprores'] .photostack::before,
+.js div.ajaxsearchpro[id*='ajaxsearchprores'] .photostack::after {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.js div.ajaxsearchpro[id*='ajaxsearchprores'] .photostack-start::before,
+.js div.ajaxsearchpro[id*='ajaxsearchprores'] .photostack-start:hover::after,
+.touch .photostack-start::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+#ajaxsearchprores1_1 .photostack figure::after, #ajaxsearchprores1_2 .photostack figure::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    visibility: visible;
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.05);
+    -webkit-transition: opacity 0.6s;
+    transition: opacity 0.6s;
+}
+
+/* Hide figure overlay when it becomes current */
+#ajaxsearchprores1_1 figure.photostack-current::after, #ajaxsearchprores1_2 figure.photostack-current::after {
+    -webkit-transition: opacity 0.6s, visibility 0s 0.6s;
+    transition: opacity 0.6s, visibility 0s 0.6s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* Special classes for transitions and perspective */
+#ajaxsearchprores1_1 .photostack-transition figure, #ajaxsearchprores1_2 .photostack-transition figure {
+    -webkit-transition: -webkit-transform 0.6s ease-in-out;
+    transition: transform 0.6s ease-in-out;
+}
+
+#ajaxsearchprores1_1 .photostack-perspective, #ajaxsearchprores1_2 .photostack-perspective {
+    -webkit-perspective: 1800px;
+    perspective: 1800px;
+}
+
+#ajaxsearchprores1_1 .photostack-perspective > div, #ajaxsearchprores1_2 .photostack-perspective > div,
+#ajaxsearchprores1_1 .photostack-perspective figure, #ajaxsearchprores1_2 .photostack-perspective figure {
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+#ajaxsearchprores1_1 .photostack-perspective figure, #ajaxsearchprores1_2 .photostack-perspective figure,
+#ajaxsearchprores1_1 .photostack-perspective figure div, #ajaxsearchprores1_2 .photostack-perspective figure div {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+#ajaxsearchprores1_1 .photostack-perspective figure.photostack-flip, #ajaxsearchprores1_2 .photostack-perspective figure.photostack-flip {
+    -webkit-transform-origin: 0% 50%;
+    transform-origin: 0% 50%;
+}
+
+.csstransformspreserve3d figure.photostack-flip .photostack-back {
+    -webkit-transform: rotateY(180deg) !important;
+    transform: rotateY(180deg) !important;
+    display: block !important;
+    z-index: 1 !important;
+}
+
+.no-csstransformspreserve3d figure.photostack-showback .photostack-back {
+    display: block !important;
+}
+
+/* The no-JS fallback look does not need to be boring ;) */
+.no-js .photostack figure {
+    box-shadow: -2px 2px 0 rgba(0, 0, 0, 0.05) !important;
+}
+
+.no-js .photostack figure::after {
+    display: none !important;
+}
+
+.no-js .photostack figure:nth-child(3n) {
+    -webkit-transform: translateX(-10%) rotate(5deg) !important;
+    transform: translateX(-10%) rotate(5deg) !important;
+}
+
+.no-js .photostack figure:nth-child(3n-2) {
+    -webkit-transform: translateY(10%) rotate(-3deg) !important;
+    transform: translateY(10%) rotate(-3deg) !important;
+}
+
+
+/**********************************************************************************************************************\
+    5. SETTINGS STYLES
+\**********************************************************************************************************************/
+
+#ajaxsearchprosettings1_1.searchsettings, #ajaxsearchprosettings1_2.searchsettings {
+    width: auto;
+    height: auto;
+    position: absolute;
+    display: none;
+    z-index: 11001;
+    border-radius: 0 0 3px 3px;
+    visibility: hidden;
+    opacity: 0;
+}
+
+#ajaxsearchprobsettings1_1.searchsettings, #ajaxsearchprobsettings1_2.searchsettings {
+    display: none;
+    visibility: hidden;
+    direction: ltr;
+}
+
+#ajaxsearchprosettings1_1.searchsettings form, #ajaxsearchprosettings1_2.searchsettings form,
+#ajaxsearchprobsettings1_1.searchsettings form, #ajaxsearchprobsettings1_2.searchsettings form {
+    display: flex;
+    flex-wrap: wrap;
+    /* some themes like to add un-removable margin and padding.. */
+    margin: 0 0 12px 0 !important;
+    padding: 0 !important;
+}
+
+#ajaxsearchprosettings1_1.searchsettings .option, #ajaxsearchprosettings1_2.searchsettings .option,
+#ajaxsearchprobsettings1_1.searchsettings .option, #ajaxsearchprobsettings1_2.searchsettings .option,
+#ajaxsearchprobsettings1_1.searchsettings input[type='text'], #ajaxsearchprobsettings1_2.searchsettings input[type='text'] {
+    margin: 2px 10px 0 10px;
+    *padding-bottom: 10px;
+}
+
+#ajaxsearchprosettings1_1.searchsettings input[type='text'], #ajaxsearchprosettings1_2.searchsettings input[type='text'],
+#ajaxsearchprobsettings1_1.searchsettings input[type='text'], #ajaxsearchprobsettings1_2.searchsettings input[type='text'] {
+    width: 86% !important;
+    padding: 8px 6px !important;
+    margin: 5px 0 0 10px !important;
+    background-color: #FAFAFA !important;
+    font-size: 13px;
+    border: none !important;
+    line-height: 17px;
+    height: 20px;
+}
+
+#ajaxsearchprosettings1_1.searchsettings.ie78 .option, #ajaxsearchprosettings1_2.searchsettings.ie78 .option,
+#ajaxsearchprobsettings1_1.searchsettings.ie78 .option, #ajaxsearchprobsettings1_2.searchsettings.ie78 .option {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+#ajaxsearchprosettings1_1.searchsettings .label, #ajaxsearchprosettings1_2.searchsettings .label,
+#ajaxsearchprobsettings1_1.searchsettings .label, #ajaxsearchprobsettings1_2.searchsettings .label {
+    font-size: 14px;
+    line-height: 20px !important;
+    margin: 0;
+    width: 150px;
+    text-shadow: none;
+    padding: 0;
+    min-height: 20px;
+    border: none;
+    background: transparent;
+    float: none;
+}
+
+#ajaxsearchprosettings1_1.searchsettings .asp_label, #ajaxsearchprosettings1_2.searchsettings .asp_label,
+#ajaxsearchprobsettings1_1.searchsettings .asp_label, #ajaxsearchprobsettings1_2.searchsettings .asp_label {
+    line-height: 24px !important;
+    vertical-align: middle;
+    display: inline-block;
+    max-width: 150px;
+}
+
+#ajaxsearchprosettings1_1.searchsettings input[type=radio], #ajaxsearchprosettings1_2.searchsettings input[type=radio],
+#ajaxsearchprobsettings1_1.searchsettings input[type=radio], #ajaxsearchprobsettings1_2.searchsettings input[type=radio] {
+    vertical-align: middle;
+    margin: 0 6px 0 17px;
+    display: inline-block;
+    appearance: normal;
+    -moz-appearance: normal; /* Firefox */
+    -webkit-appearance: radio; /* Safari and Chrome */
+}
+
+
+/* SQUARED THREE */
+#ajaxsearchprosettings1_1.searchsettings .option input[type=checkbox], #ajaxsearchprosettings1_2.searchsettings .option input[type=checkbox],
+#ajaxsearchprobsettings1_1.searchsettings .option input[type=checkbox], #ajaxsearchprobsettings1_2.searchsettings .option input[type=checkbox] {
+    display: none !important;
+}
+
+#ajaxsearchprosettings1_1.searchsettings.ie78 .option input[type=checkbox], #ajaxsearchprosettings1_2.searchsettings.ie78 .option input[type=checkbox],
+#ajaxsearchprobsettings1_1.searchsettings.ie78 .option input[type=checkbox], #ajaxsearchprobsettings1_2.searchsettings.ie78 .option input[type=checkbox] {
+    display: block;
+}
+
+#ajaxsearchprosettings1_1.searchsettings.ie78 .label, #ajaxsearchprosettings1_2.searchsettings.ie78 .label,
+#ajaxsearchprobsettings1_1.searchsettings.ie78 .label, #ajaxsearchprobsettings1_2.searchsettings.ie78 .label {
+    float: right !important;
+}
+
+#ajaxsearchprosettings1_1.searchsettings .option, #ajaxsearchprosettings1_2.searchsettings .option,
+#ajaxsearchprobsettings1_1.searchsettings .option, #ajaxsearchprobsettings1_2.searchsettings .option {
+    width: 17px;
+    height: 17px;
+    position: relative;
+    flex-grow: 0;
+    -webkit-flex-grow: 0;
+    flex-shrink: 0;
+    -webkit-flex-shrink: 0;
+}
+
+#ajaxsearchprobsettings1_1.searchsettings .option, #ajaxsearchprobsettings1_2.searchsettings .option {
+    border-radius: 3px;
+    background: rgb(66, 66, 66);
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.74);
+}
+
+#ajaxsearchprosettings1_1.searchsettings .option label, #ajaxsearchprosettings1_2.searchsettings .option label,
+#ajaxsearchprobsettings1_1.searchsettings .option label, #ajaxsearchprobsettings1_2.searchsettings .option label {
+    cursor: pointer;
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    top: 0;
+    padding: 0;
+    border-radius: 2px;
+    -webkit-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px rgba(255, 255, 255, .2);
+    -moz-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px rgba(255, 255, 255, .2);
+    box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px rgba(255, 255, 255, .2);
+}
+
+#ajaxsearchprosettings1_1.searchsettings.ie78 .option label, #ajaxsearchprosettings1_2.searchsettings.ie78 .option label,
+#ajaxsearchprobsettings1_1.searchsettings.ie78 .option label, #ajaxsearchprobsettings1_2.searchsettings.ie78 .option label {
+    display: none;
+}
+
+#ajaxsearchprosettings1_1.searchsettings .option label:after, #ajaxsearchprosettings1_2.searchsettings .option label:after,
+#ajaxsearchprobsettings1_1.searchsettings .option label:after, #ajaxsearchprobsettings1_2.searchsettings .option label:after {
+    opacity: 0;
+    font-family: 'asppsicons2';
+    content: "\e800";
+    background: transparent;
+    border-top: none;
+    border-right: none;
+    box-sizing: content-box;
+    height: 100%;
+    width: 100%;
+    padding: 0 !important;
+}
+
+#ajaxsearchprosettings1_1.searchsettings.ie78 .option label:after, #ajaxsearchprosettings1_2.searchsettings.ie78 .option label:after,
+#ajaxsearchprobsettings1_1.searchsettings.ie78 .option label:after, #ajaxsearchprobsettings1_2.searchsettings.ie78 .option label:after {
+    display: none;
+}
+
+#ajaxsearchprosettings1_1.searchsettings .option label:hover::after, #ajaxsearchprosettings1_2.searchsettings .option label:hover::after,
+#ajaxsearchprobsettings1_1.searchsettings .option label:hover::after, #ajaxsearchprobsettings1_2.searchsettings .option label:hover::after {
+    opacity: 0.3;
+}
+
+#ajaxsearchprosettings1_1.searchsettings .option input[type=checkbox]:checked ~ label:after, #ajaxsearchprosettings1_2.searchsettings .option input[type=checkbox]:checked ~ label:after,
+#ajaxsearchprobsettings1_1.searchsettings .option input[type=checkbox]:checked ~ label:after, #ajaxsearchprobsettings1_2.searchsettings .option input[type=checkbox]:checked ~ label:after {
+    opacity: 1;
+}
+
+/* foundation.min.js compatibility */
+#ajaxsearchprobsettings1_1.searchsettings span.checked ~ label:after, #ajaxsearchprobsettings1_2.searchsettings span.checked ~ label:after,
+#ajaxsearchprosettings1_1.searchsettings span.checked ~ label:after, #ajaxsearchprosettings1_2.searchsettings span.checked ~ label:after {
+    opacity: 1 !important;
+}
+
+#ajaxsearchprosettings1_1.searchsettings fieldset, #ajaxsearchprosettings1_2.searchsettings fieldset,
+#ajaxsearchprobsettings1_1.searchsettings fieldset, #ajaxsearchprobsettings1_2.searchsettings fieldset {
+    position: relative;
+    float: left;
+}
+
+#ajaxsearchprosettings1_1.searchsettings fieldset, #ajaxsearchprosettings1_2.searchsettings fieldset,
+#ajaxsearchprobsettings1_1.searchsettings fieldset, #ajaxsearchprobsettings1_2.searchsettings fieldset {
+    background: transparent;
+    font-size: 0.9em;
+    /* some themes like to add un-removable margin and padding.. */
+    margin: 12px 0 0 !important;
+    padding: 0 !important;
+    width: 200px;
+    min-width: 200px;
+}
+#ajaxsearchprobsettings1_1.searchsettings fieldset:last-child, #ajaxsearchprobsettings1_2.searchsettings fieldset:last-child {
+    margin: 5px 0 0 !important;
+}
+
+#ajaxsearchprobsettings1_1.searchsettings fieldset, #ajaxsearchprobsettings1_2.searchsettings fieldset {
+    margin: 10px 0 0;
+}
+
+#ajaxsearchprobsettings1_1.searchsettings fieldset legend, #ajaxsearchprobsettings1_2.searchsettings fieldset legend {
+    padding: 0 0 0 10px;
+    margin: 0;
+    font-weight: normal;
+    font-size: 13px;
+}
+
+#ajaxsearchprosettings1_1.searchsettings .asp_select_spacer, #ajaxsearchprosettings1_2.searchsettings .asp_select_spacer {
+    width: 100%;
+    margin: 5px 0 0 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.23);
+}
+
+#ajaxsearchprobsettings1_1.searchsettings .asp_option, #ajaxsearchprobsettings1_2.searchsettings .asp_option,
+#ajaxsearchprosettings1_1.searchsettings .asp_option, #ajaxsearchprosettings1_2.searchsettings .asp_option {
+    display: flex;
+    flex-direction: row;
+    -webkit-flex-direction: row;
+    align-items: flex-start;
+    margin: 0 0 10px 0;
+}
+
+#ajaxsearchprosettings1_1.searchsettings .asp_option.asp-o-last, #ajaxsearchprosettings1_2.searchsettings .asp_option.asp-o-last,
+#ajaxsearchprosettings1_1.searchsettings .asp_option:last-child, #ajaxsearchprosettings1_2.searchsettings .asp_option:last-child {
+    margin-bottom: 0;
+}
+
+#ajaxsearchprosettings1_1.searchsettings fieldset .asp_option, #ajaxsearchprosettings1_2.searchsettings fieldset .asp_option,
+#ajaxsearchprosettings1_1.searchsettings fieldset .asp_option_cat, #ajaxsearchprosettings1_2.searchsettings fieldset .asp_option_cat,
+#ajaxsearchprobsettings1_1.searchsettings fieldset .asp_option, #ajaxsearchprobsettings1_2.searchsettings fieldset .asp_option,
+#ajaxsearchprobsettings1_1.searchsettings fieldset .asp_option_cat, #ajaxsearchprobsettings1_2.searchsettings fieldset .asp_option_cat {
+    width: auto;
+    max-width: none;
+}
+
+#ajaxsearchprosettings1_1.searchsettings fieldset .asp_option_cat_level-1, #ajaxsearchprosettings1_2.searchsettings fieldset .asp_option_cat_level-1,
+#ajaxsearchprobsettings1_1.searchsettings fieldset .asp_option_cat_level-1, #ajaxsearchprobsettings1_2.searchsettings fieldset .asp_option_cat_level-1 {
+    margin-left: 12px;
+}
+
+#ajaxsearchprosettings1_1.searchsettings fieldset .asp_option_cat_level-2, #ajaxsearchprosettings1_2.searchsettings fieldset .asp_option_cat_level-2,
+#ajaxsearchprobsettings1_1.searchsettings fieldset .asp_option_cat_level-2, #ajaxsearchprobsettings1_2.searchsettings fieldset .asp_option_cat_level-2 {
+    margin-left: 24px;
+}
+
+#ajaxsearchprosettings1_1.searchsettings fieldset .asp_option_cat_level-3, #ajaxsearchprosettings1_2.searchsettings fieldset .asp_option_cat_level-3,
+#ajaxsearchprobsettings1_1.searchsettings fieldset .asp_option_cat_level-3, #ajaxsearchprobsettings1_2.searchsettings fieldset .asp_option_cat_level-3 {
+    margin-left: 36px;
+}
+
+#ajaxsearchprosettings1_1.searchsettings fieldset .label, #ajaxsearchprosettings1_2.searchsettings fieldset .label,
+#ajaxsearchprobsettings1_1.searchsettings fieldset .label, #ajaxsearchprobsettings1_2.searchsettings fieldset .label {
+    width: 70%;
+    display: block;
+}
+
+#ajaxsearchprosettings1_1.searchsettings fieldset .label, #ajaxsearchprosettings1_2.searchsettings fieldset .label {
+    width: auto;
+    display: block;
+    box-sizing: border-box;
+}
+
+#ajaxsearchprosettings1_1.searchsettings fieldset .asp_option_cat_level-2 .label, #ajaxsearchprosettings1_2.searchsettings fieldset .asp_option_cat_level-2 .label {
+    padding-right: 12px;
+}
+
+#ajaxsearchprosettings1_1.searchsettings fieldset .asp_option_cat_level-3 .label, #ajaxsearchprosettings1_2.searchsettings fieldset .asp_option_cat_level-3 .label {
+    padding-right: 24px;
+}
+
+#ajaxsearchprosettings1_1 select, #ajaxsearchprosettings1_2 select,
+#ajaxsearchprobsettings1_1 select, #ajaxsearchprobsettings1_2 select {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 3px !important;
+    padding: 4px !important;
+    background: #37393C !important;
+    box-shadow: 0 0 0px 1px rgba(255, 255, 255, 0.50);
+    margin: 0;
+    border: none;
+    color: rgb(215, 215, 215) !important;
+    margin-bottom: 0px !important;
+    box-sizing: border-box;
+    line-height: initial;
+}
+
+#ajaxsearchprosettings1_1 select:not([multiple]), #ajaxsearchprosettings1_2 select:not([multiple]),
+#ajaxsearchprobsettings1_1 select:not([multiple]), #ajaxsearchprobsettings1_2 select:not([multiple]) {
+    overflow: hidden !important;
+}
+
+/**********************************************************************************************************************\
+    6. COLUMN STYLES
+\**********************************************************************************************************************/
+
+.asp_two_column {
+    margin: 8px 0 12px 0;
+}
+
+.asp_two_column .asp_two_column_first,
+.asp_two_column .asp_two_column_last {
+    width: 48%;
+    padding: 1% 2% 1% 0;
+    float: left;
+    box-sizing: content-box;
+}
+
+.asp_two_column .asp_two_column_last {
+    padding: 1% 0% 1% 2%;
+}
+
+.asp_shortcodes_container {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: -10px 0 12px -10px;
+    box-sizing: border-box;
+}
+
+.asp_shortcodes_container .asp_shortcode_column {
+    -webkit-flex-grow: 0;
+    flex-grow: 0;
+    -webkit-flex-shrink: 1;
+    flex-shrink: 1;
+    min-width: 120px;
+    padding: 10px 0 0 10px;
+    flex-basis: 33%;
+    -webkit-flex-basis: 33%;
+    box-sizing: border-box;
+}
+
+
+/**********************************************************************************************************************\
+    7. CUSTOM FIELD FIELDSETS
+\**********************************************************************************************************************/
+
+div.ajaxsearchpro.searchsettings  fieldset.asp_custom_f {
+    margin-top: 9px;
+}
+
+/* Give the legend elements some margin... */
+div.ajaxsearchpro.searchsettings  fieldset legend {
+    margin-bottom: 8px !important;
+}
+
+/* .. but exclude some cases where checkboxes are presented */
+div.ajaxsearchpro.searchsettings  fieldset legend + div.option {
+    margin-top: 0px !important;
+}
+div.ajaxsearchpro.searchsettings .asp_sett_scroll > .asp_option_cat:first-child > .option,
+div.ajaxsearchpro.searchsettings .mCSBap_container > .asp_option_cat:first-child > .option {
+    margin-top: 0px !important;
+}
+
+div.ajaxsearchpro.searchsettings  fieldset .asp_select_single,
+div.ajaxsearchpro.searchsettings  fieldset.asp_custom_f .asp_select_single,
+div.ajaxsearchpro.searchsettings  fieldset.asp_custom_f .asp_select_multiple {
+    padding: 0 10px;
+}
+
+
+/**********************************************************************************************************************\
+    8. NO-UI DRAGGER STYLES
+\**********************************************************************************************************************/
+
+div.ajaxsearchpro.searchsettings .asp_noui_lu,
+#ajaxsearchprobsettings1_1 .asp_noui_lu, #ajaxsearchprobsettings1_2 .asp_noui_lu {
+    width: 157px;
+    margin-left: 18px;
+}
+
+div.ajaxsearchpro.searchsettings .asp_noui_l_pre,
+div.ajaxsearchpro.searchsettings .slider-handles-low,
+div.ajaxsearchpro.searchsettings .asp_noui_l_suff {
+    float: left;
+    color: #444;
+}
+
+div.ajaxsearchpro.searchsettings .asp_noui_u_pre,
+div.ajaxsearchpro.searchsettings .slider-handles-up,
+div.ajaxsearchpro.searchsettings .asp_noui_u_suff {
+    float: right;
+    color: #444;
+}
+
+div.ajaxsearchpro.searchsettings .noUi-target,
+div.ajaxsearchpro.searchsettings .noUi-target * {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -ms-touch-action: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+div.ajaxsearchpro.searchsettings .noUi-target {
+    position: relative;
+    max-width: 156px;
+    margin: 5px 0 10px 18px;
+}
+div.ajaxsearchpro.searchsettings .noUi-base {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+div.ajaxsearchpro.searchsettings .noUi-origin {
+    position: absolute;
+    right: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+}
+div.ajaxsearchpro.searchsettings .noUi-handle {
+    position: relative;
+    z-index: 1;
+}
+div.ajaxsearchpro.searchsettings .noUi-stacking .noUi-handle {
+    /* This class is applied to the lower origin when
+       its values is > 50%. */
+    z-index: 10;
+}
+div.ajaxsearchpro.searchsettings .noUi-stacking + .noUi-origin {
+    /* Fix stacking order in IE7, which incorrectly
+       creates a new context for the origins. */
+    *z-index: -1;
+}
+div.ajaxsearchpro.searchsettings .noUi-state-tap .noUi-origin {
+    -webkit-transition: left 0.3s, top 0.3s;
+    transition: left 0.3s, top 0.3s;
+}
+div.ajaxsearchpro.searchsettings .noUi-state-drag * {
+    cursor: inherit !important;
+}
+
+div.ajaxsearchpro.searchsettings .noUi-base {
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+
+div.ajaxsearchpro.searchsettings .noUi-horizontal {
+    height: 8px;
+}
+div.ajaxsearchpro.searchsettings .noUi-horizontal .noUi-handle {
+    width: 16px;
+    height: 17px;
+    left: -8px;
+    top: -5px;
+}
+div.ajaxsearchpro.searchsettings .noUi-vertical {
+    width: 18px;
+}
+div.ajaxsearchpro.searchsettings .noUi-vertical .noUi-handle {
+    width: 28px;
+    height: 34px;
+    left: -6px;
+    top: -17px;
+}
+
+div.ajaxsearchpro.searchsettings .noUi-background {
+    background: #FAFAFA;
+    box-shadow: inset 0 1px 1px #f0f0f0;
+}
+div.ajaxsearchpro.searchsettings .noUi-connect {
+    background: #3FB8AF;
+    box-shadow: inset 0 0 3px rgba(51,51,51,0.45);
+    -webkit-transition: background 450ms;
+    transition: background 450ms;
+}
+div.ajaxsearchpro.searchsettings .noUi-origin {
+    border-radius: 2px;
+}
+div.ajaxsearchpro.searchsettings .noUi-target {
+    border-radius: 4px;
+    box-shadow: 0 0 4px -1px #000;
+    -webkit-box-shadow: 0 0 4px -1px #000;
+    -moz-box-shadow: 0 0 2px -1px #000;
+}
+div.ajaxsearchpro.asp_firefox.searchsettings .noUi-target {
+    box-shadow: 0 0 2px -1px #000;
+}
+div.ajaxsearchpro.searchsettings .noUi-target.noUi-connect {
+    box-shadow: inset 0 0 3px rgba(51,51,51,0.45), 0 3px 6px -5px #BBB;
+}
+
+div.ajaxsearchpro.searchsettings .noUi-dragable {
+    cursor: w-resize;
+}
+div.ajaxsearchpro.searchsettings .noUi-vertical .noUi-dragable {
+    cursor: n-resize;
+}
+div.ajaxsearchpro.searchsettings .noUi-handle {
+    border: none;
+    border-radius: 3px;
+    background: #FFF;
+    cursor: default;
+    box-shadow: 0 0 4px -1px #000;
+    -webkit-box-shadow: 0 0 4px -1px #000;
+    -moz-box-shadow: 0 0 2px -1px #000;
+}
+div.ajaxsearchpro.asp_firefox.searchsettings .noUi-handle {
+    box-shadow: 0 0 2px -1px #000;
+}
+div.ajaxsearchpro.searchsettings .noUi-active {
+    box-shadow: 0 0 7px -2px #000;
+}
+
+div.ajaxsearchpro.searchsettings .noUi-handle:before,
+div.ajaxsearchpro.searchsettings .noUi-handle:after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 9px;
+    width: 1px;
+    background: #E8E7E6;
+    left: 6px;
+    top: 4px;
+}
+div.ajaxsearchpro.searchsettings .noUi-handle:after {
+    left: 9px;
+}
+div.ajaxsearchpro.searchsettings .noUi-vertical .noUi-handle:before,
+div.ajaxsearchpro.searchsettings .noUi-vertical .noUi-handle:after {
+    width: 14px;
+    height: 1px;
+    left: 6px;
+    top: 14px;
+}
+div.ajaxsearchpro.searchsettings .noUi-vertical .noUi-handle:after {
+    top: 17px;
+}
+
+
+/**********************************************************************************************************************\
+    9. SUGGESTED KEYWORDS
+\**********************************************************************************************************************/
+
+p.asp-try {
+    color: #555;
+    font-size: 14px;
+    margin-top: 5px;
+    line-height: 28px;
+    font-weight: 300;
+}
+
+p.asp-try a {
+    color: #FFB556;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+
+/**********************************************************************************************************************\
+    10. SCROLLBAR STYLES
+\**********************************************************************************************************************/
+.ajaxsearchpro .mCSBap_container {
+    display: block;
+}
+
+.results .mCSBap_container {
+    width: auto;
+    margin-right: 30px;
+    overflow: hidden;
+    display: block;
+}
+
+.results .mCSBap_container.mCS_no_scrollbar {
+    margin-right: 0;
+}
+
+.results .mCS_disabled > .mCustomScrollBox > .mCSBap_container.mCS_no_scrollbar,
+.results .mCS_destroyed > .mCustomScrollBox > .mCSBap_container.mCS_no_scrollbar {
+    margin-right: 30px;
+}
+
+.results .mCustomScrollBox > .mCSBap_scrollTools {
+    width: 16px;
+    height: 100%;
+    top: 0;
+    right: 0;
+}
+
+.results .mCSBap_scrollTools .mCSBap_draggerContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: auto;
+}
+
+.results .mCSBap_scrollTools a + .mCSBap_draggerContainer {
+    margin: 20px 0;
+}
+
+.results .mCSBap_scrollTools .mCSBap_draggerRail {
+    width: 2px;
+    height: 100%;
+    margin: 0 auto;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+
+.results .mCSBap_scrollTools .mCSBap_dragger {
+    cursor: pointer;
+    width: 100%;
+    height: 30px;
+}
+
+.results .mCSBap_scrollTools .mCSBap_dragger .mCSBap_dragger_bar {
+    width: 4px;
+    height: 100%;
+    margin: 0 auto;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.results .mCSBap_scrollTools .mCSBap_buttonUp,
+.results .mCSBap_scrollTools .mCSBap_buttonDown {
+    display: block;
+}
+
+.results .mCSBap_scrollTools .mCSBap_buttonDown {
+    top: 100%;
+    margin-top: -40px;
+}
+
+/* horizontal scrollbar */
+.results .mCSBap_horizontal > .mCSBap_container {
+    height: auto;
+    margin-right: 0;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+.results .mCSBap_horizontal > .mCSBap_container.mCS_no_scrollbar {
+    margin-bottom: 0;
+}
+
+.results .mCS_disabled > .mCSBap_horizontal > .mCSBap_container.mCS_no_scrollbar,
+.results .mCS_destroyed > .mCSBap_horizontal > .mCSBap_container.mCS_no_scrollbar {
+    margin-right: 0;
+    margin-bottom: 30px;
+}
+
+.results .mCSBap_horizontal.mCustomScrollBox > .mCSBap_scrollTools {
+    width: 100%;
+    height: 16px;
+    top: auto;
+    right: auto;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+.results .mCSBap_horizontal > .mCSBap_scrollTools a + .mCSBap_draggerContainer {
+    margin: 0 20px;
+}
+
+.results .mCSBap_horizontal > .mCSBap_scrollTools .mCSBap_draggerRail {
+    width: 100%;
+    height: 2px;
+    margin: 7px 0;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+
+.results .mCSBap_horizontal > .mCSBap_scrollTools .mCSBap_dragger {
+    width: 30px;
+    height: 100%;
+}
+
+.results .mCSBap_horizontal > .mCSBap_scrollTools .mCSBap_dragger .mCSBap_dragger_bar {
+    width: 100%;
+    height: 4px;
+    margin: 6px auto;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+
+.results .mCSBap_horizontal > .mCSBap_scrollTools .mCSBap_buttonLeft,
+.results .mCSBap_horizontal > .mCSBap_scrollTools .mCSBap_buttonRight {
+    display: block;
+    position: relative;
+    width: 20px;
+    height: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+    cursor: pointer;
+    float: left;
+}
+
+.results .mCSBap_horizontal > .mCSBap_scrollTools .mCSBap_buttonRight {
+    margin-left: -40px;
+    float: right;
+}
+
+.results .mCustomScrollBox {
+    -ms-touch-action: none; /*MSPointer events - direct all pointer events to js*/
+}
+
+.results .mCustomScrollBox > .mCSBap_scrollTools {
+    opacity: 0.75;
+}
+
+div.searchsettings .mCustomScrollBox:hover > .mCSBap_scrollTools,
+.results .mCustomScrollBox:hover > .mCSBap_scrollTools {
+    opacity: 1;
+}
+
+div.searchsettings .mCSBap_scrollTools .mCSBap_draggerRail,
+.results .mCSBap_scrollTools .mCSBap_draggerRail {
+    background: #000; /* rgba fallback */
+    background: rgba(0, 0, 0, 0.4);
+}
+
+div.searchsettings .mCSBap_scrollTools .mCSBap_dragger .mCSBap_dragger_bar,
+.results .mCSBap_scrollTools .mCSBap_dragger .mCSBap_dragger_bar {
+    background: #fff; /* rgba fallback */
+    background: rgba(255, 255, 255, 1);
+}
+
+.results .mCSBap_scrollTools .mCSBap_dragger:hover .mCSBap_dragger_bar {
+    background: rgba(255, 255, 255, 0.85);
+}
+
+.results .mCSBap_scrollTools .mCSBap_dragger:active .mCSBap_dragger_bar,
+.results .mCSBap_scrollTools .mCSBap_dragger.mCSBap_dragger_onDrag .mCSBap_dragger_bar {
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.results .mCSBap_scrollTools .mCSBap_buttonUp {
+    background-position: 0 0;
+}
+
+.results .mCSBap_scrollTools .mCSBap_buttonDown {
+    background-position: 0 -20px;
+}
+#ajaxsearchprores1_1.horizontal .results .mCSBap_scrollTools .mCSBap_buttonLeft, #ajaxsearchprores1_2.horizontal .results .mCSBap_scrollTools .mCSBap_buttonLeft,
+div.searchsettings .mCSBap_scrollTools .mCSBap_buttonLeft {
+    position: relative;
+    background: transparent;
+    margin-left: 9px;
+}
+
+#ajaxsearchprores1_1.horizontal .results .mCSBap_scrollTools .mCSBap_buttonLeft:after, #ajaxsearchprores1_2.horizontal .results .mCSBap_scrollTools .mCSBap_buttonLeft:after,
+div.searchsettings .mCSBap_scrollTools .mCSBap_buttonLeft:after {
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+}
+
+#ajaxsearchprores1_1.horizontal .results .mCSBap_scrollTools .mCSBap_buttonRight, #ajaxsearchprores1_2.horizontal .results .mCSBap_scrollTools .mCSBap_buttonRight,
+div.searchsettings .mCSBap_scrollTools .mCSBap_buttonRight {
+    position: relative;
+    background: transparent;
+    margin-right: 9px;
+    margin-top: 0px;
+}
+
+#ajaxsearchprores1_1.horizontal .results .mCSBap_scrollTools .mCSBap_buttonRight:after, #ajaxsearchprores1_2.horizontal .results .mCSBap_scrollTools .mCSBap_buttonRight:after,
+div.searchsettings .mCSBap_scrollTools .mCSBap_buttonRight:after {
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+}
+
+#ajaxsearchprores1_1 .results .mCSBap_horizontal > .mCSBap_scrollTools a + .mCSBap_draggerContainer, #ajaxsearchprores1_2 .results .mCSBap_horizontal > .mCSBap_scrollTools a + .mCSBap_draggerContainer {
+    margin: 10px 12px 0 36px
+}
+
+.results .mCSBap_scrollTools .mCSBap_buttonRight {
+    background-position: 0 -56px;
+}
+
+div.searchsettings .mCSBap_scrollTools .mCSBap_buttonUp:hover,
+div.searchsettings .mCSBap_scrollTools .mCSBap_buttonDown:hover,
+div.searchsettings .mCSBap_scrollTools .mCSBap_buttonLeft:hover,
+div.searchsettings .mCSBap_scrollTools .mCSBap_buttonRight:hover,
+.results .mCSBap_scrollTools .mCSBap_buttonUp:hover,
+.results .mCSBap_scrollTools .mCSBap_buttonDown:hover,
+.results .mCSBap_scrollTools .mCSBap_buttonLeft:hover,
+.results .mCSBap_scrollTools .mCSBap_buttonRight:hover {
+    opacity: 0.75;
+}
+
+div.searchsettings .mCSBap_scrollTools .mCSBap_buttonUp:active,
+div.searchsettings .mCSBap_scrollTools .mCSBap_buttonDown:active,
+div.searchsettings .mCSBap_scrollTools .mCSBap_buttonLeft:active,
+div.searchsettings .mCSBap_scrollTools .mCSBap_buttonRight:active,
+.results .mCSBap_scrollTools .mCSBap_buttonUp:active,
+.results .mCSBap_scrollTools .mCSBap_buttonDown:active,
+.results .mCSBap_scrollTools .mCSBap_buttonLeft:active,
+.results .mCSBap_scrollTools .mCSBap_buttonRight:active {
+    opacity: 0.9;
+}
+
+#ajaxsearchpro1_1 .mCSBap_container, #ajaxsearchpro1_2 .mCSBap_container {
+    width: auto;
+    margin-right: 20px;
+    overflow: hidden;
+}
+
+#ajaxsearchpro1_1 .mCSBap_container.mCS_no_scrollbar, #ajaxsearchpro1_2 .mCSBap_container.mCS_no_scrollbar,
+#ajaxsearchpro1_1 .mCSBap_container.mCS_no_scrollbar_y, #ajaxsearchpro1_2 .mCSBap_container.mCS_no_scrollbar_y {
+    margin-right: 0;
+}
+
+#ajaxsearchpro1_1 .mCustomScrollBox .mCSBap_scrollTools, #ajaxsearchpro1_2 .mCustomScrollBox .mCSBap_scrollTools {
+    width: 16px;
+    height: 100%;
+    top: 0;
+    right: 0;
+}
+
+#ajaxsearchpro1_1 .mCSBap_scrollTools .mCSBap_draggerContainer, #ajaxsearchpro1_2 .mCSBap_scrollTools .mCSBap_draggerContainer {
+    height: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 2px 0; /* Fix the top cut of the dragger rail */
+}
+
+#ajaxsearchpro1_1 .mCSBap_scrollTools .mCSBap_buttonUp + .mCSBap_draggerContainer, #ajaxsearchpro1_2 .mCSBap_scrollTools .mCSBap_buttonUp + .mCSBap_draggerContainer {
+    padding-bottom: 40px;
+    margin-top: 20px;
+}
+
+#ajaxsearchpro1_1 .mCSBap_scrollTools .mCSBap_draggerRail, #ajaxsearchpro1_2 .mCSBap_scrollTools .mCSBap_draggerRail {
+    width: 2px;
+    height: 100%;
+    margin: 0 auto;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+
+#ajaxsearchpro1_1 .mCSBap_scrollTools .mCSBap_dragger, #ajaxsearchpro1_2 .mCSBap_scrollTools .mCSBap_dragger {
+    cursor: pointer;
+    width: 100%;
+    height: 30px;
+}
+
+#ajaxsearchpro1_1 .mCSBap_scrollTools .mCSBap_dragger .mCSBap_dragger_bar, #ajaxsearchpro1_2 .mCSBap_scrollTools .mCSBap_dragger .mCSBap_dragger_bar {
+    width: 6px;
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.5);
+    height: 100%;
+    margin: 0 auto;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#ajaxsearchpro1_1 .mCSBap_scrollTools .mCSBap_buttonUp, #ajaxsearchpro1_2 .mCSBap_scrollTools .mCSBap_buttonUp,
+#ajaxsearchpro1_1 .mCSBap_scrollTools .mCSBap_buttonDown, #ajaxsearchpro1_2 .mCSBap_scrollTools .mCSBap_buttonDown {
+    height: 20px;
+    -overflow: hidden;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+#ajaxsearchpro1_1 .mCSBap_scrollTools .mCSBap_buttonDown, #ajaxsearchpro1_2 .mCSBap_scrollTools .mCSBap_buttonDown {
+    bottom: 0;
+    margin-top: -40px;
+}
+
+#ajaxsearchpro1_1 .mCSBap_horizontal .mCSBap_container, #ajaxsearchpro1_2 .mCSBap_horizontal .mCSBap_container {
+    height: auto;
+    margin-right: 0;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+#ajaxsearchpro1_1 .mCSBap_horizontal .mCSBap_container.mCS_no_scrollbar, #ajaxsearchpro1_2 .mCSBap_horizontal .mCSBap_container.mCS_no_scrollbar {
+    margin-bottom: 0;
+}
+
+#ajaxsearchpro1_1 .mCSBap_horizontal.mCustomScrollBox .mCSBap_scrollTools, #ajaxsearchpro1_2 .mCSBap_horizontal.mCustomScrollBox .mCSBap_scrollTools {
+    width: 100%;
+    height: 26px;
+    top: auto;
+    right: auto;
+    bottom: 6px;
+    left: 0;
+    overflow: hidden;
+}
+
+#ajaxsearchpro1_1 .mCSBap_horizontal .mCSBap_scrollTools .mCSBap_draggerContainer, #ajaxsearchpro1_2 .mCSBap_horizontal .mCSBap_scrollTools .mCSBap_draggerContainer {
+    height: 23px;
+    width: auto;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+#ajaxsearchpro1_1 .mCSBap_horizontal .mCSBap_scrollTools .mCSBap_buttonLeft + .mCSBap_draggerContainer, #ajaxsearchpro1_2 .mCSBap_horizontal .mCSBap_scrollTools .mCSBap_buttonLeft + .mCSBap_draggerContainer {
+    padding-bottom: 0;
+    padding-right: 20px;
+}
+
+#ajaxsearchpro1_1 .mCSBap_horizontal .mCSBap_scrollTools .mCSBap_draggerRail, #ajaxsearchpro1_2 .mCSBap_horizontal .mCSBap_scrollTools .mCSBap_draggerRail {
+    width: 100%;
+    height: 2px;
+    margin: 7px 0;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+
+#ajaxsearchpro1_1 .mCSBap_horizontal .mCSBap_scrollTools .mCSBap_dragger, #ajaxsearchpro1_2 .mCSBap_horizontal .mCSBap_scrollTools .mCSBap_dragger {
+    width: 30px;
+    height: 100%;
+}
+
+#ajaxsearchpro1_1 .mCSBap_horizontal .mCSBap_scrollTools .mCSBap_dragger .mCSBap_dragger_bar, #ajaxsearchpro1_2 .mCSBap_horizontal .mCSBap_scrollTools .mCSBap_dragger .mCSBap_dragger_bar {
+    width: 100%;
+    height: 4px;
+    margin: 6px auto;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+
+#ajaxsearchpro1_1 .mCSBap_horizontal .mCSBap_scrollTools .mCSBap_buttonLeft, #ajaxsearchpro1_2 .mCSBap_horizontal .mCSBap_scrollTools .mCSBap_buttonLeft,
+#ajaxsearchpro1_1 .mCSBap_horizontal .mCSBap_scrollTools .mCSBap_buttonRight, #ajaxsearchpro1_2 .mCSBap_horizontal .mCSBap_scrollTools .mCSBap_buttonRight {
+    width: 20px;
+    height: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+    cursor: pointer;
+    float: left;
+}
+
+#ajaxsearchpro1_1 .mCSBap_horizontal .mCSBap_scrollTools .mCSBap_buttonRight, #ajaxsearchpro1_2 .mCSBap_horizontal .mCSBap_scrollTools .mCSBap_buttonRight {
+    right: 0;
+    bottom: auto;
+    margin-left: -40px;
+    margin-top: -16px;
+    float: right;
+}
+
+#ajaxsearchpro1_1 .mCustomScrollBox .mCSBap_scrollTools, #ajaxsearchpro1_2 .mCustomScrollBox .mCSBap_scrollTools {
+    opacity: 0.75;
+}
+
+#ajaxsearchpro1_1 .mCustomScrollBox:hover .mCSBap_scrollTools, #ajaxsearchpro1_2 .mCustomScrollBox:hover .mCSBap_scrollTools {
+    opacity: 1;
+}
+
+#ajaxsearchpro1_1 .mCSBap_scrollTools .mCSBap_draggerRail, #ajaxsearchpro1_2 .mCSBap_scrollTools .mCSBap_draggerRail {
+    background: #000; /* rgba fallback */
+    background: rgba(0, 0, 0, 0.4);
+}
+
+#ajaxsearchpro1_1 .mCSBap_scrollTools .mCSBap_buttonUp, #ajaxsearchpro1_2 .mCSBap_scrollTools .mCSBap_buttonUp,
+#ajaxsearchpro1_1 .mCSBap_scrollTools .mCSBap_buttonDown, #ajaxsearchpro1_2 .mCSBap_scrollTools .mCSBap_buttonDown,
+#ajaxsearchpro1_1 .mCSBap_scrollTools .mCSBap_buttonLeft, #ajaxsearchpro1_2 .mCSBap_scrollTools .mCSBap_buttonLeft,
+#ajaxsearchpro1_1 .mCSBap_scrollTools .mCSBap_buttonRight, #ajaxsearchpro1_2 .mCSBap_scrollTools .mCSBap_buttonRight {
+    padding: 10px 0 0 0;
+    background: 0;
+    opacity: 0.4;
+}
+
+#ajaxsearchpro1_1 .mCSBap_scrollTools .mCSBap_buttonDown, #ajaxsearchpro1_2 .mCSBap_scrollTools .mCSBap_buttonDown {
+    height: 0;
+    position: relative;
+}
+
+#ajaxsearchpro1_1 .mCSBap_scrollTools .mCSBap_buttonDown:after, #ajaxsearchpro1_2 .mCSBap_scrollTools .mCSBap_buttonDown:after {
+    top: 100%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+}
+
+#ajaxsearchpro1_1 .mCSBap_scrollTools .mCSBap_buttonUp, #ajaxsearchpro1_2 .mCSBap_scrollTools .mCSBap_buttonUp {
+    position: relative;
+    margin: 10px 0 0 0;
+    height: 0;
+}
+
+#ajaxsearchpro1_1 .mCSBap_scrollTools .mCSBap_buttonUp:after, #ajaxsearchpro1_2 .mCSBap_scrollTools .mCSBap_buttonUp:after {
+    bottom: 100%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+}
+
+#ajaxsearchpro1_1 .mCSBap_scrollTools .mCSBap_buttonUp, #ajaxsearchpro1_2 .mCSBap_scrollTools .mCSBap_buttonUp {
+    background-position: 0 0;
+}
+
+#ajaxsearchpro1_1 .mCSBap_scrollTools .mCSBap_buttonDown, #ajaxsearchpro1_2 .mCSBap_scrollTools .mCSBap_buttonDown {
+    background-position: 0 -20px;
+}
+
+#ajaxsearchpro1_1 .mCSBap_scrollTools .mCSBap_buttonLeft, #ajaxsearchpro1_2 .mCSBap_scrollTools .mCSBap_buttonLeft {
+    background-position: 0 -40px;
+}
+
+#ajaxsearchpro1_1 .mCSBap_scrollTools .mCSBap_buttonRight, #ajaxsearchpro1_2 .mCSBap_scrollTools .mCSBap_buttonRight {
+    background-position: 0 -56px;
+}
+
+#ajaxsearchpro1_1 .mCSBap_scrollTools .mCSBap_buttonUp:hover, #ajaxsearchpro1_2 .mCSBap_scrollTools .mCSBap_buttonUp:hover,
+#ajaxsearchpro1_1 .mCSBap_scrollTools .mCSBap_buttonDown:hover, #ajaxsearchpro1_2 .mCSBap_scrollTools .mCSBap_buttonDown:hover,
+#ajaxsearchpro1_1 .mCSBap_scrollTools .mCSBap_buttonLeft:hover, #ajaxsearchpro1_2 .mCSBap_scrollTools .mCSBap_buttonLeft:hover,
+#ajaxsearchpro1_1 .mCSBap_scrollTools .mCSBap_buttonRight:hover, #ajaxsearchpro1_2 .mCSBap_scrollTools .mCSBap_buttonRight:hover {
+    opacity: 0.75;
+}
+
+#ajaxsearchpro1_1 .mCSBap_scrollTools .mCSBap_buttonUp:active, #ajaxsearchpro1_2 .mCSBap_scrollTools .mCSBap_buttonUp:active,
+#ajaxsearchpro1_1 .mCSBap_scrollTools .mCSBap_buttonDown:active, #ajaxsearchpro1_2 .mCSBap_scrollTools .mCSBap_buttonDown:active,
+#ajaxsearchpro1_1 .mCSBap_scrollTools .mCSBap_buttonLeft:active, #ajaxsearchpro1_2 .mCSBap_scrollTools .mCSBap_buttonLeft:active,
+#ajaxsearchpro1_1 .mCSBap_scrollTools .mCSBap_buttonRight:active, #ajaxsearchpro1_2 .mCSBap_scrollTools .mCSBap_buttonRight:active {
+    opacity: 0.9;
+}
+
+/* Fix for v3.08 */
+div.ajaxsearchpro .mCustScr.mCS_no_scrollbar{ -ms-touch-action: auto; touch-action: auto; }
+
+div.ajaxsearchpro .mCustomScrollBox{ /* contains plugin's markup */
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    max-width: 100%;
+    outline: none;
+    direction: ltr;
+}
+
+div.ajaxsearchpro .mCSBap_container{ /* contains the original content */
+    overflow: hidden;
+    width: auto;
+    height: auto;
+}
+
+div.ajaxsearchpro .mCSBap_container.mCS_no_scrollbar_y.mCS_y_hidden{ margin-right: 0; } /* non-visible scrollbar */
+
+div.ajaxsearchpro .mCS-dir-rtl > .mCSBap_inside > .mCSBap_container{ /* RTL direction/left-side scrollbar */
+    margin-right: 0;
+    margin-left: 0;
+}
+
+div.ajaxsearchpro .mCS-dir-rtl > .mCSBap_inside > .mCSBap_container.mCS_no_scrollbar_y.mCS_y_hidden{ margin-left: 0; } /* RTL direction/left-side scrollbar */
+
+div.ajaxsearchpro .mCSBap_scrollTools{ /* contains scrollbar markup (draggable element, dragger rail, buttons etc.) */
+    position: absolute;
+    width: 16px;
+    height: auto;
+    left: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+div.ajaxsearchpro .mCSBap_outside + .mCSBap_scrollTools{ right: -26px; } /* scrollbar position: outside */
+
+div.ajaxsearchpro .mCS-dir-rtl > .mCSBap_inside > .mCSBap_scrollTools,
+div.ajaxsearchpro .mCS-dir-rtl > .mCSBap_outside + .mCSBap_scrollTools{ /* RTL direction/left-side scrollbar */
+    right: auto;
+    left: 0;
+}
+
+div.ajaxsearchpro .mCS-dir-rtl > .mCSBap_outside + .mCSBap_scrollTools{ left: -26px; } /* RTL direction/left-side scrollbar (scrollbar position: outside) */
+
+div.ajaxsearchpro .mCSBap_scrollTools .mCSBap_draggerContainer{ /* contains the draggable element and dragger rail markup */
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: auto;
+}
+
+div.ajaxsearchpro .mCSBap_scrollTools a + .mCSBap_draggerContainer{ margin: 20px 0; }
+
+div.ajaxsearchpro .mCSBap_scrollTools .mCSBap_draggerRail{
+    width: 2px;
+    height: 100%;
+    margin: 0 auto;
+    -webkit-border-radius: 16px; -moz-border-radius: 16px; border-radius: 16px;
+}
+
+div.ajaxsearchpro .mCSBap_scrollTools .mCSBap_dragger{ /* the draggable element */
+    cursor: pointer;
+    width: 100%;
+    height: 30px; /* minimum dragger height */
+    z-index: 1;
+}
+
+div.ajaxsearchpro .mCSBap_scrollTools .mCSBap_dragger .mCSBap_dragger_bar{ /* the dragger element */
+    position: relative;
+    width: 4px;
+    height: 100%;
+    margin: 0 auto;
+    -webkit-border-radius: 16px; -moz-border-radius: 16px; border-radius: 16px;
+    text-align: center;
+}
+
+div.ajaxsearchpro .mCSBap_scrollTools_vertical.mCSBap_scrollTools_onDrag_expand .mCSBap_dragger.mCSBap_dragger_onDrag_expanded .mCSBap_dragger_bar,
+div.ajaxsearchpro .mCSBap_scrollTools_vertical.mCSBap_scrollTools_onDrag_expand .mCSBap_draggerContainer:hover .mCSBap_dragger .mCSBap_dragger_bar{ width: 12px; /* auto-expanded scrollbar */ }
+
+div.ajaxsearchpro .mCSBap_scrollTools_vertical.mCSBap_scrollTools_onDrag_expand .mCSBap_dragger.mCSBap_dragger_onDrag_expanded + .mCSBap_draggerRail,
+div.ajaxsearchpro .mCSBap_scrollTools_vertical.mCSBap_scrollTools_onDrag_expand .mCSBap_draggerContainer:hover .mCSBap_draggerRail{ width: 8px; /* auto-expanded scrollbar */ }
+
+div.ajaxsearchpro .mCSBap_scrollTools .mCSBap_buttonUp,
+div.ajaxsearchpro .mCSBap_scrollTools .mCSBap_buttonDown{
+    display: block;
+    position: absolute;
+    height: 20px;
+    width: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+div.ajaxsearchpro .mCSBap_scrollTools .mCSBap_buttonDown{ bottom: 0; }
+
+/* Fix (horizontal) for v3.08 */
+
+div.ajaxsearchpro .mCSBap_horizontal.mCSBap_inside > .mCSBap_container{
+    margin-right: 0;
+    margin-bottom: 30px !important;
+}
+
+div.ajaxsearchpro .mCSBap_horizontal.mCSBap_outside > .mCSBap_container{ min-height: 100%; }
+
+div.ajaxsearchpro .mCSBap_horizontal > .mCSBap_container.mCS_no_scrollbar_x.mCS_x_hidden{ margin-bottom: 0 !important; } /* non-visible scrollbar */
+
+div.ajaxsearchpro .mCSBap_scrollTools.mCSBap_scrollTools_horizontal{
+    width: auto;
+    height: 16px;
+    top: auto;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+div.ajaxsearchpro .mCustomScrollBox + .mCSBap_scrollTools.mCSBap_scrollTools_horizontal,
+div.ajaxsearchpro .mCustomScrollBox + .mCSBap_scrollTools + .mCSBap_scrollTools.mCSBap_scrollTools_horizontal{ bottom: -26px; } /* scrollbar position: outside */
+
+div.ajaxsearchpro .mCSBap_scrollTools.mCSBap_scrollTools_horizontal a + .mCSBap_draggerContainer{ margin: 0 20px; }
+
+div.ajaxsearchpro .mCSBap_scrollTools.mCSBap_scrollTools_horizontal .mCSBap_draggerRail{
+    width: 100%;
+    height: 2px;
+    margin: 7px 0;
+}
+
+div.ajaxsearchpro .mCSBap_scrollTools.mCSBap_scrollTools_horizontal .mCSBap_dragger{
+    width: 30px; /* minimum dragger width */
+    height: 100%;
+    left: 0;
+}
+
+div.ajaxsearchpro .mCSBap_scrollTools.mCSBap_scrollTools_horizontal .mCSBap_dragger .mCSBap_dragger_bar{
+    width: 100%;
+    height: 4px;
+    margin: 6px auto;
+}
+
+div.ajaxsearchpro .mCSBap_scrollTools_horizontal.mCSBap_scrollTools_onDrag_expand .mCSBap_dragger.mCSBap_dragger_onDrag_expanded .mCSBap_dragger_bar,
+div.ajaxsearchpro .mCSBap_scrollTools_horizontal.mCSBap_scrollTools_onDrag_expand .mCSBap_draggerContainer:hover .mCSBap_dragger .mCSBap_dragger_bar{
+    height: 12px; /* auto-expanded scrollbar */
+    margin: 2px auto;
+}
+
+div.ajaxsearchpro .mCSBap_scrollTools_horizontal.mCSBap_scrollTools_onDrag_expand .mCSBap_dragger.mCSBap_dragger_onDrag_expanded + .mCSBap_draggerRail,
+div.ajaxsearchpro .mCSBap_scrollTools_horizontal.mCSBap_scrollTools_onDrag_expand .mCSBap_draggerContainer:hover .mCSBap_draggerRail{
+    height: 8px; /* auto-expanded scrollbar */
+    margin: 4px 0;
+}
+
+div.ajaxsearchpro .mCSBap_scrollTools.mCSBap_scrollTools_horizontal .mCSBap_buttonLeft,
+div.ajaxsearchpro .mCSBap_scrollTools.mCSBap_scrollTools_horizontal .mCSBap_buttonRight{
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+div.ajaxsearchpro .mCSBap_scrollTools.mCSBap_scrollTools_horizontal .mCSBap_buttonLeft{ left: 0; }
+
+div.ajaxsearchpro .mCSBap_scrollTools.mCSBap_scrollTools_horizontal .mCSBap_buttonRight{ right: 0; }
+
+
+/**********************************************************************************************************************\
+    11. DATEPICKER STYLES
+\**********************************************************************************************************************/
+
+.asp-ui,
+.asp-ui * {
+    font-size: 12px;
+    line-height: 1.75;
+    box-sizing: content-box;
+}
+
+.ui-helper-hidden { display: none; }
+.ui-helper-hidden-accessible { position: absolute !important; clip: rect(1px 1px 1px 1px); clip: rect(1px,1px,1px,1px); }
+.ui-helper-reset { margin: 0; padding: 0; border: 0; outline: 0; line-height: 1.3; text-decoration: none; font-size: 100%; list-style: none; }
+.ui-helper-clearfix:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+.asp-ui.ui-helper-clearfix { display: inline-block; }
+/* required comment for clearfix to work in Opera \*/
+* html .asp-ui.ui-helper-clearfix { height:1%; }
+.asp-ui.ui-helper-clearfix { display:block; }
+/* end clearfix */
+.ui-helper-zfix { width: 100%; height: 100%; top: 0; left: 0; position: absolute; opacity: 0; }
+
+
+/* Interaction Cues
+----------------------------------*/
+.ui-state-disabled { cursor: default !important; }
+
+
+/* Icons
+----------------------------------*/
+
+/* states and images */
+.asp-ui .ui-icon { display: block; text-indent: -99999px; overflow: hidden; background-repeat: no-repeat; }
+
+
+/* Misc visuals
+----------------------------------*/
+
+/* Overlays */
+.ui-widget-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+/* Component containers
+----------------------------------*/
+.asp-ui.ui-widget { font-family: Verdana,Arial,sans-serif; font-size: 1.1em; }
+.asp-ui.ui-widget .asp-ui.ui-widget { font-size: 1em; }
+.asp-ui.ui-widget input, .asp-ui.ui-widget select, .asp-ui.ui-widget textarea, .asp-ui.ui-widget button { font-family: Verdana,Arial,sans-serif; font-size: 1em; }
+.asp-ui.ui-widget-content {
+    border: 1px solid #FFF;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    color: #222222;
+    background: #fff;
+}
+.asp-ui.ui-widget-content a { color: #222222; }
+.asp-ui .ui-widget-header {
+    background: #2EA2CC;
+    color: #e5e5e5;
+    font-weight: bold;
+    border: 0;
+    border-radius: 0 !important;
+    width: 100%;
+    padding: 8px 3px;
+    position: relative;
+    margin: -3px;
+}
+
+.asp-ui .ui-widget-header a { color: #e5e5e5; }
+
+/* Interaction states
+----------------------------------*/
+.asp-ui .ui-state-default, .asp-ui.ui-widget-content .ui-state-default, .asp-ui .ui-widget-header .ui-state-default { border: 1px solid #E1E1E1; background: #F9F9F9; font-weight: normal; color: #555555; }
+.asp-ui .ui-state-default a, .asp-ui .ui-state-default a:link, .asp-ui .ui-state-default a:visited { color: #555555; text-decoration: none; }
+.asp-ui .ui-state-hover, .asp-ui.ui-widget-content .ui-state-hover, .asp-ui .ui-widget-header .ui-state-hover, .asp-ui .ui-state-focus, .asp-ui.ui-widget-content .ui-state-focus, .asp-ui .ui-widget-header .ui-state-focus { border: 1px solid #999999; background: #dadada; font-weight: normal; color: #212121; }
+.asp-ui .ui-state-hover a, .ui-state-hover a:hover { color: #212121; text-decoration: none; }
+.asp-ui .ui-state-active, .asp-ui.ui-widget-content .ui-state-active, .asp-ui .ui-widget-header .ui-state-active { border: 1px solid #aaaaaa; background: #ffffff; font-weight: normal; color: #212121; }
+.asp-ui .ui-state-active a, .ui-state-active a:link, .asp-ui .ui-state-active a:visited { color: #212121; text-decoration: none; }
+.asp-ui .asp-ui.ui-widget :active { outline: none; }
+
+/* Interaction Cues
+----------------------------------*/
+.asp-ui .ui-state-highlight, .asp-ui.ui-widget-content .ui-state-highlight, .asp-ui .ui-widget-header .ui-state-highlight  {border: 1px solid #1cb1f2; background: #5bc6f5; color: #ffffff; }
+.asp-ui .ui-state-highlight a, .asp-ui.ui-widget-content .ui-state-highlight a,.asp-ui .ui-widget-header .ui-state-highlight a { color: #ffffff; }
+.asp-ui .ui-state-error, .asp-ui.ui-widget-content .ui-state-error, .asp-ui .ui-widget-header .ui-state-error {border: 1px solid #cd0a0a; background: #fef1ec; color: #cd0a0a; }
+.asp-ui .ui-state-error a, .asp-ui.ui-widget-content .ui-state-error a, .asp-ui .ui-widget-header .ui-state-error a { color: #cd0a0a; }
+.asp-ui .ui-state-error-text, .asp-ui.ui-widget-content .ui-state-error-text, .asp-ui .ui-widget-header .ui-state-error-text { color: #cd0a0a; }
+.asp-ui .ui-priority-primary, .asp-ui.ui-widget-content .ui-priority-primary, .asp-ui .ui-widget-header .ui-priority-primary { font-weight: bold; }
+.asp-ui .ui-priority-secondary, .asp-ui.ui-widget-content .ui-priority-secondary,  .asp-ui .ui-widget-header .ui-priority-secondary { opacity: .7; font-weight: normal; }
+.asp-ui .ui-state-disabled, .asp-ui.ui-widget-content .ui-state-disabled, .asp-ui .ui-widget-header .ui-state-disabled { opacity: .35; background-image: none; }
+
+/* positioning */
+.asp-ui .ui-icon-carat-1-n { background-position: 0 0; }
+.asp-ui .ui-icon-carat-1-ne { background-position: -16px 0; }
+.asp-ui .ui-icon-carat-1-e { background-position: -32px 0; }
+.asp-ui .ui-icon-carat-1-se { background-position: -48px 0; }
+.asp-ui .ui-icon-carat-1-s { background-position: -64px 0; }
+.asp-ui .ui-icon-carat-1-sw { background-position: -80px 0; }
+.asp-ui .ui-icon-carat-1-w { background-position: -96px 0; }
+.asp-ui .ui-icon-carat-1-nw { background-position: -112px 0; }
+.asp-ui .ui-icon-carat-2-n-s { background-position: -128px 0; }
+.asp-ui .ui-icon-carat-2-e-w { background-position: -144px 0; }
+.asp-ui .ui-icon-triangle-1-n { background-position: 0 -16px; }
+.asp-ui .ui-icon-triangle-1-ne { background-position: -16px -16px; }
+.asp-ui .ui-icon-triangle-1-e { background-position: -32px -16px; }
+.asp-ui .ui-icon-triangle-1-se { background-position: -48px -16px; }
+.asp-ui .ui-icon-triangle-1-s { background-position: -64px -16px; }
+.asp-ui .ui-icon-triangle-1-sw { background-position: -80px -16px; }
+.asp-ui .ui-icon-triangle-1-w { background-position: -96px -16px; }
+.asp-ui .ui-icon-triangle-1-nw { background-position: -112px -16px; }
+.asp-ui .ui-icon-triangle-2-n-s { background-position: -128px -16px; }
+.asp-ui .ui-icon-triangle-2-e-w { background-position: -144px -16px; }
+.asp-ui .ui-icon-arrow-1-n { background-position: 0 -32px; }
+.asp-ui .ui-icon-arrow-1-ne { background-position: -16px -32px; }
+.asp-ui .ui-icon-arrow-1-e { background-position: -32px -32px; }
+.asp-ui .ui-icon-arrow-1-se { background-position: -48px -32px; }
+.asp-ui .ui-icon-arrow-1-s { background-position: -64px -32px; }
+.asp-ui .ui-icon-arrow-1-sw { background-position: -80px -32px; }
+.asp-ui .ui-icon-arrow-1-w { background-position: -96px -32px; }
+.asp-ui .ui-icon-arrow-1-nw { background-position: -112px -32px; }
+.asp-ui .ui-icon-arrow-2-n-s { background-position: -128px -32px; }
+.asp-ui .ui-icon-arrow-2-ne-sw { background-position: -144px -32px; }
+.asp-ui .ui-icon-arrow-2-e-w { background-position: -160px -32px; }
+.asp-ui .ui-icon-arrow-2-se-nw { background-position: -176px -32px; }
+.asp-ui .ui-icon-arrowstop-1-n { background-position: -192px -32px; }
+.asp-ui .ui-icon-arrowstop-1-e { background-position: -208px -32px; }
+.asp-ui .ui-icon-arrowstop-1-s { background-position: -224px -32px; }
+.asp-ui .ui-icon-arrowstop-1-w { background-position: -240px -32px; }
+.asp-ui .ui-icon-arrowthick-1-n { background-position: 0 -48px; }
+.asp-ui .ui-icon-arrowthick-1-ne { background-position: -16px -48px; }
+.asp-ui .ui-icon-arrowthick-1-e { background-position: -32px -48px; }
+.asp-ui .ui-icon-arrowthick-1-se { background-position: -48px -48px; }
+.asp-ui .ui-icon-arrowthick-1-s { background-position: -64px -48px; }
+.asp-ui .ui-icon-arrowthick-1-sw { background-position: -80px -48px; }
+.asp-ui .ui-icon-arrowthick-1-w { background-position: -96px -48px; }
+.asp-ui .ui-icon-arrowthick-1-nw { background-position: -112px -48px; }
+.asp-ui .ui-icon-arrowthick-2-n-s { background-position: -128px -48px; }
+.asp-ui .ui-icon-arrowthick-2-ne-sw { background-position: -144px -48px; }
+.asp-ui .ui-icon-arrowthick-2-e-w { background-position: -160px -48px; }
+.asp-ui .ui-icon-arrowthick-2-se-nw { background-position: -176px -48px; }
+.asp-ui .ui-icon-arrowthickstop-1-n { background-position: -192px -48px; }
+.asp-ui .ui-icon-arrowthickstop-1-e { background-position: -208px -48px; }
+.asp-ui .ui-icon-arrowthickstop-1-s { background-position: -224px -48px; }
+.asp-ui .ui-icon-arrowthickstop-1-w { background-position: -240px -48px; }
+.asp-ui .ui-icon-arrowreturnthick-1-w { background-position: 0 -64px; }
+.asp-ui .ui-icon-arrowreturnthick-1-n { background-position: -16px -64px; }
+.asp-ui .ui-icon-arrowreturnthick-1-e { background-position: -32px -64px; }
+.asp-ui .ui-icon-arrowreturnthick-1-s { background-position: -48px -64px; }
+.asp-ui .ui-icon-arrowreturn-1-w { background-position: -64px -64px; }
+.asp-ui .ui-icon-arrowreturn-1-n { background-position: -80px -64px; }
+.asp-ui .ui-icon-arrowreturn-1-e { background-position: -96px -64px; }
+.asp-ui .ui-icon-arrowreturn-1-s { background-position: -112px -64px; }
+.asp-ui .ui-icon-arrowrefresh-1-w { background-position: -128px -64px; }
+.asp-ui .ui-icon-arrowrefresh-1-n { background-position: -144px -64px; }
+.asp-ui .ui-icon-arrowrefresh-1-e { background-position: -160px -64px; }
+.asp-ui .ui-icon-arrowrefresh-1-s { background-position: -176px -64px; }
+.asp-ui .ui-icon-arrow-4 { background-position: 0 -80px; }
+.asp-ui .ui-icon-arrow-4-diag { background-position: -16px -80px; }
+.asp-ui .ui-icon-extlink { background-position: -32px -80px; }
+.asp-ui .ui-icon-newwin { background-position: -48px -80px; }
+.asp-ui .ui-icon-refresh { background-position: -64px -80px; }
+.asp-ui .ui-icon-shuffle { background-position: -80px -80px; }
+.asp-ui .ui-icon-transfer-e-w { background-position: -96px -80px; }
+.asp-ui .ui-icon-transferthick-e-w { background-position: -112px -80px; }
+.asp-ui .ui-icon-folder-collapsed { background-position: 0 -96px; }
+.asp-ui .ui-icon-folder-open { background-position: -16px -96px; }
+.asp-ui .ui-icon-document { background-position: -32px -96px; }
+.asp-ui .ui-icon-document-b { background-position: -48px -96px; }
+.asp-ui .ui-icon-note { background-position: -64px -96px; }
+.asp-ui .ui-icon-mail-closed { background-position: -80px -96px; }
+.asp-ui .ui-icon-mail-open { background-position: -96px -96px; }
+.asp-ui .ui-icon-suitcase { background-position: -112px -96px; }
+.asp-ui .ui-icon-comment { background-position: -128px -96px; }
+.asp-ui .ui-icon-person { background-position: -144px -96px; }
+.asp-ui .ui-icon-print { background-position: -160px -96px; }
+.asp-ui .ui-icon-trash { background-position: -176px -96px; }
+.asp-ui .ui-icon-locked { background-position: -192px -96px; }
+.asp-ui .ui-icon-unlocked { background-position: -208px -96px; }
+.asp-ui .ui-icon-bookmark { background-position: -224px -96px; }
+.asp-ui .ui-icon-tag { background-position: -240px -96px; }
+.asp-ui .ui-icon-home { background-position: 0 -112px; }
+.asp-ui .ui-icon-flag { background-position: -16px -112px; }
+.asp-ui .ui-icon-calendar { background-position: -32px -112px; }
+.asp-ui .ui-icon-cart { background-position: -48px -112px; }
+.asp-ui .ui-icon-pencil { background-position: -64px -112px; }
+.asp-ui .ui-icon-clock { background-position: -80px -112px; }
+.asp-ui .ui-icon-disk { background-position: -96px -112px; }
+.asp-ui .ui-icon-calculator { background-position: -112px -112px; }
+.asp-ui .ui-icon-zoomin { background-position: -128px -112px; }
+.asp-ui .ui-icon-zoomout { background-position: -144px -112px; }
+.asp-ui .ui-icon-search { background-position: -160px -112px; }
+.asp-ui .ui-icon-wrench { background-position: -176px -112px; }
+.asp-ui .ui-icon-gear { background-position: -192px -112px; }
+.asp-ui .ui-icon-heart { background-position: -208px -112px; }
+.asp-ui .ui-icon-star { background-position: -224px -112px; }
+.asp-ui .ui-icon-link { background-position: -240px -112px; }
+.asp-ui .ui-icon-cancel { background-position: 0 -128px; }
+.asp-ui .ui-icon-plus { background-position: -16px -128px; }
+.asp-ui .ui-icon-plusthick { background-position: -32px -128px; }
+.asp-ui .ui-icon-minus { background-position: -48px -128px; }
+.asp-ui .ui-icon-minusthick { background-position: -64px -128px; }
+.asp-ui .ui-icon-close { background-position: -80px -128px; }
+.asp-ui .ui-icon-closethick { background-position: -96px -128px; }
+.asp-ui .ui-icon-key { background-position: -112px -128px; }
+.asp-ui .ui-icon-lightbulb { background-position: -128px -128px; }
+.asp-ui .ui-icon-scissors { background-position: -144px -128px; }
+.asp-ui .ui-icon-clipboard { background-position: -160px -128px; }
+.asp-ui .ui-icon-copy { background-position: -176px -128px; }
+.asp-ui .ui-icon-contact { background-position: -192px -128px; }
+.asp-ui .ui-icon-image { background-position: -208px -128px; }
+.asp-ui .ui-icon-video { background-position: -224px -128px; }
+.asp-ui .ui-icon-script { background-position: -240px -128px; }
+.asp-ui .ui-icon-alert { background-position: 0 -144px; }
+.asp-ui .ui-icon-info { background-position: -16px -144px; }
+.asp-ui .ui-icon-notice { background-position: -32px -144px; }
+.asp-ui .ui-icon-help { background-position: -48px -144px; }
+.asp-ui .ui-icon-check { background-position: -64px -144px; }
+.asp-ui .ui-icon-bullet { background-position: -80px -144px; }
+.asp-ui .ui-icon-radio-off { background-position: -96px -144px; }
+.asp-ui .ui-icon-radio-on { background-position: -112px -144px; }
+.asp-ui .ui-icon-pin-w { background-position: -128px -144px; }
+.asp-ui .ui-icon-pin-s { background-position: -144px -144px; }
+.asp-ui .ui-icon-play { background-position: 0 -160px; }
+.asp-ui .ui-icon-pause { background-position: -16px -160px; }
+.asp-ui .ui-icon-seek-next { background-position: -32px -160px; }
+.asp-ui .ui-icon-seek-prev { background-position: -48px -160px; }
+.asp-ui .ui-icon-seek-end { background-position: -64px -160px; }
+.asp-ui .ui-icon-seek-start { background-position: -80px -160px; }
+/* ui-icon-seek-first is deprecated, use ui-icon-seek-start instead */
+.asp-ui .ui-icon-seek-first { background-position: -80px -160px; }
+.asp-ui .ui-icon-stop { background-position: -96px -160px; }
+.asp-ui .ui-icon-eject { background-position: -112px -160px; }
+.asp-ui .ui-icon-volume-off { background-position: -128px -160px; }
+.asp-ui .ui-icon-volume-on { background-position: -144px -160px; }
+.asp-ui .ui-icon-power { background-position: 0 -176px; }
+.asp-ui .ui-icon-signal-diag { background-position: -16px -176px; }
+.asp-ui .ui-icon-signal { background-position: -32px -176px; }
+.asp-ui .ui-icon-battery-0 { background-position: -48px -176px; }
+.asp-ui .ui-icon-battery-1 { background-position: -64px -176px; }
+.asp-ui .ui-icon-battery-2 { background-position: -80px -176px; }
+.asp-ui .ui-icon-battery-3 { background-position: -96px -176px; }
+.asp-ui .ui-icon-circle-plus { background-position: 0 -192px; }
+.asp-ui .ui-icon-circle-minus { background-position: -16px -192px; }
+.asp-ui .ui-icon-circle-close { background-position: -32px -192px; }
+.asp-ui .ui-icon-circle-triangle-e { background-position: -48px -192px; }
+.asp-ui .ui-icon-circle-triangle-s { background-position: -64px -192px; }
+.asp-ui .ui-icon-circle-triangle-w { background-position: -80px -192px; }
+.asp-ui .ui-icon-circle-triangle-n { background-position: -96px -192px; }
+.asp-ui .ui-icon-circle-arrow-e { background-position: -112px -192px; }
+.asp-ui .ui-icon-circle-arrow-s { background-position: -128px -192px; }
+.asp-ui .ui-icon-circle-arrow-w { background-position: -144px -192px; }
+.asp-ui .ui-icon-circle-arrow-n { background-position: -160px -192px; }
+.asp-ui .ui-icon-circle-zoomin { background-position: -176px -192px; }
+.asp-ui .ui-icon-circle-zoomout { background-position: -192px -192px; }
+.asp-ui .ui-icon-circle-check { background-position: -208px -192px; }
+.asp-ui .ui-icon-circlesmall-plus { background-position: 0 -208px; }
+.asp-ui .ui-icon-circlesmall-minus { background-position: -16px -208px; }
+.asp-ui .ui-icon-circlesmall-close { background-position: -32px -208px; }
+.asp-ui .ui-icon-squaresmall-plus { background-position: -48px -208px; }
+.asp-ui .ui-icon-squaresmall-minus { background-position: -64px -208px; }
+.asp-ui .ui-icon-squaresmall-close { background-position: -80px -208px; }
+.asp-ui .ui-icon-grip-dotted-vertical { background-position: 0 -224px; }
+.asp-ui .ui-icon-grip-dotted-horizontal { background-position: -16px -224px; }
+.asp-ui .ui-icon-grip-solid-vertical { background-position: -32px -224px; }
+.asp-ui .ui-icon-grip-solid-horizontal { background-position: -48px -224px; }
+.asp-ui .ui-icon-gripsmall-diagonal-se { background-position: -64px -224px; }
+.asp-ui .ui-icon-grip-diagonal-se { background-position: -80px -224px; }
+
+
+/* Misc visuals
+----------------------------------*/
+
+/* Corner radius */
+.asp-ui.ui-corner-all, .ui-corner-top, .ui-corner-left, .ui-corner-tl { -moz-border-radius-topleft: 4px; -webkit-border-top-left-radius: 4px; -khtml-border-top-left-radius: 4px; border-top-left-radius: 4px; }
+.asp-ui.ui-corner-all, .ui-corner-top, .ui-corner-right, .ui-corner-tr { -moz-border-radius-topright: 4px; -webkit-border-top-right-radius: 4px; -khtml-border-top-right-radius: 4px; border-top-right-radius: 4px; }
+.asp-ui.ui-corner-all, .ui-corner-bottom, .ui-corner-left, .ui-corner-bl { -moz-border-radius-bottomleft: 4px; -webkit-border-bottom-left-radius: 4px; -khtml-border-bottom-left-radius: 4px; border-bottom-left-radius: 4px; }
+.asp-ui.ui-corner-all, .ui-corner-bottom, .ui-corner-right, .ui-corner-br { -moz-border-radius-bottomright: 4px; -webkit-border-bottom-right-radius: 4px; -khtml-border-bottom-right-radius: 4px; border-bottom-right-radius: 4px; }
+
+/* Overlays */
+.ui-widget-overlay { background: #aaaaaa; opacity: .30; }
+.ui-widget-shadow { margin: -8px 0 0 -8px; padding: 8px; background: #aaaaaa; opacity: .30; -moz-border-radius: 8px; -khtml-border-radius: 8px; -webkit-border-radius: 8px; border-radius: 8px; }/*
+ * jQuery UI Datepicker 1.8.14
+ *
+ * Copyright 2011, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Datepicker#theming
+ */
+#ui-datepicker-div {
+    z-index: 100000000 !important;
+    display: none;
+}
+.asp-ui.ui-datepicker { width: 17em; padding: .2em .2em 0; display: none; border-radius: 0 !important; }
+.asp-ui.ui-datepicker .ui-datepicker-header {  }
+.asp-ui.ui-datepicker .ui-datepicker-prev, .asp-ui.ui-datepicker .ui-datepicker-next { position:absolute; top: 2px; width: 1.8em; height: 1.8em; display: none; }
+.asp-ui.ui-datepicker .ui-datepicker-prev-hover, .asp-ui.ui-datepicker .ui-datepicker-next-hover { top: 1px; }
+.asp-ui.ui-datepicker .ui-datepicker-prev { left:2px; }
+.asp-ui.ui-datepicker .ui-datepicker-next { right:2px; }
+.asp-ui.ui-datepicker .ui-datepicker-prev-hover { left:1px; }
+.asp-ui.ui-datepicker .ui-datepicker-next-hover { right:1px; }
+.asp-ui.ui-datepicker .ui-datepicker-prev span, .asp-ui.ui-datepicker .ui-datepicker-next span { display: block; position: absolute; left: 50%; margin-left: -8px; top: 50%; margin-top: -8px;  }
+.asp-ui.ui-datepicker .ui-datepicker-title { margin: 0; text-align: center; }
+.asp-ui.ui-datepicker .ui-datepicker-title select { font-size:1em; margin:0 0 0 2%; }
+.asp-ui.ui-datepicker select.ui-datepicker-month-year {width: 100%;}
+.asp-ui.ui-datepicker select.ui-datepicker-month,
+.asp-ui.ui-datepicker select.ui-datepicker-year {
+    width: 43%;
+    padding: 4px;
+    font-size: 12px;
+    font-weight: normal;
+    border: 0;
+    height: 20px;
+    margin: 3px;
+    box-sizing: content-box;
+}
+.asp-ui.ui-datepicker table {width: 100%; font-size: .9em; border-collapse: collapse; margin:0 0 .4em; border: 0; }
+.asp-ui.ui-datepicker th { padding: .7em .3em; text-align: center; font-weight: bold; border: 0; width: 14%; }
+.asp-ui.ui-datepicker td { border: 0; padding: 1px; }
+.asp-ui.ui-datepicker td span, .asp-ui.ui-datepicker td a { display: block; padding: .2em; text-align: right; text-decoration: none; }
+.asp-ui.ui-datepicker .ui-datepicker-buttonpane { background-image: none; margin: .7em 0 0 0; padding:0 .2em; border-left: 0; border-right: 0; border-bottom: 0; }
+.asp-ui.ui-datepicker .ui-datepicker-buttonpane button { float: right; margin: .5em .2em .4em; cursor: pointer; padding: .2em .6em .3em .6em; width:auto; overflow:visible; }
+.asp-ui.ui-datepicker .ui-datepicker-buttonpane button.ui-datepicker-current { float:left; }
+
+/* with multiple calendars */
+.ui-datepicker.ui-datepicker-multi { width:auto; }
+.ui-datepicker-multi .ui-datepicker-group { float:left; }
+.ui-datepicker-multi .ui-datepicker-group table { width:95%; margin:0 auto .4em; }
+.ui-datepicker-multi-2 .ui-datepicker-group { width:50%; }
+.ui-datepicker-multi-3 .ui-datepicker-group { width:33.3%; }
+.ui-datepicker-multi-4 .ui-datepicker-group { width:25%; }
+.ui-datepicker-multi .ui-datepicker-group-last .ui-datepicker-header { border-left-width:0; }
+.ui-datepicker-multi .ui-datepicker-group-middle .ui-datepicker-header { border-left-width:0; }
+.ui-datepicker-multi .ui-datepicker-buttonpane { clear:left; }
+.ui-datepicker-row-break { clear:both; width:100%; font-size:0em; }
+
+/* RTL support */
+.ui-datepicker-rtl { direction: rtl; }
+.ui-datepicker-rtl .ui-datepicker-prev { right: 2px; left: auto; }
+.ui-datepicker-rtl .ui-datepicker-next { left: 2px; right: auto; }
+.ui-datepicker-rtl .ui-datepicker-prev:hover { right: 1px; left: auto; }
+.ui-datepicker-rtl .ui-datepicker-next:hover { left: 1px; right: auto; }
+.ui-datepicker-rtl .ui-datepicker-buttonpane { clear:right; }
+.ui-datepicker-rtl .ui-datepicker-buttonpane button { float: left; }
+.ui-datepicker-rtl .ui-datepicker-buttonpane button.ui-datepicker-current { float:right; }
+.ui-datepicker-rtl .ui-datepicker-group { float:right; }
+.ui-datepicker-rtl .ui-datepicker-group-last .ui-datepicker-header { border-right-width:0; border-left-width:1px; }
+.ui-datepicker-rtl .ui-datepicker-group-middle .ui-datepicker-header { border-right-width:0; border-left-width:1px; }
+
+/* IE6 IFRAME FIX (taken from datepicker 1.5.3 */
+.ui-datepicker-cover {
+    display: none; /*sorry for IE5*/
+    display/**/: block; /*sorry for IE5*/
+    position: absolute; /*must have*/
+    z-index: -1; /*must have*/
+    filter: mask(); /*must have*/
+    top: -4px; /*must have*/
+    left: -4px; /*must have*/
+    width: 200px; /*must have*/
+    height: 200px; /*must have*/
+}
+
+.asp-ui.ui-datepicker  .ui-datepicker-buttonpane {
+    background: #EAF2FA;
+    border-top: 1px solid #E1E1E1;
+    width: 100%;
+    padding: 3px;
+    margin: 0;
+    margin: 0 0 0 -3px;
+    position: relative;
+    overflow: hidden;
+}
+
+.asp-ui.ui-datepicker .ui-datepicker-buttonpane button {
+    margin: 0;
+    padding: 0px;
+    font-size: 12px;
+    background: transparent;
+    border: 0 none;
+    text-shadow: 0 1px 0 #FFFFFF;
+    color: #7A9BBE;
+    opacity: 1;
+    display: block;line-height: 1em;
+    padding: 5px;
+}
+
+.asp-ui.ui-datepicker .ui-state-highlight {
+    background: #EAF2FA;
+    color: #555555;
+    border: 1px solid #95B1CE;
+}
+
+.asp-ui.ui-datepicker .ui-state-active {
+    background: #2EA2CC;
+    color: #FFFFFF;
+    border: #0074A2 solid 1px;
+}
+#ajaxsearchpro1_1 div.asp_loader, #ajaxsearchpro1_2 div.asp_loader,
+#ajaxsearchpro1_1 div.asp_loader *, #ajaxsearchpro1_2 div.asp_loader * {
+    /* display: none; */
+    box-sizing: border-box !important;
+    margin: 0;
+    padding: 0;
+    /* vertical-align: middle !important; */
+    box-shadow: none;
+}
+
+#ajaxsearchpro1_1 div.asp_loader, #ajaxsearchpro1_2 div.asp_loader {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 1 auto;
+    flex-direction: column;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis:28px;
+    max-width: 100%;
+    max-height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+#ajaxsearchpro1_1 div.asp_loader-inner, #ajaxsearchpro1_2 div.asp_loader-inner {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    /* vertical-align: text-top; */
+    height: 100%;
+}
+ 
+@-webkit-keyframes rotate-simple {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg); }
+
+    50% {
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg); }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg); } }
+
+@keyframes rotate-simple {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg); }
+
+    50% {
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg); }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg); } }
+#ajaxsearchpro1_1 div.asp_simple-circle, #ajaxsearchpro1_2 div.asp_simple-circle {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    animation: rotate-simple 0.8s infinite linear;
+    -webkit-animation: rotate-simple 0.8s infinite linear;
+    border: 4px solid rgb(255, 255, 255);
+    border-right-color: transparent;
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+
+@-webkit-keyframes asp_an_fadeInDown {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+    }
+}
+
+@keyframes asp_an_fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.asp_an_fadeInDown {
+    -webkit-animation-name:  asp_an_fadeInDown;
+    animation-name:  asp_an_fadeInDown;
+}
+ 
+
+    #ajaxsearchpro1_1,
+    #ajaxsearchprosettings1_1,
+    #ajaxsearchprores1_1,
+    #ajaxsearchpro1_2,
+    #ajaxsearchprores1_2,
+    #ajaxsearchprosettings1_2,
+div.ajaxsearchpro[id*="ajaxsearchprores1_"],
+div.ajaxsearchpro[id*="ajaxsearchprores1_"] *,
+div.ajaxsearchpro[id*="ajaxsearchpro1_"],
+div.ajaxsearchpro[id*="ajaxsearchpro1_"] *,
+div.ajaxsearchpro[id*="ajaxsearchprosettings1_"],
+div.ajaxsearchpro[id*="ajaxsearchprosettings1_"] * {
+    -webkit-box-sizing: content-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: content-box; /* Firefox, other Gecko */
+    -ms-box-sizing: content-box;
+    -o-box-sizing: content-box;
+    box-sizing: content-box;
+    border: 0;
+    border-radius: 0;
+    text-transform: none;
+    text-shadow: none;
+    box-shadow: none;
+    text-decoration: none;
+    text-align: left;
+    letter-spacing: normal;
+}
+
+    #ajaxsearchpro1_1,
+    #ajaxsearchprosettings1_1,
+    #ajaxsearchprores1_1,
+    #ajaxsearchpro1_2,
+    #ajaxsearchprores1_2,
+    #ajaxsearchprosettings1_2,
+div.ajaxsearchpro[id*="ajaxsearchprores1_"],
+div.ajaxsearchpro[id*="ajaxsearchpro1_"],
+div.ajaxsearchpro[id*="ajaxsearchprosettings1_"] {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* Margin and padding gets wrecked if set with compatibility.. */
+div.ajaxsearchpro[id*="ajaxsearchprores1_"],
+div.ajaxsearchpro[id*="ajaxsearchprores1_"] *,
+div.ajaxsearchpro[id*="ajaxsearchpro1_"],
+div.ajaxsearchpro[id*="ajaxsearchpro1_"] *,
+div.ajaxsearchpro[id*="ajaxsearchprosettings1_"],
+div.ajaxsearchpro[id*="ajaxsearchprosettings1_"] * {
+    padding: 0;
+    margin: 0;
+}
+
+.wpdreams_clear {
+    clear: both;
+}
+
+    #ajaxsearchpro1_1,
+    #ajaxsearchpro1_2,
+div.ajaxsearchpro[id*="ajaxsearchpro1_"] {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  background: #d1eaff;
+                background-image: -moz-radial-gradient(center, ellipse cover,  rgb(225, 99, 92), rgb(225, 99, 92));
+            background-image: -webkit-gradient(radial, center center, 0px, center center, 100%, rgb(225, 99, 92), rgb(225, 99, 92));
+            background-image: -webkit-radial-gradient(center, ellipse cover,  rgb(225, 99, 92), rgb(225, 99, 92));
+            background-image: -o-radial-gradient(center, ellipse cover,  rgb(225, 99, 92), rgb(225, 99, 92));
+            background-image: -ms-radial-gradient(center, ellipse cover,  rgb(225, 99, 92), rgb(225, 99, 92));
+            background-image: radial-gradient(ellipse at center,  rgb(225, 99, 92), rgb(225, 99, 92));
+          overflow: hidden;
+  border:0px none rgb(141, 213, 239);border-radius:0px 0px 0px 0px;  box-shadow:0px 0px 0px 0px #000000 ;}
+
+    #ajaxsearchpro1_1 .probox,
+    #ajaxsearchpro1_2 .probox,
+div.ajaxsearchpro[id*="ajaxsearchpro1_"] .probox {
+  margin: 0px;
+  height: 34px;
+              background-image: -moz-radial-gradient(center, ellipse cover,  rgb(225, 99, 92), rgb(225, 99, 92));
+            background-image: -webkit-gradient(radial, center center, 0px, center center, 100%, rgb(225, 99, 92), rgb(225, 99, 92));
+            background-image: -webkit-radial-gradient(center, ellipse cover,  rgb(225, 99, 92), rgb(225, 99, 92));
+            background-image: -o-radial-gradient(center, ellipse cover,  rgb(225, 99, 92), rgb(225, 99, 92));
+            background-image: -ms-radial-gradient(center, ellipse cover,  rgb(225, 99, 92), rgb(225, 99, 92));
+            background-image: radial-gradient(ellipse at center,  rgb(225, 99, 92), rgb(225, 99, 92));
+          border:0px solid rgb(104, 174, 199);border-radius:0px 0px 0px 0px;  box-shadow:0px 0px 0px 0px rgb(181, 181, 181) inset;}
+
+
+
+p[id*=asp-try-1] {
+    color: rgb(85, 85, 85) !important;
+    display: block;
+}
+
+div.asp_main_container+[id*=asp-try-1] {
+        width: 100%;
+}
+
+p[id*=asp-try-1] a {
+    color: rgb(255, 181, 86) !important;
+}
+
+    #ajaxsearchpro1_1 .probox .proinput,
+    #ajaxsearchpro1_2 .probox .proinput,
+div.ajaxsearchpro[id*="ajaxsearchpro1_"] .probox .proinput {
+  font-weight:normal;font-family:'Open Sans';color:rgb(255, 255, 255);font-size:12px;line-height:15px;text-shadow:0px 0px 0px rgba(255, 255, 255, 0);    line-height: normal;
+  flex-grow: 1;
+  order: 5;
+  /* Ipad and stuff.. */
+  -webkit-flex-grow: 1;
+  -webkit-order: 5;
+}
+
+    #ajaxsearchpro1_1 .probox .proinput input.orig,
+    #ajaxsearchpro1_2 .probox .proinput input.orig,
+div.ajaxsearchpro[id*="ajaxsearchpro1_"] .probox .proinput input.orig {
+    font-weight:normal;font-family:'Open Sans';color:rgb(255, 255, 255);font-size:12px;line-height:15px;text-shadow:0px 0px 0px rgba(255, 255, 255, 0);    line-height: normal;
+    border: 0;
+    box-shadow: none;
+    height: 34px;
+    position: relative;
+    z-index: 2;
+    padding: 0 !important;
+    padding-top: 2px !important;
+    margin: -1px 0 0 -4px !important;
+    width: 100%;
+    background: transparent !important;
+}
+
+    #ajaxsearchpro1_1 .probox .proinput input.autocomplete,
+    #ajaxsearchpro1_2 .probox .proinput input.autocomplete,
+div.ajaxsearchpro[id*="ajaxsearchpro1_"] .probox .proinput input.autocomplete {
+    font-weight:normal;font-family:'Open Sans';color:rgb(255, 255, 255);font-size:12px;line-height:15px;text-shadow:0px 0px 0px rgba(255, 255, 255, 0);    line-height: normal;
+    opacity: 0.25;
+    height: 34px;
+    display: block;
+    position: relative;
+    z-index: 1;
+    padding: 0 !important;
+    margin: -1px 0 0 -4px !important;
+    margin-top: -34px !important;
+    width: 100%;
+    background: transparent !important;
+}
+
+    .rtl #ajaxsearchpro1_1 .probox .proinput input.orig,
+    .rtl #ajaxsearchpro1_2 .probox .proinput input.orig,
+    .rtl #ajaxsearchpro1_1 .probox .proinput input.autocomplete,
+    .rtl #ajaxsearchpro1_2 .probox .proinput input.autocomplete,
+.rtl div.ajaxsearchpro[id*="ajaxsearchpro1_"] .probox .proinput input.orig,
+.rtl div.ajaxsearchpro[id*="ajaxsearchpro1_"] .probox .proinput input.autocomplete {
+font-weight:normal;font-family:'Open Sans';color:rgb(255, 255, 255);font-size:12px;line-height:15px;text-shadow:0px 0px 0px rgba(255, 255, 255, 0);line-height: normal;
+direction: rtl;
+text-align: right;
+}
+
+    .rtl #ajaxsearchpro1_1 .probox .proinput,
+    .rtl #ajaxsearchpro1_2 .probox .proinput,
+.rtl div.ajaxsearchpro[id*="ajaxsearchpro1_"] .probox .proinput {
+    /*float: right;*/
+    margin-right: 2px;
+}
+
+    .rtl #ajaxsearchpro1_1 .probox .proloading,
+    .rtl #ajaxsearchpro1_1 .probox .proclose,
+    .rtl #ajaxsearchpro1_2 .probox .proloading,
+    .rtl #ajaxsearchpro1_2 .probox .proclose,
+.rtl div.ajaxsearchpro[id*="ajaxsearchpro1_"] .probox .proloading,
+.rtl div.ajaxsearchpro[id*="ajaxsearchpro1_"] .probox .proclose {
+    order: 3;
+}
+
+
+div.ajaxsearchpro[id*="ajaxsearchpro1_"] .probox .proinput input.orig::-webkit-input-placeholder {
+    font-weight:normal;font-family:'Open Sans';color:rgb(255, 255, 255);font-size:12px;text-shadow:0px 0px 0px rgba(255, 255, 255, 0);    opacity: 0.85;
+}
+div.ajaxsearchpro[id*="ajaxsearchpro1_"] .probox .proinput input.orig::-moz-placeholder {
+    font-weight:normal;font-family:'Open Sans';color:rgb(255, 255, 255);font-size:12px;text-shadow:0px 0px 0px rgba(255, 255, 255, 0);    opacity: 0.85;
+}
+div.ajaxsearchpro[id*="ajaxsearchpro1_"] .probox .proinput input.orig:-ms-input-placeholder {
+    font-weight:normal;font-family:'Open Sans';color:rgb(255, 255, 255);font-size:12px;text-shadow:0px 0px 0px rgba(255, 255, 255, 0);    opacity: 0.85;
+}
+div.ajaxsearchpro[id*="ajaxsearchpro1_"] .probox .proinput input.orig:-moz-placeholder {
+    font-weight:normal;font-family:'Open Sans';color:rgb(255, 255, 255);font-size:12px;text-shadow:0px 0px 0px rgba(255, 255, 255, 0);    opacity: 0.85;
+    line-height: normal !important;
+}
+
+    #ajaxsearchpro1_1 .probox .proinput input.autocomplete,
+    #ajaxsearchpro1_2 .probox .proinput input.autocomplete,
+div.ajaxsearchpro[id*="ajaxsearchpro1_"] .probox .proinput input.autocomplete {
+  font-weight:normal;font-family:'Open Sans';color:rgb(255, 255, 255);font-size:12px;line-height:15px;text-shadow:0px 0px 0px rgba(255, 255, 255, 0);    line-height: normal;
+    border: 0;
+    box-shadow: none;
+}
+
+    #ajaxsearchpro1_1 .probox .proloading,
+    #ajaxsearchpro1_1 .probox .proclose,
+    #ajaxsearchpro1_1 .probox .promagnifier,
+    #ajaxsearchpro1_1 .probox .prosettings,
+    #ajaxsearchpro1_2 .probox .proloading,
+    #ajaxsearchpro1_2 .probox .proclose,
+    #ajaxsearchpro1_2 .probox .promagnifier,
+    #ajaxsearchpro1_2 .probox .prosettings,
+div.ajaxsearchpro[id*="ajaxsearchpro1_"] .probox .proloading,
+div.ajaxsearchpro[id*="ajaxsearchpro1_"] .probox .proclose,
+div.ajaxsearchpro[id*="ajaxsearchpro1_"] .probox .promagnifier,
+div.ajaxsearchpro[id*="ajaxsearchpro1_"] .probox .prosettings {
+  width: 34px;
+  height: 34px;
+  flex: 0 0 34px;
+  flex-grow: 0;
+  order: 7;
+    /* Ipad and stuff.. */
+    -webkit-flex: 0 0 34px;
+    -webkit-flex-grow: 0;
+    -webkit-order: 7;
+}
+
+	#ajaxsearchpro1_1 .probox .proloading,
+	#ajaxsearchpro1_2 .probox .proloading,
+div.ajaxsearchpro[id*="ajaxsearchpro1_"] .probox .proloading {
+    width: 34px;
+    height: 34px;
+    min-width: 34px;
+    min-height: 34px;
+    max-width: 34px;
+    max-height: 34px;
+}
+
+	#ajaxsearchpro1_1 .probox .proloading .asp_loader,
+	#ajaxsearchpro1_2 .probox .proloading .asp_loader,
+div.ajaxsearchpro[id*="ajaxsearchpro1_"] .probox .proloading .asp_loader {
+    width: 30px;
+    height: 30px;
+    min-width: 30px;
+    min-height: 30px;
+    max-width: 30px;
+    max-height: 30px;
+}
+
+	#ajaxsearchpro1_1 .probox .promagnifier,
+	#ajaxsearchpro1_2 .probox .promagnifier,
+div.ajaxsearchpro[id*="ajaxsearchpro1_"] .probox .promagnifier {
+	width: auto;
+	height: 34px;
+	flex: 0 0 auto;
+	order: 7;
+	/* Ipad and stuff.. */
+	-webkit-flex: 0 0 auto;
+	-webkit-order: 7;
+}
+
+
+	#ajaxsearchpro1_1 .probox .promagnifier div.innericon,
+	#ajaxsearchpro1_2 .probox .promagnifier div.innericon,
+div.ajaxsearchpro[id*="ajaxsearchpro1_"] .probox .promagnifier div.innericon {
+	width: 34px;
+	height: 34px;
+	float: right;
+}
+
+	#ajaxsearchpro1_1 .probox .promagnifier div.asp_text_button,
+	#ajaxsearchpro1_2 .probox .promagnifier div.asp_text_button,
+div.ajaxsearchpro[id*="ajaxsearchpro1_"] .probox .promagnifier div.asp_text_button {
+	width: auto;
+	height: 34px;
+	float: right;
+	margin: 0;
+		    padding: 0 10px 0 2px;
+		font-weight:normal;font-family:'Open Sans';color:rgba(51, 51, 51, 1);font-size:15px;line-height:normal;text-shadow:0px 0px 0px rgba(255, 255, 255, 0);    /* to center the text, this must be identical with the height */
+    line-height: 34px;
+}
+
+    #ajaxsearchpro1_1 .probox .promagnifier .innericon svg,
+    #ajaxsearchpro1_2 .probox .promagnifier .innericon svg,
+div.ajaxsearchpro[id*="ajaxsearchpro1_"] .probox .promagnifier .innericon svg {
+  fill: rgb(255, 255, 255);
+}
+
+    #ajaxsearchpro1_1 .probox .prosettings .innericon svg,
+    #ajaxsearchpro1_2 .probox .prosettings .innericon svg,
+div.ajaxsearchpro[id*="ajaxsearchpro1_"] .probox .prosettings .innericon svg {
+  fill: rgb(255, 255, 255);
+}
+
+
+    #ajaxsearchpro1_1.asp_msie .probox .proloading,
+    #ajaxsearchpro1_2.asp_msie .probox .proloading,
+div.ajaxsearchpro[id*="ajaxsearchpro1_"].asp_msie .probox .proloading {
+    background-image: url("http://localhost:8888/TimeImmo/wp-content/plugins/ajax-search-pro//img/loading/newload1.gif");
+    float: right;
+}
+
+    #ajaxsearchpro1_1 .probox .promagnifier,
+    #ajaxsearchpro1_2 .probox .promagnifier,
+div.ajaxsearchpro[id*="ajaxsearchpro1_"] .probox .promagnifier {
+        width: 34px;
+    height: 34px;
+              background-image: -webkit-linear-gradient(180deg, rgb(190, 76, 70), rgb(190, 76, 70));
+            background-image: -moz-linear-gradient(180deg, rgb(190, 76, 70), rgb(190, 76, 70));
+            background-image: -o-linear-gradient(180deg, rgb(190, 76, 70), rgb(190, 76, 70));
+            background-image: -ms-linear-gradient(180deg, rgb(190, 76, 70) 0%, rgb(190, 76, 70) 100%);
+            background-image: linear-gradient(180deg, rgb(190, 76, 70), rgb(190, 76, 70));
+          background-position:center center;
+  background-repeat: no-repeat;
+
+  order: 11;
+  /* Ipad and stuff fix */
+  -webkit-order: 11;
+  float: right; /* IE9, no flexbox */
+  border:0px solid rgb(0, 0, 0);border-radius:0px 0px 0px 0px;  box-shadow:0px 0px 0px 0px rgba(255, 255, 255, 0.61) ;  cursor: pointer;
+  background-size: 100% 100%;
+
+  background-position:center center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+
+
+    #ajaxsearchpro1_1 .probox .prosettings,
+    #ajaxsearchpro1_2 .probox .prosettings,
+div.ajaxsearchpro[id*="ajaxsearchpro1_"] .probox .prosettings {
+  width: 34px;
+  height: 34px;
+              background-image: -webkit-linear-gradient(185deg, rgb(190, 76, 70), rgb(190, 76, 70));
+            background-image: -moz-linear-gradient(185deg, rgb(190, 76, 70), rgb(190, 76, 70));
+            background-image: -o-linear-gradient(185deg, rgb(190, 76, 70), rgb(190, 76, 70));
+            background-image: -ms-linear-gradient(185deg, rgb(190, 76, 70) 0%, rgb(190, 76, 70) 100%);
+            background-image: linear-gradient(185deg, rgb(190, 76, 70), rgb(190, 76, 70));
+          background-position:center center;
+  background-repeat: no-repeat;
+  order: 10;
+  /* Ipad and stuff fix*/
+  -webkit-order: 10;
+  float: right; /* IE9, no flexbox */
+  border:0px solid rgb(104, 174, 199);border-radius:0px 0px 0px 0px;  box-shadow:0px 0px 0px 0px rgba(255, 255, 255, 0.63) ;  cursor: pointer;
+  background-size: 100% 100%;
+  align-self: flex-end;
+}
+
+
+    #ajaxsearchprores1_1,
+    #ajaxsearchprores1_2,
+div.ajaxsearchpro[id*="ajaxsearchprores1_"] {
+    position: absolute;
+    z-index: 11000;
+}
+
+    #ajaxsearchprores1_1 .results .asp_nores .asp_keyword,
+    #ajaxsearchprores1_2 .results .asp_nores .asp_keyword,
+div.ajaxsearchpro[id*="ajaxsearchprores1_"] .results .asp_nores .asp_keyword {
+    padding: 0 6px;
+    cursor: pointer;
+    font-weight:normal;font-family:'Open Sans';color:rgba(74, 74, 74, 1);font-size:13px;line-height:13px;text-shadow:0px 0px 0px rgba(255, 255, 255, 0);    font-weight: bold;
+}
+
+    #ajaxsearchprores1_1 .results .item,
+    #ajaxsearchprores1_2 .results .item,
+div.ajaxsearchpro[id*="ajaxsearchprores1_"] .results .item {
+    height: auto;
+    background: rgb(255, 255, 255);
+}
+
+    #ajaxsearchprores1_1 .results .item.hovered,
+    #ajaxsearchprores1_2 .results .item.hovered,
+div.ajaxsearchpro[id*="ajaxsearchprores1_"] .results .item.hovered {
+              background-image: -moz-radial-gradient(center, ellipse cover,  rgb(245, 245, 245), rgb(245, 245, 245));
+            background-image: -webkit-gradient(radial, center center, 0px, center center, 100%, rgb(245, 245, 245), rgb(245, 245, 245));
+            background-image: -webkit-radial-gradient(center, ellipse cover,  rgb(245, 245, 245), rgb(245, 245, 245));
+            background-image: -o-radial-gradient(center, ellipse cover,  rgb(245, 245, 245), rgb(245, 245, 245));
+            background-image: -ms-radial-gradient(center, ellipse cover,  rgb(245, 245, 245), rgb(245, 245, 245));
+            background-image: radial-gradient(ellipse at center,  rgb(245, 245, 245), rgb(245, 245, 245));
+        }
+
+    #ajaxsearchprores1_1 .results .item .asp_image,
+    #ajaxsearchprores1_2 .results .item .asp_image,
+div.ajaxsearchpro[id*="ajaxsearchprores1_"] .results .item .asp_image {
+  width: 70px;
+  height: 70px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+    #ajaxsearchprores1_1 .results .item .asp_item_img,
+    #ajaxsearchprores1_2 .results .item .asp_item_img,
+div.ajaxsearchpro[id*="ajaxsearchprores1_"] .results .item .asp_item_img {
+   background-size: cover;
+   background-repeat: no-repeat;
+}
+
+    #ajaxsearchprores1_1 .results .item .asp_item_overlay_img,
+    #ajaxsearchprores1_2 .results .item .asp_item_overlay_img,
+div.ajaxsearchpro[id*="ajaxsearchprores1_"] .results .item .asp_item_overlay_img {
+   background-size: cover;
+   background-repeat: no-repeat;
+}
+
+
+    #ajaxsearchprores1_1 .results .item .asp_content,
+    #ajaxsearchprores1_2 .results .item .asp_content,
+div.ajaxsearchpro[id*="ajaxsearchprores1_"] .results .item .asp_content {
+    overflow: hidden;
+    background: transparent;
+    margin: 0;
+    padding: 0 10px;
+}
+
+    #ajaxsearchprores1_1 .results .item .asp_content h3,
+    #ajaxsearchprores1_2 .results .item .asp_content h3,
+div.ajaxsearchpro[id*="ajaxsearchprores1_"] .results .item .asp_content h3 {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  line-height: inherit;
+  font-weight:bold;font-family:'Open Sans';color:rgba(20, 84, 169, 1);font-size:14px;line-height:20px;text-shadow:0px 0px 0px rgba(255, 255, 255, 0);}
+
+    #ajaxsearchprores1_1 .results .item .asp_content h3 a,
+    #ajaxsearchprores1_2 .results .item .asp_content h3 a,
+div.ajaxsearchpro[id*="ajaxsearchprores1_"] .results .item .asp_content h3 a {
+  margin: 0;
+  padding: 0;
+  line-height: inherit;
+  font-weight:bold;font-family:'Open Sans';color:rgba(20, 84, 169, 1);font-size:14px;line-height:20px;text-shadow:0px 0px 0px rgba(255, 255, 255, 0);}
+
+    #ajaxsearchprores1_1 .results .item .asp_content h3 a:hover,
+    #ajaxsearchprores1_2 .results .item .asp_content h3 a:hover,
+div.ajaxsearchpro[id*="ajaxsearchprores1_"] .results .item .asp_content h3 a:hover {
+  font-weight:bold;font-family:'Open Sans';color:rgba(20, 84, 169, 1);font-size:14px;line-height:20px;text-shadow:0px 0px 0px rgba(255, 255, 255, 0);}
+
+    #ajaxsearchprores1_1 .results .item div.etc,
+    #ajaxsearchprores1_2 .results .item div.etc,
+div.ajaxsearchpro[id*="ajaxsearchprores1_"] .results .item div.etc {
+  padding: 0;
+  font-size: 13px;
+  line-height: 1.3em;
+  margin-bottom: 6px;
+}
+
+    #ajaxsearchprores1_1 .results .item .etc .asp_author,
+    #ajaxsearchprores1_2 .results .item .etc .asp_author,
+div.ajaxsearchpro[id*="ajaxsearchprores1_"] .results .item .etc .asp_author {
+  padding: 0;
+  font-weight:bold;font-family:'Open Sans';color:rgba(161, 161, 161, 1);font-size:12px;line-height:13px;text-shadow:0px 0px 0px rgba(255, 255, 255, 0);}
+
+    #ajaxsearchprores1_1 .results .item .etc .asp_date,
+    #ajaxsearchprores1_2 .results .item .etc .asp_date,
+div.ajaxsearchpro[id*="ajaxsearchprores1_"] .results .item .etc .asp_date {
+  margin: 0 0 0 10px;
+  padding: 0;
+  font-weight:normal;font-family:'Open Sans';color:rgba(173, 173, 173, 1);font-size:12px;line-height:15px;text-shadow:0px 0px 0px rgba(255, 255, 255, 0);}
+
+    #ajaxsearchprores1_1 .results .item p.desc,
+    #ajaxsearchprores1_2 .results .item p.desc,
+div.ajaxsearchpro[id*="ajaxsearchprores1_"] .results .item p.desc {
+  margin: 2px 0px;
+  padding: 0;
+  font-weight:normal;font-family:'Open Sans';color:rgba(74, 74, 74, 1);font-size:13px;line-height:13px;text-shadow:0px 0px 0px rgba(255, 255, 255, 0);}
+
+    #ajaxsearchprores1_1 .results .item div.asp_content,
+    #ajaxsearchprores1_2 .results .item div.asp_content,
+div.ajaxsearchpro[id*="ajaxsearchprores1_"] .results .item div.asp_content {
+    margin: 0px;
+    padding: 0;
+    font-weight:normal;font-family:'Open Sans';color:rgba(74, 74, 74, 1);font-size:13px;line-height:13px;text-shadow:0px 0px 0px rgba(255, 255, 255, 0);}
+
+    #ajaxsearchprores1_1 span.highlighted,
+    #ajaxsearchprores1_2 span.highlighted,
+div.ajaxsearchpro[id*="ajaxsearchprores1_"] span.highlighted {
+    font-weight: bold;
+    color: #d9312b;
+    background-color: #eee;
+    color: rgba(217, 49, 43, 1);
+    background-color: rgba(238, 238, 238, 1);
+}
+
+    #ajaxsearchprores1_1 p.showmore,
+    #ajaxsearchprores1_2 p.showmore,
+div.ajaxsearchpro[id*="ajaxsearchprores1_"] p.showmore {
+  text-align: center;
+  margin: 5px 0 0;
+  font-weight:normal;font-family:'Open Sans';color:rgba(5, 94, 148, 1);font-size:12px;line-height:15px;text-shadow:0px 0px 0px rgba(255, 255, 255, 0);}
+
+    #ajaxsearchprores1_1 p.showmore a,
+    #ajaxsearchprores1_2 p.showmore a,
+div.ajaxsearchpro[id*="ajaxsearchprores1_"] p.showmore a {
+    font-weight:normal;font-family:'Open Sans';color:rgba(5, 94, 148, 1);font-size:12px;line-height:15px;text-shadow:0px 0px 0px rgba(255, 255, 255, 0);    padding: 10px 5px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 1);
+    display: block;
+    text-align: center;
+}
+
+    #ajaxsearchprores1_1 .asp_group_header,
+    #ajaxsearchprores1_2 .asp_group_header,
+div.ajaxsearchpro[id*="ajaxsearchprores1_"] .asp_group_header {
+  background: #DDDDDD;
+  background: rgb(246, 246, 246);
+  border-radius: 3px 3px 0 0;
+  border-top: 1px solid rgb(248, 248, 248);
+  border-left: 1px solid rgb(248, 248, 248);
+  border-right: 1px solid rgb(248, 248, 248);
+  margin: 10px 0 -3px;
+  padding: 7px 0 7px 10px;
+  position: relative;
+  z-index: 1000;
+  font-weight:bold;font-family:'Open Sans';color:rgba(5, 94, 148, 1);font-size:11px;line-height:13px;text-shadow:0px 0px 0px rgba(255, 255, 255, 0);}
+
+    #ajaxsearchprores1_1 .asp_res_loader,
+    #ajaxsearchprores1_2 .asp_res_loader,
+div.ajaxsearchpro[id*="ajaxsearchprores1_"] .asp_res_loader {
+    background: rgb(255, 255, 255);
+    height: 200px;
+    padding: 10px;
+}
+
+    #ajaxsearchprores1_1.isotopic .asp_res_loader,
+    #ajaxsearchprores1_2.isotopic .asp_res_loader,
+div.ajaxsearchpro[id*="ajaxsearchprores1_"].isotopic .asp_res_loader {
+    background: rgba(255, 255, 255, 0);;
+}
+
+    #ajaxsearchprores1_1 .asp_res_loader .asp_loader,
+    #ajaxsearchprores1_2 .asp_res_loader .asp_loader,
+div.ajaxsearchpro[id*="ajaxsearchprores1_"] .asp_res_loader .asp_loader {
+    height: 200px;
+    width: 200px;
+    margin: 0 auto;
+}
+
+
+/* Search settings */
+    div.ajaxsearchpro[id*="ajaxsearchprosettings1_"].searchsettings,
+    div.ajaxsearchpro[id*="ajaxsearchprosettings1_"].searchsettings,
+div.ajaxsearchpro[id*="ajaxsearchprosettings1_"].searchsettings  {
+  direction: ltr;
+  padding: 0;
+              background-image: -webkit-linear-gradient(185deg, rgb(190, 76, 70), rgb(190, 76, 70));
+            background-image: -moz-linear-gradient(185deg, rgb(190, 76, 70), rgb(190, 76, 70));
+            background-image: -o-linear-gradient(185deg, rgb(190, 76, 70), rgb(190, 76, 70));
+            background-image: -ms-linear-gradient(185deg, rgb(190, 76, 70) 0%, rgb(190, 76, 70) 100%);
+            background-image: linear-gradient(185deg, rgb(190, 76, 70), rgb(190, 76, 70));
+          box-shadow:0px 0px 0px 0px rgb(0, 0, 0) ;;
+  max-width: 208px;
+  z-index: 11001;
+}
+
+    #ajaxsearchprobsettings1_1.searchsettings,
+    #ajaxsearchprobsettings1_2.searchsettings,
+div.ajaxsearchpro[id*="ajaxsearchprobsettings1_"].searchsettings {
+  max-width: none;
+}
+
+    div.ajaxsearchpro[id*="ajaxsearchprosettings1_"].searchsettings form,
+    div.ajaxsearchpro[id*="ajaxsearchprosettings1_"].searchsettings form,
+div.ajaxsearchpro[id*="ajaxsearchprosettings1_"].searchsettings form {
+  display: block;
+    -moz-column-width: 200px;
+    -moz-column-fill: balance;
+    -moz-column-gap: 0px;
+    -webkit-column-width: 200px;
+    -webkit-column-gap: 0;
+    column-width: 200px;
+    column-gap: 0;
+    column-fill: balance;
+}
+
+    div.ajaxsearchpro[id*="ajaxsearchprobsettings1_"].searchsettings form,
+    div.ajaxsearchpro[id*="ajaxsearchprobsettings1_"].searchsettings form,
+div.ajaxsearchpro[id*="ajaxsearchprobsettings1_"].searchsettings form {
+  display: block;
+    -moz-column-width: 200px;
+    -moz-column-fill: balance;
+    -moz-column-gap: 0px;
+    -webkit-column-width: 200px;
+    -webkit-column-gap: 0;
+    column-width: 200px;
+    column-gap: 0;
+    column-fill: balance;
+}
+
+            div.ajaxsearchpro[id*="ajaxsearchprobsettings1_"].searchsettings form>fieldset,
+        div.ajaxsearchpro[id*="ajaxsearchprobsettings1_"].searchsettings form>fieldset,
+        div.ajaxsearchpro[id*="ajaxsearchprobsettings1_"].searchsettings form>fieldset {
+      display: inline-block;
+      vertical-align: top;
+      float: none;
+    }
+            div.ajaxsearchpro[id*="ajaxsearchprosettings1_"].searchsettings form>fieldset,
+        div.ajaxsearchpro[id*="ajaxsearchprosettings1_"].searchsettings form>fieldset,
+        div.ajaxsearchpro[id*="ajaxsearchprosettings1_"].searchsettings form>fieldset {
+      display: inline-block;
+      vertical-align: top;
+      float: none;
+    }
+
+    #ajaxsearchprosettings1_1.searchsettings .label,
+    #ajaxsearchprosettings1_2.searchsettings .label,
+    #ajaxsearchprosettings1_1.searchsettings .asp_label,
+    #ajaxsearchprosettings1_2.searchsettings .asp_label,
+div.ajaxsearchpro[id*="ajaxsearchprosettings1_"].searchsettings .label,
+div.ajaxsearchpro[id*="ajaxsearchprosettings1_"].searchsettings .asp_label {
+  font-weight:bold;font-family:'Open Sans';color:rgb(255, 255, 255);font-size:12px;line-height:15px;text-shadow:0px 0px 0px rgba(255, 255, 255, 0);}
+
+    #ajaxsearchprosettings1_1.searchsettings .option label,
+    #ajaxsearchprosettings1_2.searchsettings .option label,
+div.ajaxsearchpro[id*="ajaxsearchprosettings1_"].searchsettings .option label {
+              background-image: -webkit-linear-gradient(180deg, rgb(34, 34, 34), rgb(69, 72, 77));
+            background-image: -moz-linear-gradient(180deg, rgb(34, 34, 34), rgb(69, 72, 77));
+            background-image: -o-linear-gradient(180deg, rgb(34, 34, 34), rgb(69, 72, 77));
+            background-image: -ms-linear-gradient(180deg, rgb(34, 34, 34) 0%, rgb(69, 72, 77) 100%);
+            background-image: linear-gradient(180deg, rgb(34, 34, 34), rgb(69, 72, 77));
+        }
+
+    #ajaxsearchprosettings1_1.searchsettings .option label:after,
+    #ajaxsearchprosettings1_2.searchsettings .option label:after,
+    #ajaxsearchprobsettings1_1.searchsettings .option label:after,
+    #ajaxsearchprobsettings1_2.searchsettings .option label:after,
+div.ajaxsearchpro[id*="ajaxsearchprobsettings1_"].searchsettings .option label:after,
+div.ajaxsearchpro[id*="ajaxsearchprosettings1_"].searchsettings .option label:after {
+    font-family: 'asppsicons2';
+    border: none;
+    content: "\e800";
+    display: block;
+    font-size: 11px;
+    color: rgb(255, 255, 255);
+    margin: 1px 0 0 0px !important;
+    line-height: 17px;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: none;
+}
+
+    #ajaxsearchprosettings1_1.searchsettings .asp_sett_scroll,
+    #ajaxsearchprosettings1_2.searchsettings .asp_sett_scroll,
+div.ajaxsearchpro[id*="ajaxsearchprosettings1_"].searchsettings .asp_sett_scroll {
+  max-height: 220px;
+  overflow: auto;
+}
+
+    #ajaxsearchprobsettings1_1.searchsettings .asp_sett_scroll,
+    #ajaxsearchprobsettings1_2.searchsettings .asp_sett_scroll,
+div.ajaxsearchpro[id*="ajaxsearchprobsettings1_"].searchsettings .asp_sett_scroll {
+  max-height: 220px;
+  overflow: auto;
+}
+
+    #ajaxsearchprosettings1_1.searchsettings fieldset,
+    #ajaxsearchprosettings1_2.searchsettings fieldset,
+div.ajaxsearchpro[id*="ajaxsearchprosettings1_"].searchsettings fieldset {
+  width: 200px;
+  min-width: 200px;
+  max-width: 10000px;
+}
+
+    #ajaxsearchprobsettings1_1.searchsettings fieldset,
+    #ajaxsearchprobsettings1_2.searchsettings fieldset,
+div.ajaxsearchpro[id*="ajaxsearchprobsettings1_"].searchsettings fieldset {
+  width: 200px;
+  min-width: 200px;
+  max-width: 10000px;
+}
+
+    #ajaxsearchprosettings1_1.searchsettings fieldset legend,
+    #ajaxsearchprosettings1_2.searchsettings fieldset legend,
+div.ajaxsearchpro[id*="ajaxsearchprosettings1_"].searchsettings fieldset legend {
+  padding: 0 0 0 10px;
+  margin: 0;
+  background: transparent;
+  font-weight:normal;font-family:'Open Sans';color:rgb(31, 31, 31);font-size:13px;line-height:15px;text-shadow:0px 0px 0px rgba(255, 255, 255, 0);}
+    #ajaxsearchprores1_1.vertical,
+    #ajaxsearchprores1_2.vertical,
+div.ajaxsearchpro[id*="ajaxsearchprores1_"].vertical {
+    padding: 4px;
+    background: rgb(225, 99, 92);
+    border-radius: 3px;
+    border:0px none #000000;border-radius:0px 0px 0px 0px;    box-shadow:0px 0px 0px 0px #000000 ;    visibility: hidden;
+    display: none;
+}
+
+    #ajaxsearchprores1_1.vertical .item .asp_content h3,
+    #ajaxsearchprores1_2.vertical .item .asp_content h3,
+div.ajaxsearchpro[id*="ajaxsearchprores1_"].vertical .item .asp_content h3 {
+    display: inline;
+}
+
+    #ajaxsearchprores1_1.vertical .results .item .asp_content,
+    #ajaxsearchprores1_2.vertical .results .item .asp_content,
+div.ajaxsearchpro[id*="ajaxsearchprores1_"].vertical .results .item .asp_content {
+    overflow: hidden;
+    width: auto;
+    height: auto;
+    background: transparent;
+    margin: 0;
+    padding: 0 10px;
+}
+
+    #ajaxsearchprores1_1.vertical .results .item .asp_image,
+    #ajaxsearchprores1_2.vertical .results .item .asp_image,
+div.ajaxsearchpro[id*="ajaxsearchprores1_"].vertical .results .item .asp_image {
+    width: 70px;
+    height: 70px;
+    margin: 2px 8px 0px 0;
+}
+
+    #ajaxsearchprores1_1.vertical .results .asp_spacer,
+    #ajaxsearchprores1_2.vertical .results .asp_spacer,
+div.ajaxsearchpro[id*="ajaxsearchprores1_"].vertical .results .asp_spacer {
+    background: rgba(204, 204, 204, 1);
+}
+
+    #ajaxsearchprores1_1 .mCSBap_scrollTools .mCSBap_dragger .mCSBap_dragger_bar,
+    #ajaxsearchprores1_2 .mCSBap_scrollTools .mCSBap_dragger .mCSBap_dragger_bar,
+div.ajaxsearchpro[id*="ajaxsearchprores1_"] .mCSBap_scrollTools .mCSBap_dragger .mCSBap_dragger_bar {
+    background:#fff; /* rgba fallback */
+    background:rgba(255, 255, 255,0.9);
+}
+
+    #ajaxsearchprores1_1 .mCSBap_scrollTools .mCSBap_dragger:hover .mCSBap_dragger_bar,
+    #ajaxsearchprores1_2 .mCSBap_scrollTools .mCSBap_dragger:hover .mCSBap_dragger_bar,
+div.ajaxsearchpro[id*="ajaxsearchprores1_"] .mCSBap_scrollTools .mCSBap_dragger:hover .mCSBap_dragger_bar {
+    background:rgba(255, 255, 255,0.95);
+}
+
+div.ajaxsearchpro[id*="ajaxsearchprores1_"] .mCSBap_scrollTools .mCSBap_dragger:active .mCSBap_dragger_bar,
+div.ajaxsearchpro[id*="ajaxsearchprores1_"] .mCSBap_scrollTools .mCSBap_dragger.mCSBap_dragger_onDrag .mCSBap_dragger_bar{
+    background:rgba(255, 255, 255,1);
+}
+
+div.ajaxsearchpro[id*="ajaxsearchprores1_"].horizontal .mCSBap_scrollTools .mCSBap_dragger .mCSBap_dragger_bar{
+    background:#fff; /* rgba fallback */
+    background:rgb(250, 250, 250);
+    opacity: 0.9;
+}
+div.ajaxsearchpro[id*="ajaxsearchprores1_"].horizontal .mCSBap_scrollTools .mCSBap_dragger:hover .mCSBap_dragger_bar{
+    background:rgb(250, 250, 250);
+    opacity: 0.95;
+}
+
+div.ajaxsearchpro[id*="ajaxsearchprores1_"].horizontal .mCSBap_scrollTools .mCSBap_dragger:active .mCSBap_dragger_bar,
+div.ajaxsearchpro[id*="ajaxsearchprores1_"].horizontal .mCSBap_scrollTools .mCSBap_dragger.mCSBap_dragger_onDrag .mCSBap_dragger_bar{
+    background: rgb(250, 250, 250);
+}
+
+div.ajaxsearchpro[id*="ajaxsearchprores1_"] .mCSBap_scrollTools .mCSBap_buttonDown {
+    position: relative;
+    margin: -16px 0px 0 3px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 6px 5px 0 5px;
+    border-color: rgba(10, 63, 77, 1) transparent transparent transparent;
+}
+
+div.ajaxsearchpro[id*="ajaxsearchprores1_"] .mCSBap_scrollTools .mCSBap_buttonUp {
+    position: relative;
+    margin: -8px 0px 0 3px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 5px 6px 5px;
+    border-color: transparent transparent rgba(10, 63, 77, 1) transparent;
+}.wpdreams_asp_sc-1, .asp-try-1 {display: block; max-height: none; overflow: visible;}
+/* Generated at: 2017-03-01 07:54:25 */

@@ -19,6 +19,8 @@
 
 /** Contact Form 7 Removing BR tags */
 
+define('WP_CACHE', true); //Added by WP-Cache Manager
+define( 'WPCACHEHOME', '/Users/jimmy/TimeImmo/wp-content/plugins/wp-super-cache/' ); //Added by WP-Cache Manager
 define("WPCF7_AUTOP",false);
 
 // ** Réglages MySQL - Votre hébergeur doit vous fournir ces informations. ** //

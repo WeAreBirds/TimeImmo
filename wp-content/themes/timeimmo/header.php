@@ -11,7 +11,7 @@
 ================================================== -->
 <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/style.css">
 <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/colors/main.css" id="colors">
-
+<?php wp_head(); ?>
 </head>
 
 <body>

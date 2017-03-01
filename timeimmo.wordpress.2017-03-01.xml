@@ -16,7 +16,7 @@
 <!-- 7. WordPress will then import each of the posts, pages, comments, categories, etc. -->
 <!--    contained in this file into your site. -->
 
-<!-- generator="WordPress/4.7.2" created="2017-02-28 19:47" -->
+<!-- generator="WordPress/4.7.2" created="2017-03-01 19:13" -->
 <rss version="2.0"
 	xmlns:excerpt="http://wordpress.org/export/1.2/excerpt/"
 	xmlns:content="http://purl.org/rss/1.0/modules/content/"
@@ -29,7 +29,7 @@
 	<title>TimeImmo</title>
 	<link>http://localhost:8888/TimeImmo</link>
 	<description>Agence immobilière</description>
-	<pubDate>Tue, 28 Feb 2017 19:47:28 +0000</pubDate>
+	<pubDate>Wed, 01 Mar 2017 19:13:39 +0000</pubDate>
 	<language>fr-FR</language>
 	<wp:wxr_version>1.2</wp:wxr_version>
 	<wp:base_site_url>http://localhost:8888/TimeImmo</wp:base_site_url>
@@ -73,11 +73,137 @@
 		<wp:tag_name><![CDATA[salle de bain]]></wp:tag_name>
 	</wp:tag>
 	<wp:term>
+		<wp:term_id><![CDATA[31]]></wp:term_id>
+		<wp:term_taxonomy><![CDATA[chambre]]></wp:term_taxonomy>
+		<wp:term_slug><![CDATA[1]]></wp:term_slug>
+		<wp:term_parent><![CDATA[]]></wp:term_parent>
+		<wp:term_name><![CDATA[1]]></wp:term_name>
+	</wp:term>
+	<wp:term>
+		<wp:term_id><![CDATA[34]]></wp:term_id>
+		<wp:term_taxonomy><![CDATA[bain]]></wp:term_taxonomy>
+		<wp:term_slug><![CDATA[1]]></wp:term_slug>
+		<wp:term_parent><![CDATA[]]></wp:term_parent>
+		<wp:term_name><![CDATA[1]]></wp:term_name>
+	</wp:term>
+	<wp:term>
+		<wp:term_id><![CDATA[32]]></wp:term_id>
+		<wp:term_taxonomy><![CDATA[chambre]]></wp:term_taxonomy>
+		<wp:term_slug><![CDATA[2]]></wp:term_slug>
+		<wp:term_parent><![CDATA[]]></wp:term_parent>
+		<wp:term_name><![CDATA[2]]></wp:term_name>
+	</wp:term>
+	<wp:term>
+		<wp:term_id><![CDATA[35]]></wp:term_id>
+		<wp:term_taxonomy><![CDATA[bain]]></wp:term_taxonomy>
+		<wp:term_slug><![CDATA[2]]></wp:term_slug>
+		<wp:term_parent><![CDATA[]]></wp:term_parent>
+		<wp:term_name><![CDATA[2]]></wp:term_name>
+	</wp:term>
+	<wp:term>
+		<wp:term_id><![CDATA[33]]></wp:term_id>
+		<wp:term_taxonomy><![CDATA[chambre]]></wp:term_taxonomy>
+		<wp:term_slug><![CDATA[3]]></wp:term_slug>
+		<wp:term_parent><![CDATA[]]></wp:term_parent>
+		<wp:term_name><![CDATA[3]]></wp:term_name>
+	</wp:term>
+	<wp:term>
+		<wp:term_id><![CDATA[36]]></wp:term_id>
+		<wp:term_taxonomy><![CDATA[bain]]></wp:term_taxonomy>
+		<wp:term_slug><![CDATA[3]]></wp:term_slug>
+		<wp:term_parent><![CDATA[]]></wp:term_parent>
+		<wp:term_name><![CDATA[3]]></wp:term_name>
+	</wp:term>
+	<wp:term>
+		<wp:term_id><![CDATA[39]]></wp:term_id>
+		<wp:term_taxonomy><![CDATA[options]]></wp:term_taxonomy>
+		<wp:term_slug><![CDATA[alarme]]></wp:term_slug>
+		<wp:term_parent><![CDATA[]]></wp:term_parent>
+		<wp:term_name><![CDATA[alarme]]></wp:term_name>
+	</wp:term>
+	<wp:term>
+		<wp:term_id><![CDATA[21]]></wp:term_id>
+		<wp:term_taxonomy><![CDATA[biens]]></wp:term_taxonomy>
+		<wp:term_slug><![CDATA[appartement]]></wp:term_slug>
+		<wp:term_parent><![CDATA[]]></wp:term_parent>
+		<wp:term_name><![CDATA[appartement]]></wp:term_name>
+	</wp:term>
+	<wp:term>
+		<wp:term_id><![CDATA[26]]></wp:term_id>
+		<wp:term_taxonomy><![CDATA[pays]]></wp:term_taxonomy>
+		<wp:term_slug><![CDATA[belgique]]></wp:term_slug>
+		<wp:term_parent><![CDATA[]]></wp:term_parent>
+		<wp:term_name><![CDATA[belgique]]></wp:term_name>
+	</wp:term>
+	<wp:term>
+		<wp:term_id><![CDATA[30]]></wp:term_id>
+		<wp:term_taxonomy><![CDATA[villes]]></wp:term_taxonomy>
+		<wp:term_slug><![CDATA[bruxelles]]></wp:term_slug>
+		<wp:term_parent><![CDATA[]]></wp:term_parent>
+		<wp:term_name><![CDATA[Bruxelles]]></wp:term_name>
+	</wp:term>
+	<wp:term>
+		<wp:term_id><![CDATA[40]]></wp:term_id>
+		<wp:term_taxonomy><![CDATA[options]]></wp:term_taxonomy>
+		<wp:term_slug><![CDATA[chauffage-central]]></wp:term_slug>
+		<wp:term_parent><![CDATA[]]></wp:term_parent>
+		<wp:term_name><![CDATA[chauffage central]]></wp:term_name>
+	</wp:term>
+	<wp:term>
+		<wp:term_id><![CDATA[23]]></wp:term_id>
+		<wp:term_taxonomy><![CDATA[biens]]></wp:term_taxonomy>
+		<wp:term_slug><![CDATA[commerce]]></wp:term_slug>
+		<wp:term_parent><![CDATA[]]></wp:term_parent>
+		<wp:term_name><![CDATA[commerce]]></wp:term_name>
+	</wp:term>
+	<wp:term>
+		<wp:term_id><![CDATA[27]]></wp:term_id>
+		<wp:term_taxonomy><![CDATA[pays]]></wp:term_taxonomy>
+		<wp:term_slug><![CDATA[france]]></wp:term_slug>
+		<wp:term_parent><![CDATA[]]></wp:term_parent>
+		<wp:term_name><![CDATA[france]]></wp:term_name>
+	</wp:term>
+	<wp:term>
+		<wp:term_id><![CDATA[24]]></wp:term_id>
+		<wp:term_taxonomy><![CDATA[biens]]></wp:term_taxonomy>
+		<wp:term_slug><![CDATA[garage]]></wp:term_slug>
+		<wp:term_parent><![CDATA[]]></wp:term_parent>
+		<wp:term_name><![CDATA[garages]]></wp:term_name>
+	</wp:term>
+	<wp:term>
 		<wp:term_id><![CDATA[15]]></wp:term_id>
 		<wp:term_taxonomy><![CDATA[categorie]]></wp:term_taxonomy>
 		<wp:term_slug><![CDATA[location]]></wp:term_slug>
 		<wp:term_parent><![CDATA[]]></wp:term_parent>
 		<wp:term_name><![CDATA[location]]></wp:term_name>
+	</wp:term>
+	<wp:term>
+		<wp:term_id><![CDATA[22]]></wp:term_id>
+		<wp:term_taxonomy><![CDATA[biens]]></wp:term_taxonomy>
+		<wp:term_slug><![CDATA[maison]]></wp:term_slug>
+		<wp:term_parent><![CDATA[]]></wp:term_parent>
+		<wp:term_name><![CDATA[maison]]></wp:term_name>
+	</wp:term>
+	<wp:term>
+		<wp:term_id><![CDATA[29]]></wp:term_id>
+		<wp:term_taxonomy><![CDATA[villes]]></wp:term_taxonomy>
+		<wp:term_slug><![CDATA[mons]]></wp:term_slug>
+		<wp:term_parent><![CDATA[]]></wp:term_parent>
+		<wp:term_name><![CDATA[Mons]]></wp:term_name>
+	</wp:term>
+	<wp:term>
+		<wp:term_id><![CDATA[37]]></wp:term_id>
+		<wp:term_taxonomy><![CDATA[options]]></wp:term_taxonomy>
+		<wp:term_slug><![CDATA[piscine]]></wp:term_slug>
+		<wp:term_parent><![CDATA[]]></wp:term_parent>
+		<wp:term_name><![CDATA[piscine]]></wp:term_name>
+	</wp:term>
+	<wp:term>
+		<wp:term_id><![CDATA[38]]></wp:term_id>
+		<wp:term_taxonomy><![CDATA[options]]></wp:term_taxonomy>
+		<wp:term_slug><![CDATA[terrasse]]></wp:term_slug>
+		<wp:term_parent><![CDATA[]]></wp:term_parent>
+		<wp:term_name><![CDATA[terrasse]]></wp:term_name>
 	</wp:term>
 	<wp:term>
 		<wp:term_id><![CDATA[14]]></wp:term_id>
@@ -1770,6 +1896,13 @@
 		<wp:post_type><![CDATA[liste]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
+		<category domain="chambre" nicename="1"><![CDATA[1]]></category>
+		<category domain="options" nicename="alarme"><![CDATA[alarme]]></category>
+		<category domain="pays" nicename="belgique"><![CDATA[belgique]]></category>
+		<category domain="villes" nicename="bruxelles"><![CDATA[Bruxelles]]></category>
+		<category domain="options" nicename="chauffage-central"><![CDATA[chauffage central]]></category>
+		<category domain="biens" nicename="maison"><![CDATA[maison]]></category>
+		<category domain="options" nicename="terrasse"><![CDATA[terrasse]]></category>
 		<category domain="categorie" nicename="vente"><![CDATA[vente]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_edit_last]]></wp:meta_key>
@@ -1885,7 +2018,7 @@
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_yoast_wpseo_primary_biens]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
+			<wp:meta_value><![CDATA[22]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[carte]]></wp:meta_key>
@@ -1970,6 +2103,30 @@
 			<wp:meta_key><![CDATA[_features]]></wp:meta_key>
 			<wp:meta_value><![CDATA[field_58b4a05896d1a]]></wp:meta_value>
 		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[statut]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a vendre]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_yoast_wpseo_primary_pays]]></wp:meta_key>
+			<wp:meta_value><![CDATA[26]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_yoast_wpseo_primary_villes]]></wp:meta_key>
+			<wp:meta_value><![CDATA[30]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_yoast_wpseo_primary_chambre]]></wp:meta_key>
+			<wp:meta_value><![CDATA[31]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_yoast_wpseo_primary_bain]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_yoast_wpseo_primary_options]]></wp:meta_key>
+			<wp:meta_value><![CDATA[39]]></wp:meta_value>
+		</wp:postmeta>
 	</item>
 	<item>
 		<title>Appartement</title>
@@ -1992,6 +2149,7 @@
 		<wp:post_type><![CDATA[liste]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
+		<category domain="biens" nicename="appartement"><![CDATA[appartement]]></category>
 		<category domain="categorie" nicename="location"><![CDATA[location]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_edit_last]]></wp:meta_key>
@@ -2079,7 +2237,7 @@
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_yoast_wpseo_primary_biens]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
+			<wp:meta_value><![CDATA[21]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[prix]]></wp:meta_key>
@@ -2151,7 +2309,7 @@
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[choix]]></wp:meta_key>
-			<wp:meta_value><![CDATA[null]]></wp:meta_value>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_choix]]></wp:meta_key>
@@ -2168,6 +2326,26 @@
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_is_ns_featured_post]]></wp:meta_key>
 			<wp:meta_value><![CDATA[yes]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[statut]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a louer]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[features]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_features]]></wp:meta_key>
+			<wp:meta_value><![CDATA[field_58b4a05896d1a]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[detail]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_detail]]></wp:meta_key>
+			<wp:meta_value><![CDATA[field_58b4a57ca73ac]]></wp:meta_value>
 		</wp:postmeta>
 	</item>
 	<item>
@@ -2243,7 +2421,7 @@
 		</wp:comment>
 	</item>
 	<item>
-		<title>test 3</title>
+		<title>commerce</title>
 		<link>http://localhost:8888/TimeImmo/liste/test-3/</link>
 		<pubDate>Mon, 27 Feb 2017 22:55:44 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
@@ -2263,7 +2441,8 @@
 		<wp:post_type><![CDATA[liste]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<category domain="categorie" nicename="vente"><![CDATA[vente]]></category>
+		<category domain="biens" nicename="commerce"><![CDATA[commerce]]></category>
+		<category domain="categorie" nicename="location"><![CDATA[location]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_edit_last]]></wp:meta_key>
 			<wp:meta_value><![CDATA[1]]></wp:meta_value>
@@ -2410,11 +2589,11 @@
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_yoast_wpseo_primary_categorie]]></wp:meta_key>
-			<wp:meta_value><![CDATA[14]]></wp:meta_value>
+			<wp:meta_value><![CDATA[15]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_yoast_wpseo_primary_biens]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
+			<wp:meta_value><![CDATA[23]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_is_ns_featured_post]]></wp:meta_key>
@@ -2422,7 +2601,7 @@
 		</wp:postmeta>
 	</item>
 	<item>
-		<title>test 4</title>
+		<title>garage</title>
 		<link>http://localhost:8888/TimeImmo/liste/test-4/</link>
 		<pubDate>Mon, 27 Feb 2017 23:02:39 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
@@ -2442,6 +2621,7 @@
 		<wp:post_type><![CDATA[liste]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
+		<category domain="biens" nicename="garage"><![CDATA[garages]]></category>
 		<category domain="categorie" nicename="location"><![CDATA[location]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_edit_last]]></wp:meta_key>
@@ -2593,7 +2773,7 @@
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_yoast_wpseo_primary_biens]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
+			<wp:meta_value><![CDATA[24]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_is_ns_featured_post]]></wp:meta_key>
@@ -3597,7 +3777,7 @@ This e-mail was sent from a contact form on TimeImmo (http://localhost:8888/Time
 	</item>
 	<item>
 		<title>Recherche</title>
-		<link>http://localhost:8888/TimeImmo/recherche/</link>
+		<link>http://localhost:8888/TimeImmo/recherche__trashed/</link>
 		<pubDate>Thu, 23 Feb 2017 14:06:59 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
 		<guid isPermaLink="false">http://localhost:8888/TimeImmo/?page_id=88</guid>
@@ -3609,8 +3789,8 @@ This e-mail was sent from a contact form on TimeImmo (http://localhost:8888/Time
 		<wp:post_date_gmt><![CDATA[2017-02-23 14:06:59]]></wp:post_date_gmt>
 		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
-		<wp:post_name><![CDATA[recherche]]></wp:post_name>
-		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_name><![CDATA[recherche__trashed]]></wp:post_name>
+		<wp:status><![CDATA[trash]]></wp:status>
 		<wp:post_parent>0</wp:post_parent>
 		<wp:menu_order>0</wp:menu_order>
 		<wp:post_type><![CDATA[page]]></wp:post_type>
@@ -3622,11 +3802,23 @@ This e-mail was sent from a contact form on TimeImmo (http://localhost:8888/Time
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_page_template]]></wp:meta_key>
-			<wp:meta_value><![CDATA[page-search.php]]></wp:meta_value>
+			<wp:meta_value><![CDATA[default]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_yoast_wpseo_content_score]]></wp:meta_key>
 			<wp:meta_value><![CDATA[30]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_wp_trash_meta_status]]></wp:meta_key>
+			<wp:meta_value><![CDATA[publish]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_wp_trash_meta_time]]></wp:meta_key>
+			<wp:meta_value><![CDATA[1488314991]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_wp_desired_post_slug]]></wp:meta_key>
+			<wp:meta_value><![CDATA[recherche]]></wp:meta_value>
 		</wp:postmeta>
 	</item>
 	<item>
@@ -3636,7 +3828,7 @@ This e-mail was sent from a contact form on TimeImmo (http://localhost:8888/Time
 		<dc:creator><![CDATA[admin]]></dc:creator>
 		<guid isPermaLink="false">http://localhost:8888/TimeImmo/?page_id=92</guid>
 		<description></description>
-		<content:encoded><![CDATA[]]></content:encoded>
+		<content:encoded><![CDATA[[wpdreams_ajaxsearchpro id=2][wpdreams_asp_settings id=2][wpdreams_ajaxsearchpro_two_column id=2][wpdreams_ajaxsearchpro_results id=2 element=div]]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>92</wp:post_id>
 		<wp:post_date><![CDATA[2017-02-27 00:49:01]]></wp:post_date>
@@ -3656,11 +3848,15 @@ This e-mail was sent from a contact form on TimeImmo (http://localhost:8888/Time
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_page_template]]></wp:meta_key>
-			<wp:meta_value><![CDATA[page-search.php]]></wp:meta_value>
+			<wp:meta_value><![CDATA[default]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_yoast_wpseo_content_score]]></wp:meta_key>
-			<wp:meta_value><![CDATA[30]]></wp:meta_value>
+			<wp:meta_value><![CDATA[60]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_asp_metadata]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:2:{s:21:"asp_suggested_phrases";s:0:"";s:23:"asp_suggested_instances";s:1:"0";}]]></wp:meta_value>
 		</wp:postmeta>
 	</item>
 	<item>

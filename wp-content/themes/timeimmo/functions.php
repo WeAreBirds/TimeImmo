@@ -1,35 +1,7 @@
 <?php  
 
 //pagination
-if( !function_exists( 'theme_pagination' ) ) {
-  
-    function theme_pagination() {
-  
-  global $wp_query, $wp_rewrite;
-  $wp_query->query_vars['paged'] > 1 ? $current = $wp_query->query_vars['paged'] : $current = 1;
-  
-  $pagination = array(
-    'base' => @add_query_arg('page','%#%'),
-    'format' => '',
-    'total' => $wp_query->max_num_pages,
-    'current' => $current,
-          'show_all' => false,
-          'end_size'     => 1,
-          'mid_size'     => 2,
-    'type' => 'list',
-    'next_text' => '»',
-    'prev_text' => '«'
-  );
-  
-  if( $wp_rewrite->using_permalinks() )
-    $pagination['base'] = user_trailingslashit( trailingslashit( remove_query_arg( 's', get_pagenum_link( 1 ) ) ) . 'page/%#%/', 'paged' );
-  
-  if( !empty($wp_query->query_vars['s']) )
-    $pagination['add_args'] = array( 's' => str_replace( ' ' , '+', get_query_var( 's' ) ) );
-    
-  echo str_replace('page/1/','', paginate_links( $pagination ) );
-    } 
-}
+
 
 //Active les images à la une
 add_theme_support( 'post-thumbnails' );
@@ -105,6 +77,15 @@ register_sidebar(array(
 'after_title' => '',
 )); 
 
+register_sidebar(array(
+'name' => 'header_search',
+'id' => 'header_search',
+'before_widget' => '',
+'after_widget' => '',
+'before_title' => '',
+'after_title' => '',
+)); 
+
 // if ( function_exists('register_sidebar') ) {
 //     register_sidebar( array('before_widget' => '<div class="box">', 'after_widget' => '</div>', 'before_title' => '<h2>', 'after_title' => '</h2>') );
 // }
@@ -164,7 +145,7 @@ function create_post_type() {
   		'editor',
   		// 'author',
   		'thumbnail',
-  		// 'custom-fields',
+  		'custom-fields',
   		// 'comments',
   		'page-attributes'
       ),
@@ -211,6 +192,106 @@ register_taxonomy(
     'labels' => array(
     'name' => 'biens',
     'singular_name' => 'biens',
+    'all_items' => 'Toutes les categorie',
+    'edit_item' => 'Éditer la categorie',
+    'view_item' => 'Voir la categorie',
+    'update_item' => 'Mettre à jour la categorie',
+    'add_new_item' => 'Ajouter une categorie',
+    'new_item_name' => 'Nouvelle categorie',
+    'search_items' => 'Rechercher parmi les categories',
+    'popular_items' => 'categorie les plus utilisés'
+  ),
+  'hierarchical' => true
+  )
+);
+register_taxonomy(
+  'pays',
+  'liste',
+  array(
+    'label' => 'localisation pays',
+    'labels' => array(
+    'name' => 'pays',
+    'singular_name' => 'pays',
+    'all_items' => 'Toutes les categorie',
+    'edit_item' => 'Éditer la categorie',
+    'view_item' => 'Voir la categorie',
+    'update_item' => 'Mettre à jour la categorie',
+    'add_new_item' => 'Ajouter une categorie',
+    'new_item_name' => 'Nouvelle categorie',
+    'search_items' => 'Rechercher parmi les categories',
+    'popular_items' => 'categorie les plus utilisés'
+  ),
+  'hierarchical' => true
+  )
+);
+register_taxonomy(
+  'villes',
+  'liste',
+  array(
+    'label' => 'localisation villes',
+    'labels' => array(
+    'name' => 'villes',
+    'singular_name' => 'villes',
+    'all_items' => 'Toutes les categorie',
+    'edit_item' => 'Éditer la categorie',
+    'view_item' => 'Voir la categorie',
+    'update_item' => 'Mettre à jour la categorie',
+    'add_new_item' => 'Ajouter une categorie',
+    'new_item_name' => 'Nouvelle categorie',
+    'search_items' => 'Rechercher parmi les categories',
+    'popular_items' => 'categorie les plus utilisés'
+  ),
+  'hierarchical' => true
+  )
+);
+register_taxonomy(
+  'chambre',
+  'liste',
+  array(
+    'label' => 'nombre de chambres',
+    'labels' => array(
+    'name' => 'chambres',
+    'singular_name' => 'chambre',
+    'all_items' => 'Toutes les categorie',
+    'edit_item' => 'Éditer la categorie',
+    'view_item' => 'Voir la categorie',
+    'update_item' => 'Mettre à jour la categorie',
+    'add_new_item' => 'Ajouter une categorie',
+    'new_item_name' => 'Nouvelle categorie',
+    'search_items' => 'Rechercher parmi les categories',
+    'popular_items' => 'categorie les plus utilisés'
+  ),
+  'hierarchical' => true
+  )
+);
+register_taxonomy(
+  'bain',
+  'liste',
+  array(
+    'label' => 'nombre de salle de bains',
+    'labels' => array(
+    'name' => 'salle de bains',
+    'singular_name' => 'bain',
+    'all_items' => 'Toutes les categorie',
+    'edit_item' => 'Éditer la categorie',
+    'view_item' => 'Voir la categorie',
+    'update_item' => 'Mettre à jour la categorie',
+    'add_new_item' => 'Ajouter une categorie',
+    'new_item_name' => 'Nouvelle categorie',
+    'search_items' => 'Rechercher parmi les categories',
+    'popular_items' => 'categorie les plus utilisés'
+  ),
+  'hierarchical' => true
+  )
+);
+register_taxonomy(
+  'options',
+  'liste',
+  array(
+    'label' => 'options',
+    'labels' => array(
+    'name' => 'options',
+    'singular_name' => 'options',
     'all_items' => 'Toutes les categorie',
     'edit_item' => 'Éditer la categorie',
     'view_item' => 'Voir la categorie',

@@ -16,11 +16,10 @@
 
 					<!-- Row With Forms -->
 					<div class="row with-forms">
-
+						
 						<!-- Property Type -->
 						<div class="col-md-3">
-							<option>For Sale</option>
-							<option>For Rent</option>
+							<?php echo do_shortcode('[wpdreams_ajaxsearchpro_results id=2 element="div"]'); ?>
 						</div>
 
 						<!-- Status -->
@@ -44,7 +43,7 @@
 
 					<!-- Browse Jobs -->
 					<div class="adv-search-btn">
-						Recherche approfondie <a href="listings-list-full-width.html">Recherche avancée</a>
+						Recherche approfondie <a href="<?php echo get_page_link(59); ?>">Recherche avancée</a>
 					</div>
 					
 					<!-- Announce -->
