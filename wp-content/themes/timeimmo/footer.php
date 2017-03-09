@@ -75,6 +75,6 @@
 </div>
 <!-- Wrapper / End -->
 
-
+<?php wp_footer() ?>
 </body>
 </html>

@@ -34,7 +34,7 @@
 
 			
 			<?php
-			$query = new WP_Query(array('post_type' => 'Blog', 'posts_per_page' => 1));; 
+			$query = new WP_Query(array('post_type' => 'Blog', 'posts_per_page' => 3));; 
 			if($query->have_posts()) : while($query->have_posts()) : $query->the_post();
 			?>
 
@@ -52,10 +52,10 @@
 
 					<ul class="post-meta">
 						<li><?php the_time('d-m-y'); ?></li>
-						<li><a href="#">5 Comments</a></li>
+						<!-- <li><a href="#">5 Comments</a></li> -->
 					</ul>
 
-					<p><?php the_content() ?></p>
+					<p><?php the_excerpt() ?></p>
 
 					<a href="<?php the_permalink(); ?>" class="read-more">Lire la suite<i class="fa fa-angle-right"></i></a>
 				</div>
@@ -63,11 +63,11 @@
 			</div>
 			<!-- Blog Post / End -->
 
-			<?php theme_pagination(); ?>
+			
 
 			<!-- Pagination -->
 			<div class="clearfix"></div>
-			<div class="pagination-container">
+<!-- 			<div class="pagination-container">
 				<nav class="pagination">
 					<ul>
 						<li><a href="#" class="current-page">1</a></li>
@@ -82,11 +82,10 @@
 						<li><a href="<?php next_posts_link(); ?>" class="next">Suivant</a></li>
 					</ul>
 				</nav>
-			</div>
+			</div> -->
 			<div class="clearfix"></div>
 			<?php endwhile; endif; ?>
 		</div>
-		<?php theme_pagination(); ?>
 		
 	<!-- Widgets -->
 	<div class="col-md-4">
@@ -105,10 +104,10 @@
 
 			<!-- Widget -->
 			<div class="widget">
-				<h3>Vous avez des questions?</h3>
+				<h3>Vous avez des questions ?</h3>
 				<div class="info-box margin-bottom-10">
-					<p>N'hésitez pas à nous contactez et nous vous répondrons au plus vite</p>
-					<a href="contact.html" class="button fullwidth margin-top-20"><i class="fa fa-envelope-o"></i> Ecrivez-nous</a>
+					<p>N'hésitez pas à nous contacter et nous vous répondrons au plus vite</p>
+					<a href="contact.html" class="button fullwidth margin-top-20"><i class="fa fa-envelope-o"></i> Écrivez-nous</a>
 				</div>
 			</div>
 			<!-- Widget / End -->
@@ -117,7 +116,7 @@
 			<!-- Widget -->
 			<div class="widget">
 
-				<h3>Pages recommandées</h3>
+				<h3>Autres dossiers</h3>
 				<ul class="widget-tabs">
 					
 					<!-- Post popular -->
@@ -155,7 +154,7 @@
 
 
 			<!-- Widget -->
-			<div class="widget">
+			<!-- <div class="widget">
 				<h3 class="margin-top-0 margin-bottom-25">Social</h3>
 				<ul class="social-icons rounded">
 					<li><a class="facebook" href="#"><i class="icon-facebook"></i></a></li>
@@ -164,7 +163,7 @@
 					<li><a class="linkedin" href="#"><i class="icon-linkedin"></i></a></li>
 				</ul>
 
-			</div>
+			</div> -->
 			<!-- Widget / End-->
 
 			<div class="clearfix"></div>

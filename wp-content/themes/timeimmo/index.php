@@ -71,11 +71,71 @@
 
 </div>
 
+<!-- Featured -->
+<div class="container border-bottom">
+	<div class="row">
+	
+		<div class="col-md-12">
+			<h3 class="headline margin-bottom-25 margin-top-65">Les dernières annonces</h3>
+		</div>
+		
+		<!-- Carousel -->
+		<div class="col-md-12">
+			<div class="carousel">	
+
+				<!-- Listing Item -->
+				<?php
+				$query = new WP_Query(array(
+					'post_type' => 'Liste', 
+					'posts_per_page' => 6)); 
+				if($query->have_posts()) : while($query->have_posts()) : $query->the_post();
+				?>
+				<div class="carousel-item">
+					<div class="listing-item compact">
+
+						<a href="<?php the_permalink(); ?>" class="listing-img-container">
+
+							<div class="listing-badges">
+								<span class="featured">NOUVEAU</span>
+								<span><?php the_field('status_du_bien'); ?></span>
+							</div>
+
+							<div class="listing-img-content">
+								<span class="listing-compact-title"><?php the_title( ); ?> <i><?php the_field('prix'); ?></i></span>
+
+								<ul class="listing-hidden-content">
+									<li><?php the_field('surface'); ?></li>
+									<li><?php the_field('chambre'); ?></li>
+									<li><?php the_field('salle_de_bain'); ?></li>
+									<li><?php the_field('choix'); ?></li>
+								</ul>
+							</div>
+
+							<?php $image = get_field('large_image_list');
+							if( !empty($image) ): ?>
+								<img src="<?php echo $image['url']; ?>" alt="">
+							<?php endif; ?>
+						</a>
+
+					</div>
+				</div>
+				<?php endwhile; ?>
+				<?php else : ?>
+				<?php endif; ?>
+				<!-- Listing Item / End -->
+
+			</div>
+		</div>
+		<!-- Carousel / End -->
+
+	</div>
+</div>
+<!-- Featured / End -->
 		
 <!-- Content
 ================================================== -->
 <!-- Fullwidth Section -->
-<section class="fullwidth border-bottom margin-top-0 margin-bottom-0 padding-top-50 padding-bottom-50" data-background-color="#ffffff">
+<section class="fullwidth margin-top-0 margin-bottom-0 padding-top-50 padding-bottom-50" data-background-color="#ffffff">
 
 	<!-- Content -->
 	<div class="container">
@@ -147,66 +207,6 @@
 <!-- Fullwidth Section / End -->
 
 
-<!-- Featured -->
-<div class="container">
-	<div class="row">
-	
-		<div class="col-md-12">
-			<h3 class="headline margin-bottom-25 margin-top-65">Les dernières annonces</h3>
-		</div>
-		
-		<!-- Carousel -->
-		<div class="col-md-12">
-			<div class="carousel">	
-
-				<!-- Listing Item -->
-				<?php
-				$query = new WP_Query(array(
-					'post_type' => 'Liste', 
-					'posts_per_page' => 6)); 
-				if($query->have_posts()) : while($query->have_posts()) : $query->the_post();
-				?>
-				<div class="carousel-item">
-					<div class="listing-item compact">
-
-						<a href="<?php the_permalink(); ?>" class="listing-img-container">
-
-							<div class="listing-badges">
-								<span class="featured">NOUVEAU</span>
-								<span><?php the_field('status_du_bien'); ?></span>
-							</div>
-
-							<div class="listing-img-content">
-								<span class="listing-compact-title"><?php the_title( ); ?> <i><?php the_field('prix'); ?></i></span>
-
-								<ul class="listing-hidden-content">
-									<li><?php the_field('surface'); ?></li>
-									<li><?php the_field('chambre'); ?></li>
-									<li><?php the_field('salle_de_bain'); ?></li>
-									<li><?php the_field('choix'); ?></li>
-								</ul>
-							</div>
-
-							<?php $image = get_field('large_image_list');
-							if( !empty($image) ): ?>
-								<img src="<?php echo $image['url']; ?>" alt="">
-							<?php endif; ?>
-						</a>
-
-					</div>
-				</div>
-				<?php endwhile; ?>
-				<?php else : ?>
-				<?php endif; ?>
-				<!-- Listing Item / End -->
-
-			</div>
-		</div>
-		<!-- Carousel / End -->
-
-	</div>
-</div>
-<!-- Featured / End -->
 
 
 

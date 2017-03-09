@@ -10407,3 +10407,18 @@ body .counter-boxes-inside-parallax .counter-box-icon i,
 	/*Custom css*/
 	textarea{height: 130px;}
 	input#button{line-height: 25px;}
+	
+	form#searchform {
+	    width: 100%;
+	}
+	#searchform input.ico-01 {
+		display: inline-block;
+		width: calc(100% - 140px);
+	}
+	#searchform input.button {
+	    display: inline-block;
+	    width: 130px;
+	    float: right;
+	    padding: 0;
+	    margin-right: 0;
+	}

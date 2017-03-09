@@ -126,6 +126,7 @@ function create_post_type() {
       'comments',
       'page-attributes'
       ),
+      'taxonomies' => array( 'category', 'post_tag' ),
     )
   );
 
@@ -149,6 +150,7 @@ function create_post_type() {
   		// 'comments',
   		'page-attributes'
       ),
+      'taxonomies' => array( 'category', 'post_tag' ),
     )
   );
 

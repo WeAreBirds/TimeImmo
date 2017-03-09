@@ -7,8 +7,8 @@
 		<div class="row">
 			<div class="col-md-12">
 
-				<h2>Actualités</h2>
-				<span>Restez au courant des actualités sur Time-Immo</span>
+				<h2>Nos dossiers</h2>
+				<span>Nous avons enquêté pour vous !</span>
 				
 				<!-- Breadcrumbs -->
 				<nav id="breadcrumbs">
@@ -51,19 +51,19 @@
 
 					<ul class="post-meta">
 						<li><?php the_date('d-m') ?></li>
-						<li><a href="#">5 Comments</a></li>
+						<!-- <li><a href="#">5 Comments</a></li> -->
 					</ul>
 
 					<?php the_content() ?>
 
 
 					<!-- Share Buttons -->
-					<ul class="share-buttons margin-top-40 margin-bottom-0">
+					<!-- <ul class="share-buttons margin-top-40 margin-bottom-0">
 						<li><a class="fb-share" href="#"><i class="fa fa-facebook"></i> Share</a></li>
 						<li><a class="twitter-share" href="#"><i class="fa fa-twitter"></i> Tweet</a></li>
 						<li><a class="gplus-share" href="#"><i class="fa fa-google-plus"></i> Share</a></li>
 						<li><a class="pinterest-share" href="#"><i class="fa fa-pinterest-p"></i> Pin</a></li>
-					</ul>
+					</ul> -->
 					<div class="clearfix"></div>
 
 				</div>
@@ -76,7 +76,7 @@
 
 
 			<!-- Post Navigation -->
-			<ul id="posts-nav" class="margin-top-0 margin-bottom-40">
+			<!-- <ul id="posts-nav" class="margin-top-0 margin-bottom-40">
 				<li class="next-post">
 					<a href="#"><span>Next Post</span>
 					Tips For Newbie Hitchhiker</a>
@@ -85,176 +85,26 @@
 					<a href="#"><span>Previous Post</span>
 					What's So Great About Merry?</a>
 				</li>
-			</ul>
+			</ul> -->
 
 
 			<!-- About Author -->
-			<div class="about-author">
+			<!-- <div class="about-author">
 				<img src="images/agent-avatar.jpg" alt="" />
 				<div class="about-description">
 					<h4>Jennie Wilson</h4>
 					<a href="#">jennie@example.com</a>
 					<p>Nullam ultricies, velit ut varius molestie, ante metus condimentum nisi, dignissim facilisis turpis ex in libero. Sed porta ante tortor, a pulvinar mi facilisis nec. Proin finibus dolor ac convallis congue.</p>
 				</div>
-			</div>
+			</div> -->
 
 
 			<!-- Related Posts -->
-			<div class="clearfix"></div>
-			<h4 class="headline margin-top-25">Related Posts</h4>
-			<div class="row">
-				<div class="col-md-6">
-
-					<!-- Blog Post -->
-					<div class="blog-post">
-						
-						<!-- Img -->
-						<a href="#" class="post-img">
-							<img src="images/blog-post-02.jpg" alt="">
-						</a>
-						
-						<!-- Content -->
-						<div class="post-content">
-							<h3><a href="#">Bedroom Colors You'll Never Regret</a></h3>
-							<p>Nam nisl lacus, dignissim ac tristique ut, scelerisque eu massa. Vestibulum ligula nunc, rutrum in malesuada vitae. </p>
-
-							<a href="#" class="read-more">Read More <i class="fa fa-angle-right"></i></a>
-						</div>
-
-					</div>
-					<!-- Blog Post / End -->
-
-				</div>
-
-				<div class="col-md-6">
-
-					<!-- Blog Post -->
-					<div class="blog-post">
-						
-						<!-- Img -->
-						<a href="#" class="post-img">
-							<img src="images/blog-post-03.jpg" alt="">
-						</a>
-						
-						<!-- Content -->
-						<div class="post-content">
-							<h3><a href="#">What to Do a Year Before Buying Apartment</a></h3>
-							<p>Nam nisl lacus, dignissim ac tristique ut, scelerisque eu massa. Vestibulum ligula nunc, rutrum in malesuada vitae. </p>
-
-							<a href="#" class="read-more">Read More <i class="fa fa-angle-right"></i></a>
-						</div>
-
-					</div>
-					<!-- Blog Post / End -->
-
-				</div>
-			</div>
-			<!-- Related Posts / End -->
-
-
-			<div class="margin-top-50"></div>
-
-			<!-- Reviews -->
-			<section class="comments">
-			<h4 class="headline margin-bottom-35">Comments <span class="comments-amount">(5)</span></h4>
-
-				<ul>
-					<li>
-						<div class="avatar"><img src="http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;s=70" alt="" /></div>
-						<div class="comment-content"><div class="arrow-comment"></div>
-							<div class="comment-by">Kathy Brown<span class="date">12th, June 2015</span>
-								<a href="#" class="reply"><i class="fa fa-reply"></i> Reply</a>
-							</div>
-							<p>Morbi velit eros, sagittis in facilisis non, rhoncus et erat. Nam posuere tristique sem, eu ultricies tortor imperdiet vitae. Curabitur lacinia neque non metus</p>
-						</div>
-
-						<ul>
-							<li>
-								<div class="avatar"><img src="http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;s=70" alt="" /></div>
-								<div class="comment-content"><div class="arrow-comment"></div>
-									<div class="comment-by">Tom Smith<span class="date">12th, June 2015</span>
-										<a href="#" class="reply"><i class="fa fa-reply"></i> Reply</a>
-									</div>
-									<p>Rrhoncus et erat. Nam posuere tristique sem, eu ultricies tortor imperdiet vitae. Curabitur lacinia neque.</p>
-								</div>
-							</li>
-							<li>
-								<div class="avatar"><img src="http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;s=70" alt="" /></div>
-								<div class="comment-content"><div class="arrow-comment"></div>
-									<div class="comment-by">Kathy Brown<span class="date">12th, June 2015</span>
-										<a href="#" class="reply"><i class="fa fa-reply"></i> Reply</a>
-									</div>
-									<p>Nam posuere tristique sem, eu ultricies tortor.</p>
-								</div>
-
-								<ul>
-									<li>
-										<div class="avatar"><img src="http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;s=70" alt="" /></div>
-										<div class="comment-content"><div class="arrow-comment"></div>
-											<div class="comment-by">John Doe<span class="date">12th, June 2015</span>
-												<a href="#" class="reply"><i class="fa fa-reply"></i> Reply</a>
-											</div>
-											<p>Great template!</p>
-										</div>
-									</li>
-								</ul>
-
-							</li>
-						</ul>
-
-					</li>
-
-					<li>
-						<div class="avatar"><img src="http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm&amp;s=70" alt="" /> </div>
-						<div class="comment-content"><div class="arrow-comment"></div>
-							<div class="comment-by">John Doe<span class="date">15th, May 2015</span>
-								<a href="#" class="reply"><i class="fa fa-reply"></i> Reply</a>
-							</div>
-							<p>Commodo est luctus eget. Proin in nunc laoreet justo volutpat blandit enim. Sem felis, ullamcorper vel aliquam non, varius eget justo. Duis quis nunc tellus sollicitudin mauris.</p>
-						</div>
-
-					</li>
-				 </ul>
-
-			</section>
-			<div class="clearfix"></div>
-			<div class="margin-top-55"></div>
-
-
-			<!-- Add Comment -->
-			<h4 class="headline">Add Comment</h4>
-			<div class="margin-top-15"></div>
 			
-			<!-- Add Comment Form -->
-			<form id="add-comment" class="add-comment">
-				<fieldset>
-
-					<div>
-						<label>Name:</label>
-						<input type="text" value=""/>
-					</div>
-						
-					<div>
-						<label>Email: <span>*</span></label>
-						<input type="text" value=""/>
-					</div>
-
-					<div>
-						<label>Comment: <span>*</span></label>
-						<textarea cols="40" rows="3"></textarea>
-					</div>
-
-				</fieldset>
-
-				<a href="#" class="button">Add Comment</a>
-				<div class="clearfix"></div>
-				<div class="margin-bottom-20"></div>
-
-			</form>
-
+			<!-- Related Posts / End -->
+			
 	</div>
 	<!-- Content / End -->
-
 
 
 	<!-- Sidebar
@@ -279,8 +129,8 @@
 			<div class="widget">
 				<h3>Vous avez des questions?</h3>
 				<div class="info-box margin-bottom-10">
-					<p>N'hésitez pas à nous contactez et nous vous répondrons au plus vite</p>
-					<a href="contact.html" class="button fullwidth margin-top-20"><i class="fa fa-envelope-o"></i> Ecrivez-nous</a>
+					<p>N'hésitez pas à nous contacter et nous vous répondrons au plus vite</p>
+					<a href="../../contact" class="button fullwidth margin-top-20"><i class="fa fa-envelope-o"></i> Écrivez-nous</a>
 				</div>
 			</div>
 			<!-- Widget / End -->
@@ -289,7 +139,7 @@
 			<!-- Widget -->
 			<div class="widget">
 
-				<h3>Pages recommandées</h3>
+				<h3>Autres dossiers</h3>
 				<ul class="widget-tabs">
 
 					<!-- Post popular -->
@@ -328,7 +178,7 @@
 
 
 			<!-- Widget -->
-			<div class="widget">
+			<!-- <div class="widget">
 				<h3 class="margin-top-0 margin-bottom-25">Social</h3>
 				<ul class="social-icons rounded">
 					<li><a class="facebook" href="#"><i class="icon-facebook"></i></a></li>
@@ -337,7 +187,7 @@
 					<li><a class="linkedin" href="#"><i class="icon-linkedin"></i></a></li>
 				</ul>
 
-			</div>
+			</div> -->
 			<!-- Widget / End-->
 
 			<div class="clearfix"></div>

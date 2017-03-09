@@ -59,7 +59,7 @@
 						</div>
 					</li>
 
-					<li class="with-btn"><a href="<?php echo get_page_link(15); ?>" class="button border">Vendre un bien</a></li>
+					<li class="with-btn"><a href="<?php echo get_page_link(15); ?>" class="button border">Proposer un bien</a></li>
 				</ul>
 			</div>
 			<!-- Right Side Content / End -->
